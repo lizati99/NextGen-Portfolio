@@ -1,25 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import PublicLayouts from './Layouts/PublicLayouts';
+import PageNotFound from './Pages/PageNotFound';
+import HomePage from './Pages/HomePage';
+import AboutPage from './Pages/AboutPage';
+import '@fontsource/audiowide';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <PublicLayouts />,
+      errorElement: <PageNotFound />,
+      children: [
+        { index: true, element: <HomePage /> },
+        { path: '/about', element: <AboutPage /> }
+      ]
+    }
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;

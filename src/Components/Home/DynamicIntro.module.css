@@ -1,0 +1,70 @@
+.intro_text h1{
+    font-size: 50px;
+}
+.intro_text p{
+    text-align: center;
+    font-size: 30px;
+}
+.intro_text p span{
+    color: var(--color-secondary);
+}
+
+/* Row Effect */
+.row_left{
+    position: absolute;
+    top: 52%;
+    left: 0;
+    width: 25%;
+    height: 3px;
+    background-color: var(--color-overlay);
+    opacity: .5;
+    border-radius: 20px;
+    overflow: hidden;
+    border-radius: 0 50% 50% 0;
+
+}
+.row_left::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 25px;
+    height: 3px;
+    background-image: linear-gradient(to left,var(--color-secondary),transparent);
+    border-radius: inherit;
+    animation: rowLeftAnime 5s infinite;
+    opacity: 1;
+    filter: brightness(200%) saturate(120%);
+}
+@keyframes rowLeftAnime {
+    0%{transform: translate(-50px);}
+    100%{transform: translateX(calc(25vw));}
+}
+.row_right{
+    position: absolute;
+    top: 52%;
+    right: 0;
+    width: 25%;
+    height: 3px;
+    background-color: var(--color-overlay);
+    opacity: .5;
+    overflow: hidden;
+    border-radius: 50% 0 0 50%;
+}
+.row_right::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 25px;
+    height: 3px;
+    background-image: linear-gradient(to right,var(--color-secondary),transparent);
+    border-radius: 25%;
+    transform: translateX(50px);
+    animation: rowRightAnime 5s infinite;
+    opacity: 1;
+    filter: brightness(200%) saturate(120%);
+}
+@keyframes rowRightAnime {
+    0%{transform: translate(50px);}
+    100%{transform: translateX(calc(-25vw));}
+}
+

@@ -1,0 +1,26 @@
+.landing_page{
+    height: 100vh;
+    max-height:100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    backdrop-filter: blur(3px);
+    overflow: hidden !important;
+    position: relative;
+}
+
+.landing_img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: url(../../assets/images/Home/IMG-2.png) top;
+    background-size: cover;
+    opacity: .2;
+}
+
+
+/* End landing Page */

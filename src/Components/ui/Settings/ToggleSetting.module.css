@@ -1,0 +1,40 @@
+
+.toggle_settings{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: auto;
+    height: auto;
+    z-index: 1;    
+}
+.toggle_settings svg{
+    font-size: 22px;
+    cursor: pointer;
+    transition: .5s;
+}
+.toggle_settings svg:hover{
+    color: var(--color-secondary);
+}
+.settings{
+    display: none;
+    position: absolute;
+    bottom: 70px;
+    left: 7.2%;
+    width: 17px;
+    height: 115px;
+    overflow: hidden;
+    animation: settingAnime 1s 1;
+}
+@keyframes settingAnime {
+    0%{height: 0px;transform: scaleY(0);}
+    100%{height: 115px;transform: scale(100%);}
+}
+.settings li{
+    width: 100%;
+    height: 17px;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-size: 17px;
+    text-align: center;
+    cursor: pointer;
+}
