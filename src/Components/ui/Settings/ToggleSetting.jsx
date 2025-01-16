@@ -1,39 +1,47 @@
 import { faExpand, faGear } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import classes from "./ToggleSetting.module.css"
+import classes from "./ToggleSetting.module.css";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../../../Context/ThemeContext";
+import MODE from "./../../../utils/color";
 
-export default function ToggleSetting(){
-    const {isDarkMode,toggleThemeMode}=useContext(ThemeContext);
-    const [isOpen, setIsOpen]=useState(false);
-    const colorCode=[
-        {color:"#00bcd4", logo:"3"},
-        {color:"#ffc107", logo:"2"},
-        {color:"#ba021d", logo:"1"},
-        {color:`${isDarkMode ? "#fff" : "#333" }`, backgroundColor: `${isDarkMode ? "#333" : "#fff"}`, logo : ''}
-    ]
-    const displayColorList=()=>{
-        return colorCode.map( (color,key)=>{
-            return <li
-                key={key}
-                data-color={color.color}
-                data-logo={color.logo}
-                style={{ backgroundColor: color.color }}
-                onClick={color.logo === "" ? toggleThemeMode : undefined}
-            ></li>
-        })
-    }
-    const handleClick=()=>{
-        setIsOpen( prevIsOpen=> !prevIsOpen );
-    }
-    return <div className={classes.setting_container}>
-        <div className={classes.toggle_settings}>
-            <FontAwesomeIcon icon={faGear} onClick={handleClick}/>
-        </div>
-        <ul className={`${classes.settings} ${ isOpen ? classes.show : classes.hide}`} id="settings">
-            <li data-screen=""><FontAwesomeIcon icon={faExpand}/></li>
-            {displayColorList()}
-        </ul>
+export default function ToggleSetting() {
+  const { isDarkMode, toggleThemeMode, toggleColors } = useContext(ThemeContext);
+  const themeColors = isDarkMode ? MODE.dark : MODE.light;
+  const [isOpen, setIsOpen] = useState(false);
+
+  const displayColorList = () => {
+    return themeColors.COLORS.map((color, key) => {
+      return (
+        <li
+          key={key}
+          data-color={color.color}
+          data-logo={color.logo}
+          style={{ backgroundColor: color.color }}
+          onClick={color.logo === "" ? toggleThemeMode : () => toggleColors(color.color)}
+        ></li>
+      );
+    });
+  };
+
+  const handleClick = () => {
+    setIsOpen((prevIsOpen) => !prevIsOpen);
+  };
+
+  return (
+    <div className={classes.setting_container}>
+      <div className={classes.toggle_settings}>
+        <FontAwesomeIcon icon={faGear} onClick={handleClick} />
+      </div>
+      <ul
+        className={`${classes.settings} ${isOpen ? classes.show : classes.hide}`}
+        id="settings"
+      >
+        <li data-screen="">
+          <FontAwesomeIcon icon={faExpand} />
+        </li>
+        {displayColorList()}
+      </ul>
     </div>
+  );
 }

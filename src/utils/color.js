@@ -1,28 +1,30 @@
-const COLORS = {
-    primary: { color: "#009688", logo: "" },
-    secondary: { color: "#ffc107", logo: "2" },
-    thernary: { color: "#ba021d", logo: "1" },
-    fourthy: { color: "#00bcd4", logo: "3" },
-    fifty: { color: "#3f51b5", logo: "" },
-    sixty: { color: "#ffc107", logo: "" },
-    seventy: { color: "#03a9f4", logo: "" },
-    eighty: { color: "#ffeb3b", logo: "" },
-    ninety: { color: "#e91e63", logo: "" },
-    hundred: { color: "#673ab7", logo: "" },
-};
-
 const MODE = {
+    secondaryColor: "#009688",
+    overlayColor: "#222",
     light: {
         backgroundColor: "#EEE",
         textColor: "#111",
-        secondaryColor: "#009688",
-        overlayColor: "#222",
+        logo: "",
+        COLORS: [
+            { color: "#ba021d", logo: "logo_1.png" },
+            { color: "#ffc107", logo: "logo_2.png" },
+            { color: "#00bcd4", logo: "logo_3.png" },
+            { color: "#009688", logo: "logo_4.png" },
+            { color: "#111", logo: "" }
+        ]
     },
     dark: {
         backgroundColor: "#111",
         textColor: "#EEE",
-        secondaryColor: "#009688",
-        overlayColor: "#222",
-    },
+        logo: "",
+        COLORS: [
+            { color: "#ba021d", logo: "1" },
+            { color: "#ffc107", logo: "2" },
+            { color: "#00bcd4", logo: "3" },
+            { color: "#009688", logo: "4" },
+            { color: "#EEE", logo: "" }
+        ]
+    }
 };
+
 export default MODE;
