@@ -12,12 +12,12 @@ code {
     monospace;
 } */
 
-:root{
+/* :root{
   --color-bg:#000;
   --color-text:#fff;
   --color-secondary:#009688;
   --color-overlay:#222;
-}
+} */
 ::-webkit-scrollbar{
   width: 10px;
 }
@@ -65,3 +65,12 @@ body{
   overflow: hidden !important;
 }
 
+.light{
+  color:var(--color-overlay);
+  background-color: var(--color-text);
+}
+
+.dark{
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}

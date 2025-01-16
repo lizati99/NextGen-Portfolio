@@ -17,7 +17,7 @@ export default function DynamicIntro(){
                 setCharIndex(prevCharIndex => prevCharIndex + 1);
             }else{
                 setIsDeleting(prevIsDeleted => !prevIsDeleted);
-                console.log("start deleting");
+                // console.log("start deleting");
             }
         }else{
             if(charIndex > 0){
@@ -25,7 +25,7 @@ export default function DynamicIntro(){
                 setCharIndex(prevCharIndex => prevCharIndex - 1);
             }
             if(charIndex===0){
-                console.log("End deleting");
+                // console.log("End deleting");
                 setIsDeleting(prevIsDeleted => !prevIsDeleted);
                 setCurrentRoleIndex( (prevIndex) => (prevIndex + 1) % roleList.length);
             }
