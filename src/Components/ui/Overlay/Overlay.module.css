@@ -1,0 +1,49 @@
+/* Start Overlay */
+.overlay{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4b4b4b81;
+    z-index: 999;
+    transition: .5;
+}
+/* End Overlay */
+/* Start Overlay Effect */
+.overlay_effect{
+    position: absolute;
+    height: 200vh;
+    width: 100%;
+    background-color: var(--color-overlay);
+    z-index: 1000;
+    transform: translateY(-200vh);
+}
+
+.show{
+    display: block;
+}
+
+.open_effect{
+    animation: openOverlayAnimee .5s 1 ease-out;
+}
+
+.close_effect{
+    animation: closeOverlayAnimee .5s 1 ease-in;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes closeOverlayAnimee {
+    0%{transform: translateY(-200vh);}
+    100%{transform: translateY(100vh);}
+}
+@keyframes openOverlayAnimee {
+    0%{transform: translateY(100vh);}
+    100%{transform: translateY(-200vh);}
+}
+/* End Overlay Effect */

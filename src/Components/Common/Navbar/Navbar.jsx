@@ -5,13 +5,14 @@ import icon1 from "./../../../assets/icons/icon_1.png";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import homeIcon from "./../../../assets/images/Navbar/home (1).png"
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import OverlayEffect from "../../ui/Overlay/OverlayEffect";
 export default function Navbar() {
 
     const [activeLink, setActiveLink] = useState("/");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const linkRef=useRef('');
+    const [isShowOverlay, setIsShowOverlay] = useState(false);
     const location = useLocation();
 
 
@@ -21,18 +22,14 @@ export default function Navbar() {
 
     const handleMenuToggle = () => {
         setIsMenuOpen( prevOpen=> !prevOpen); 
-        console.log(isMenuOpen);
     };
 
 
     const handleClick = (path) => {
         setActiveLink(path);
         setIsMenuOpen(false);
+        setIsShowOverlay(path !== "/");
     };
-
-    const handleToggleMenu=(e)=>{
-        linkRef.current.classList.toggle(classes.show);
-    }
 
     const displayNavLink = () => {
          const linkList = [
@@ -51,6 +48,7 @@ export default function Navbar() {
                     className={
                         activeLink === link.path ? classes.active : ""
                     }
+                    aria-label={link.label}
                 >
                     {link.icon ? <img src={link.icon} alt={link.label} /> : link.label}
                 </Link>
@@ -59,6 +57,7 @@ export default function Navbar() {
     };
     return (
         <>
+            <OverlayEffect isShow={isShowOverlay}/>
             <nav className={`${classes.navbar} `}>
                 <div className="container">
                     <div className={classes.header_area}>
@@ -67,10 +66,14 @@ export default function Navbar() {
                         </div>
                         <ul className={`${classes.links} ${ isMenuOpen ? classes.open : ""}`}>
                             <li className={classes.logo_link}>
-                                <img src={icon1} width="40" alt="navbar icon" />
+                                <Link to="/" onClick={() => handleClick("/")} aria-label="Home">
+                                    <img src={icon1} width="40" alt="navbar icon" />
+                                </Link>
                             </li>
-                            <li className={classes.close_link}>
-                                <FontAwesomeIcon icon={faAngleLeft}/>
+                            <li className={`${classes.close_link} ${isShowOverlay ? classes.show : ""}`}>
+                                <Link to="/" onClick={() => handleClick("/")} aria-label="Home">
+                                    <FontAwesomeIcon icon={faAngleLeft}/>
+                                </Link>
                             </li>
                             {displayNavLink()}
                         </ul>

@@ -4,12 +4,14 @@
 }
 
 .intro_text h1{
-    font-size: 50px;
-    letter-spacing: 1px;
+    font-size: clamp(25px, 4vw, 50px);
+    letter-spacing: 3px;
 }
 .intro_text p{
     text-align: center;
-    font-size: 30px;
+    font-size: clamp(20px, 2vw, 25px);
+    letter-spacing: 1px;
+
 }
 .intro_text p span{
     color: var(--color-secondary);

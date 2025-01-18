@@ -22,12 +22,17 @@
 .links .linkItem {
     margin-left: 30px;
     cursor: pointer;
-    transition: 0.5s;
 }
-.links .linkItem:hover,
+
+.links .linkItem a{
+    letter-spacing: 3px;
+    transition: color 0.5s;
+}
+.links .linkItem:hover a,
 .links .active {
     color: var(--color-secondary);
 }
+
 .toggle_menu {
     display: none;
     flex-direction: column;
@@ -80,9 +85,14 @@
     background-color: var(--color-secondary);
     cursor: pointer;
     opacity: 0.5;
+    z-index: 1000;
 }
 .close_link:hover {
     opacity: 1;
+}
+
+.show{
+    display: block !important;
 }
 /* Start meduim and small device in media query */
 @media screen and (max-width: 992px) {

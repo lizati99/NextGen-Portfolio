@@ -50,6 +50,32 @@ body{
   padding-right: 20px;
   overflow: hidden;
 }
+.box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 100%; */
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  padding: 80px 0;
+  animation: boxOpacity 1s 1;
+  transition: .5s;
+  z-index: 1000;
+}
+@keyframes boxOpacity {
+  0%,50%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+.close-box{
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  cursor: pointer;
+  z-index: 1;
+}
+
 /* End General Style */
 
 /* Start landing Page */
@@ -64,6 +90,7 @@ body{
   backdrop-filter: blur(3px);
   overflow: hidden !important;
 }
+/* End landing Page */
 
 .light{
   color:var(--color-overlay);
