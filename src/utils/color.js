@@ -10,7 +10,7 @@ const MODE = {
             { color: "#ffc107", logo: "logo_2.png" },
             { color: "#00bcd4", logo: "logo_3.png" },
             { color: "#009688", logo: "logo_4.png" },
-            { color: "#111", logo: "" }
+            { color: "#000", logo: "" }
         ]
     },
     dark: {
@@ -18,10 +18,10 @@ const MODE = {
         textColor: "#EEE",
         logo: "",
         COLORS: [
-            { color: "#ba021d", logo: "1" },
-            { color: "#ffc107", logo: "2" },
-            { color: "#00bcd4", logo: "3" },
-            { color: "#009688", logo: "4" },
+            { color: "#ba021d", logo: "logo_1.png" },
+            { color: "#ffc107", logo: "logo_2.png" },
+            { color: "#00bcd4", logo: "logo_3.png" },
+            { color: "#009688", logo: "logo_4.png" },
             { color: "#EEE", logo: "" }
         ]
     }

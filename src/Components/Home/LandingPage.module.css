@@ -6,9 +6,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    backdrop-filter: blur(3px);
     overflow: hidden !important;
-    position: relative;
 }
 
 .landing_img{
@@ -17,9 +15,16 @@
     right: 0;
     width: 50%;
     height: 100%;
-    background: url(../../assets/images/Home/IMG-2.png) top;
-    background-size: cover;
     opacity: .2;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(to top, var(--color-bg) 45%, transparent), 
+            repeating-linear-gradient(to left, var(--color-secondary), transparent 10px, var(--color-secondary) 20px);;
+}
+
+.landing_img img{
+    height: 100%;
+    width: 100%;
 }
 
 
