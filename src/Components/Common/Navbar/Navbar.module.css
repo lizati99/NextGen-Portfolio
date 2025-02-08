@@ -94,6 +94,10 @@
 .show{
     display: block !important;
 }
+
+.hide{
+    display: none !important;
+}
 /* Start meduim and small device in media query */
 @media screen and (max-width: 992px) {
     .close_link,

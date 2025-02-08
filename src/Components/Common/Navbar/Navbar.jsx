@@ -62,7 +62,7 @@ export default function Navbar() {
                 <div className="container">
                     <div className={classes.header_area}>
                         <div className={classes.logo}>
-                            <img src={logo5} width="40" alt="" />
+                            <img src={logo5} width="40" alt="header logo" />
                         </div>
                         <ul className={`${classes.links} ${ isMenuOpen ? classes.open : ""}`}>
                             <li className={classes.logo_link}>
