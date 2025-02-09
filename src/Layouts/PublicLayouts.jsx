@@ -8,7 +8,7 @@ export default function PublicLayouts() {
     <>
       <Navbar />
       <div className={`container`}>
-        <Outlet />
+          <Outlet />
       </div>
       <Footer />
     </>
