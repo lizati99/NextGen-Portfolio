@@ -3,7 +3,7 @@ import React, { Suspense, lazy} from "react";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import '@fontsource/audiowide';
 
-const Loader = lazy( () => import('./Layouts/Loaders/Loader.jsx'));
+// const Loader = lazy( () => import('./Layouts/Loaders/Loader.jsx'));
 const PublicLayouts = lazy(() => import("./Layouts/PublicLayouts"));
 const PageNotFound = lazy(() => import("./Pages/PageNotFound"));
 const HomePage = lazy(() => import("./Pages/HomePage"));
@@ -41,9 +41,9 @@ function App() {
   
 
   return (
-      <Suspense fallback={<Loader />}>
+      // <Suspense fallback={<Loader />}>
           <RouterProvider router={router} />
-      </Suspense>
+      // </Suspense>
   );
 }
 

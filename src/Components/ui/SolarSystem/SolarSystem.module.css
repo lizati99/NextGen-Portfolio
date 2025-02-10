@@ -3,34 +3,35 @@
   width: 250px;
   height: 250px;
   margin: 0 auto;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   /* overflow: hidden; */
-  background: rgba(0, 0, 0, .3);
+  /* background: rgba(10, 10, 10, .4); */
+  background: radial-gradient(circle at center, var(--color-overlay), transparent);
   transform: translateX(1px);
 }
 
 .sun {
   width: 50px;
   height: 50px;
-  background: radial-gradient(circle at center, #ffd700, #ff8c00);
+  background: radial-gradient(circle at center, var(--color-sun), transparent);
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 0px #ff8c00, 0 0 100px rgba(255, 140, 0, 0.5);
+  /* box-shadow: 0 0 0px var(--color-sun), 0 0 100px rgba(255, 140, 0, 0.5); */
   z-index: 10;
-  animation: sun 10s linear infinite;
+  animation: sun 5s linear infinite;
   animation-play-state: var(--animation-state);
 }
 
 @keyframes sun {
   from {
-    box-shadow: 0 0 0px #ff8c00, 0 0 100px rgba(255, 140, 0, 0.5);
+    box-shadow: 0 0 0 var(--color-sun), 0 0 50px orange;
   }
   to {
-    box-shadow: 0 0 80px #ff8c00, 0 0 100px rgba(255, 140, 0, 0.4);
+    box-shadow: 0 0 150px var(--color-sun), 0 0 100px blue;
   }
 }
 
@@ -38,7 +39,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border: 2px dashed rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   transform:  rotate(0deg) translate(-50%, -50%);
   animation: orbit 10s linear infinite;
@@ -59,7 +60,7 @@
   position: absolute;
   top: calc(50% - 20px);
   left: calc(50% - 20px);
-  width: 40px;
+  width: auto;
   height: 70px;
   transform-origin: center;
   transform: translate(var(--orbit-distance), calc(-50% + 20px));

@@ -30,7 +30,7 @@ export default function Navbar() {
         setIsMenuOpen(false);
         setIsShowOverlay(path !== "/");
     };
-
+console.log(activeLink);
     const displayNavLink = () => {
          const linkList = [
             { label: "Home", path: "/", icon: homeIcon },
@@ -58,33 +58,59 @@ export default function Navbar() {
     return (
         <>
             <OverlayEffect isShow={isShowOverlay}/>
-            <nav className={`${classes.navbar} `}>
-                <div className="container">
-                    <div className={classes.header_area}>
-                        <div className={classes.logo}>
-                            <img src={logo5} width="40" alt="header logo" />
+            {activeLink==="/d" ? (
+                <nav className={`${classes.navbar}`}>
+                    <div className="container">
+                        <div className={classes.header_area}>
+                            <div className={classes.logo}>
+                                <img src={logo5} width="40" alt="header logo" />
+                            </div>
+                            <ul className={`${classes.links} ${ isMenuOpen ? classes.open : ""}`}>
+                                <li className={classes.logo_link}>
+                                    <Link to="/" onClick={() => handleClick("/")} aria-label="Home">
+                                        <img src={icon1} width="40" alt="navbar icon" />
+                                    </Link>
+                                </li>
+                                <li className={`${classes.close_link} ${isShowOverlay ? classes.show : ""}`}>
+                                    <Link to="/" onClick={() => handleClick("/")} aria-label="Home">
+                                        <FontAwesomeIcon icon={faAngleLeft}/>
+                                    </Link>
+                                </li>
+                                {displayNavLink()}
+                            </ul>
+                            <button className={classes.toggle_menu} onClick={handleMenuToggle}>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
                         </div>
-                        <ul className={`${classes.links} ${ isMenuOpen ? classes.open : ""}`}>
-                            <li className={classes.logo_link}>
-                                <Link to="/" onClick={() => handleClick("/")} aria-label="Home">
-                                    <img src={icon1} width="40" alt="navbar icon" />
-                                </Link>
-                            </li>
-                            <li className={`${classes.close_link} ${isShowOverlay ? classes.show : ""}`}>
-                                <Link to="/" onClick={() => handleClick("/")} aria-label="Home">
-                                    <FontAwesomeIcon icon={faAngleLeft}/>
-                                </Link>
-                            </li>
-                            {displayNavLink()}
-                        </ul>
-                        <button className={classes.toggle_menu} onClick={handleMenuToggle}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            ) : (
+                <nav className={`${classes.navbar} ${classes.first}`}>
+                    <div className="container">
+                        <div className={classes.header_area}>
+                            <div className={classes.logo}>
+                                <img src={logo5} width="40" alt="header logo" />
+                            </div>
+                            <ul className={`${classes.links} ${ isMenuOpen ? classes.open : ""}`}>
+                                <li className={classes.logo_link}>
+                                    <Link to="/" onClick={() => handleClick("/")} aria-label="Home">
+                                        <img src={icon1} width="40" alt="navbar icon" />
+                                    </Link>
+                                </li>
+                                <li className={`${classes.close_link} ${isShowOverlay ? classes.show : ""}`}>
+                                    <Link to="/" onClick={() => handleClick("/")} aria-label="Home">
+                                        <FontAwesomeIcon icon={faAngleLeft}/>
+                                    </Link>
+                                </li>
+                                {displayNavLink()}
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            )}
+            
         </>
     );
 }

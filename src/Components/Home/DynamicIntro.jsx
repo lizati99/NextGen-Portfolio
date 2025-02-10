@@ -8,7 +8,6 @@ export default function DynamicIntro(){
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    
 
     const handleTypingEffect = () => {
         let text=roleList[currentRoleIndex];
