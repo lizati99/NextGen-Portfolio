@@ -23,16 +23,15 @@ import contact_2 from './../assets/icons/navbar/contact_2.svg';
 import contact_3 from './../assets/icons/navbar/contact_3.svg';
 import contact_4 from './../assets/icons/navbar/contact_4.svg';
 
-// إنشاء كائن يحتوي على جميع الصور
 const images = {
-  logo: {
-    logo_1,
-    logo_2,
-    logo_3,
-    logo_4,
-  },
-  icon: {
-    about: {
+    logo: {
+      logo_1: logo_1,
+      logo_2: logo_2,
+      logo_3: logo_3,
+      logo_4: logo_4,
+    },
+    icon: {
+      about: {
         about_1,
         about_2,
         about_3,
@@ -56,8 +55,8 @@ const images = {
         contact_3,
         contact_4,
       },
-  }
-};
-
-// تصدير الكائن
-export default images;
+    },
+  };
+  
+  export default images;
+  

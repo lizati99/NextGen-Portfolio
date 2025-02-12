@@ -8,8 +8,15 @@ export const ThemeProvider = ({ children }) => {
     const storedMode = localStorage.getItem("mode");
     return storedMode ? JSON.parse(storedMode) : true;
   });
-  const [color, setColor] = useState(() => {
-    return localStorage.getItem("color-secondary") || MODE.secondaryColor;
+
+  const getDefaultColorData = (mode) => {
+    const theme = mode ? MODE.dark : MODE.light;
+    return theme.COLORS[0] || {}; 
+  };
+
+  const [colorData, setColorData] = useState(() => {
+    const storedData = localStorage.getItem("colorData");
+    return storedData ? JSON.parse(storedData) : getDefaultColorData(true);
   });
 
   useEffect(() => {
@@ -21,26 +28,33 @@ export const ThemeProvider = ({ children }) => {
     root.style.setProperty("--color-overlay", themeColors.overlayColor);
 
     localStorage.setItem("mode", JSON.stringify(isDarkMode));
+
+    // setColorData(getDefaultColorData(isDarkMode));
   }, [isDarkMode]);
 
   useEffect(() => {
-    if (color) {
+    if (colorData.color) {
       const root = document.documentElement;
-      root.style.setProperty("--color-secondary", color);
-      localStorage.setItem("color-secondary", color);
+      root.style.setProperty("--color-secondary", colorData.color);
+      localStorage.setItem("colorData", JSON.stringify(colorData));
     }
-  }, [color]);
+  }, [colorData]);
 
   const toggleThemeMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
 
   const toggleColors = (colorCode) => {
-    setColor(colorCode);
+    const newColorData = (isDarkMode ? MODE.dark.COLORS : MODE.light.COLORS).find(
+      (item) => item.color === colorCode
+    );
+    if (newColorData) {
+      setColorData(newColorData);
+    }
   };
 
   return (
-    <ThemeContext.Provider value={{ isDarkMode, toggleThemeMode, toggleColors }}>
+    <ThemeContext.Provider value={{ isDarkMode, toggleThemeMode, colorData, toggleColors }}>
       {children}
     </ThemeContext.Provider>
   );

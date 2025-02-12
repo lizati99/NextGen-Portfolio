@@ -5,11 +5,14 @@ import icon1 from "./../../../assets/icons/icon_1.png";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import homeIcon from "./../../../assets/images/Navbar/home (1).png"
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import OverlayEffect from "../../ui/Overlay/OverlayEffect";
-export default function Navbar() {
+import { ThemeContext } from "../../../Context/ThemeContext";
+import NavbarMobile from "./NavbarMobile";
 
+export default function Navbar() {
+    const { colorData } = useContext(ThemeContext);
     const [activeLink, setActiveLink] = useState("/");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isShowOverlay, setIsShowOverlay] = useState(false);
@@ -21,7 +24,7 @@ export default function Navbar() {
     }, [location]);
 
     const handleMenuToggle = () => {
-        setIsMenuOpen( prevOpen=> !prevOpen); 
+        setIsMenuOpen(prevOpen => !prevOpen);
     };
 
 
@@ -30,9 +33,9 @@ export default function Navbar() {
         setIsMenuOpen(false);
         setIsShowOverlay(path !== "/");
     };
-console.log(activeLink);
+
     const displayNavLink = () => {
-         const linkList = [
+        const linkList = [
             { label: "Home", path: "/", icon: homeIcon },
             { label: "About", path: "/About", icon: null },
             { label: "Resume", path: "/Resume", icon: null },
@@ -57,15 +60,15 @@ console.log(activeLink);
     };
     return (
         <>
-            <OverlayEffect isShow={isShowOverlay}/>
-            {activeLink==="/d" ? (
+            <OverlayEffect isShow={isShowOverlay} />
+            { activeLink==="/" ? (
                 <nav className={`${classes.navbar}`}>
                     <div className="container">
                         <div className={classes.header_area}>
                             <div className={classes.logo}>
-                                <img src={logo5} width="40" alt="header logo" />
+                                <img src={colorData.logo} width="40" alt="header logo" />
                             </div>
-                            <ul className={`${classes.links} ${ isMenuOpen ? classes.open : ""}`}>
+                            <ul className={`${classes.links} ${isMenuOpen ? classes.open : ""}`}>
                                 <li className={classes.logo_link}>
                                     <Link to="/" onClick={() => handleClick("/")} aria-label="Home">
                                         <img src={icon1} width="40" alt="navbar icon" />
@@ -73,7 +76,7 @@ console.log(activeLink);
                                 </li>
                                 <li className={`${classes.close_link} ${isShowOverlay ? classes.show : ""}`}>
                                     <Link to="/" onClick={() => handleClick("/")} aria-label="Home">
-                                        <FontAwesomeIcon icon={faAngleLeft}/>
+                                        <FontAwesomeIcon icon={faAngleLeft} />
                                     </Link>
                                 </li>
                                 {displayNavLink()}
@@ -86,31 +89,14 @@ console.log(activeLink);
                         </div>
                     </div>
                 </nav>
+            
             ) : (
-                <nav className={`${classes.navbar} ${classes.first}`}>
-                    <div className="container">
-                        <div className={classes.header_area}>
-                            <div className={classes.logo}>
-                                <img src={logo5} width="40" alt="header logo" />
-                            </div>
-                            <ul className={`${classes.links} ${ isMenuOpen ? classes.open : ""}`}>
-                                <li className={classes.logo_link}>
-                                    <Link to="/" onClick={() => handleClick("/")} aria-label="Home">
-                                        <img src={icon1} width="40" alt="navbar icon" />
-                                    </Link>
-                                </li>
-                                <li className={`${classes.close_link} ${isShowOverlay ? classes.show : ""}`}>
-                                    <Link to="/" onClick={() => handleClick("/")} aria-label="Home">
-                                        <FontAwesomeIcon icon={faAngleLeft}/>
-                                    </Link>
-                                </li>
-                                {displayNavLink()}
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+                <>
+                    <NavbarMobile />
+                </>
             )}
             
+
         </>
     );
 }

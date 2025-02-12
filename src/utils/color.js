@@ -29,6 +29,13 @@ export const SOLARSYSTEMCOLORS = {
 };
 
 
+const assignIcons = (index) => ({
+    about: images.icon.about[`about_${index + 1}`],
+    resume: images.icon.resume[`resume_${index + 1}`],
+    portfolio: images.icon.portfolio[`portfolio_${index + 1}`],
+    contact: images.icon.contact[`contact_${index + 1}`],
+  });
+  
 const MODE = {
     secondaryColor: "#009688",
     light: {
@@ -37,12 +44,12 @@ const MODE = {
         overlayColor: "#AAA",
         logo: "",
         COLORS: [
-            { color: "#ba021d", logo: images.logo.logo_1, icons : images.icon.about },
-            { color: "#ffc107", logo: images.logo.logo_2, icons : images.icon.resume },
-            { color: "#00bcd4", logo: images.logo.logo_3, icons : images.icon.portfolio },
-            { color: "#009688", logo: images.logo.logo_4, icons : images.icon.contact },
-            { color: "#000", logo: "" }
-        ]
+        { color: "#ba021d", logo: images.logo.logo_1 },
+        { color: "#ffc107", logo: images.logo.logo_2 },
+        { color: "#00bcd4", logo: images.logo.logo_3 },
+        { color: "#009688", logo: images.logo.logo_4 },
+        { color: "#000", logo: images.logo.logo_1 },
+        ],
     },
     dark: {
         backgroundColor: "#000",
@@ -50,13 +57,13 @@ const MODE = {
         overlayColor: "#222",
         logo: "",
         COLORS: [
-            { color: "#ba021d", logo: "logo_1.png" },
-            { color: "#ffc107", logo: "logo_2.png" },
-            { color: "#00bcd4", logo: "logo_3.png" },
-            { color: "#009688", logo: "logo_4.png" },
-            { color: "#EEE", logo: "" }
-        ]
-    }
+        { color: "#ba021d", logo: images.logo.logo_1 },
+        { color: "#ffc107", logo: images.logo.logo_2 },
+        { color: "#00bcd4", logo: images.logo.logo_3 },
+        { color: "#009688", logo: images.logo.logo_4 },
+        { color: "#EEE", logo: images.logo.logo_1 },
+        ],
+    },
 };
-
+  
 export default MODE;
