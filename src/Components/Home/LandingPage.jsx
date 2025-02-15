@@ -4,6 +4,7 @@ import VerticalSocialItem from '../ui/Social/SocialVerticalItem'
 import ToggleSetting from '../ui/Settings/ToggleSetting'
 import HomeImageWebp from './../../assets/images/Home/IMG-2.webp'
 
+
 export default function LandingPage(){
     return <>
         <div className={classes.landing_page}>

@@ -1,0 +1,32 @@
+.contactList{
+    margin: 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    position: relative;
+}
+
+.contactList li a{
+    background-color: var(--color-overlay);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: .5s;
+}
+.contactList li a:hover,
+.contactList li a:focus{
+    opacity: .5;
+}
+.contactList li a::after{
+    content: '';
+    height: 0;
+    width: 0;
+    border: 10px solid;
+    border-color: transparent transparent var(--color-overlay) transparent;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}

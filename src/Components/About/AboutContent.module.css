@@ -1,0 +1,123 @@
+/* Start About Content */
+.content_about{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+    cursor: default;
+    overflow: hidden;
+}
+.content_about .left{
+    width: 40%;
+    height: inherit;
+    background: url(../../assets/images/About/IMG-3.jpg)  50% 70%;
+    background-size: cover;
+}
+.content_about .right{
+    width: 60%;
+    height: 100%;
+    padding: 40px 80px;
+    line-height: 2;
+}
+.right .question{
+    color: var(--color-secondary);
+    font-size: 18px;
+}
+.right h1{
+    font-size: 30px;
+}
+.right .answer{
+    letter-spacing: 1px;
+    color: #777;
+}
+.right .contactList{
+    margin: 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    position: relative;
+}
+
+.contactList li i{
+    background-color: var(--color-overlay);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: .5s;
+}
+.contactList li i:hover,
+.contactList li i:focus{
+    opacity: .5;
+}
+.contactList li i::after{
+    content: '';
+    height: 0;
+    width: 0;
+    border: 10px solid;
+    border-color: transparent transparent var(--color-overlay) transparent;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.export{
+    text-align: center;
+}
+.export a{
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.btn_primary{
+    background-color: var(--color-secondary);
+    transition: .5s;
+}
+.btn_primary:hover,
+.btn_primary:focus{
+    opacity: .5;
+}
+/* End About Content */
+
+@media screen and (max-width:1200px) {
+    .content_about .right{
+        padding: 20px;
+    }
+}
+@media screen and (max-width:767px) {
+    .content_about{
+        display: block;
+    }
+    .content_about .left{
+        height: 40vh;
+        width: 100%;
+        background-position:50% 30%;
+    }
+    .content_about .right{
+        padding: 10px;
+        width: 100%;
+    }
+    .right .answer{
+        text-align: justify;
+        font-size: 13px;
+    }
+    .right h1{
+        font-size: 16px;
+        text-align: center;
+    }
+    .right .question{
+        text-align: center;
+    }
+    .right .question{
+        font-size: 12px;
+    }
+    .services_box{
+        padding: 25px 0;
+    }
+    .services_content .service{
+        width: 100%;
+        padding: 20px;
+    }
+}

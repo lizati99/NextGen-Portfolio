@@ -1,0 +1,7 @@
+.close_box{
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    cursor: pointer;
+    z-index: 1;
+}

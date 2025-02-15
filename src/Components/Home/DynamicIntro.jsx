@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import classes from './DynamicIntro.module.css'
-import SolarSystem from './../ui/SolarSystem/SolarSystem' 
+
 
 export default function DynamicIntro(){
     const roleList = ['Web', 'Frontend', 'Backend', 'Fullstack'];
@@ -47,8 +47,6 @@ export default function DynamicIntro(){
         }, [charIndex, isDeleting, currentRole]);
 
     return <>
-        <SolarSystem />
-
         <div className={classes.intro_text} id="role-container">
             <h1>Lizati Mohammed</h1>
             <p>I'm a <span className={classes.role}>{currentRole}</span> Developer</p>

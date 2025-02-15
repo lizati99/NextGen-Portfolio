@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import classes from "./NavbarMobile.module.css";
 import { Link } from "react-router-dom"; 
-import { Home, Search, PieChart, Clock, User } from "lucide-react";
+import { 
+  Home as HomeIcon,
+  User as AboutMeIcon, 
+  Clock as ResumeIcon,
+  Mail as ContactIcon, 
+  PieChart as PortfolioIcon,
+} from "lucide-react";
 import { useLocation } from "react-router-dom";
 import OverlayEffect from "../../ui/Overlay/OverlayEffect";
 
@@ -22,11 +28,11 @@ export default function NavbarMobile() {
 
   const displayNavLink = () => {
     const linkList = [
-      { icon: <Home size={20} />,label: "Home", path: "/"},
-      { icon: <Search size={20} />,label: "About", path: "/About"},
-      { icon: <PieChart size={20} />,label: "Resume", path: "/Resume"},
-      { icon: <Clock size={20} />,label: "Portfolio", path: "/Portfolio"},
-      { icon: <User size={20} />,label: "Contact", path: "/Contact"}
+      { icon: <HomeIcon size={20} />,label: "Home", path: "/"},
+      { icon: <AboutMeIcon size={20} />,label: "About", path: "/About"},
+      { icon: <ResumeIcon size={20} />,label: "Resume", path: "/Resume"},
+      { icon: <PortfolioIcon size={20} />,label: "Portfolio", path: "/Portfolio"},
+      { icon: <ContactIcon size={20} />,label: "Contact", path: "/Contact"}
     ];
 
     return linkList.map((link, index) => (

@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '@fontsource/audiowide';
 import { ThemeProvider } from './Context/ThemeContext';
+import Testimonial from './Components/ui/Testimonial/Testimonial';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
