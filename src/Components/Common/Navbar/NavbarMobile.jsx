@@ -36,7 +36,7 @@ export default function NavbarMobile() {
     ];
 
     return linkList.map((link, index) => (
-      <NavItem key={index} path={link.path} icon={link.icon} label={link.label} isActive={activeItem===link.label.toLowerCase() || activeLink===link.path} onClick={() => handleClick(link.path, link.label)} />
+      <NavItem key={index} path={link.path} icon={link.icon} label={link.label} isActive={activeLink===link.path} onClick={() => handleClick(link.path, link.label)} />
     ));
   };
   console.log(activeItem);

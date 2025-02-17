@@ -12,7 +12,6 @@ export default function AboutPage(){
                 <AboutContent />
                 {/* Service Section */}
                 <ServiceWorker />
-                <Testimonial />
             </div>
         </div>
     </>

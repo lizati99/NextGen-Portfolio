@@ -5,7 +5,7 @@ import classes from './SocialVerticalItem.module.css'
 
 export default function SocialVerticalItem(){
     return <>
-        <ul className={classes.contactList}>
+        <ul className={classes.social}>
             <li><Link href="#"><FontAwesomeIcon icon={faFacebook} /></Link></li>
             <li><Link href=""><FontAwesomeIcon icon={faWhatsapp} /></Link></li>
             <li><Link href="#"><FontAwesomeIcon icon={faLinkedin} /></Link></li>

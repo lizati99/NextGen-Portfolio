@@ -1,8 +1,8 @@
 import classes from './LandingPage.module.css'
 import DynamicIntro from './DynamicIntro'
-import VerticalSocialItem from '../ui/Social/SocialVerticalItem'
 import ToggleSetting from '../ui/Settings/ToggleSetting'
 import HomeImageWebp from './../../assets/images/Home/IMG-2.webp'
+import SocialVerticalItem from '../ui/Social/SocialVerticalItem'
 
 
 export default function LandingPage(){
@@ -12,7 +12,7 @@ export default function LandingPage(){
                 <img src={HomeImageWebp} loading="lazy" alt="HomePhoto" />
             </div>
             <DynamicIntro />
-            <VerticalSocialItem />
+            <SocialVerticalItem />
             <ToggleSetting />
         </div>
     </>
