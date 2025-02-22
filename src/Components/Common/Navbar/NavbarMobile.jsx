@@ -9,21 +9,17 @@ import {
   PieChart as PortfolioIcon,
 } from "lucide-react";
 import { useLocation } from "react-router-dom";
-import OverlayEffect from "../../ui/Overlay/OverlayEffect";
 
 export default function NavbarMobile() {
-  const [activeItem, setActiveItem]=useState("home");
-  const [activeLink, setActiveLink] = useState("/");
-  const [isShowOverlay, setIsShowOverlay] = useState(false);
+  const [activeLink, setActiveLink] = useState();
   const location = useLocation();
 
   useEffect(() => {
     setActiveLink(location.pathname);
 }, [location]);
-  const handleClick = (path, label) => {
+
+  const handleClick = (path) => {
     setActiveLink(path);
-    // setIsShowOverlay(path !== "/");
-    setActiveItem(label.toLowerCase())
   };
 
   const displayNavLink = () => {
@@ -39,10 +35,8 @@ export default function NavbarMobile() {
       <NavItem key={index} path={link.path} icon={link.icon} label={link.label} isActive={activeLink===link.path} onClick={() => handleClick(link.path, link.label)} />
     ));
   };
-  console.log(activeItem);
   return (
     <>
-      <OverlayEffect isShow={isShowOverlay} />
       <div className={classes.navbar}>
         {displayNavLink()}
       </div>

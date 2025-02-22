@@ -15,7 +15,6 @@ export default function Navbar() {
     const { colorData } = useContext(ThemeContext);
     const [activeLink, setActiveLink] = useState("/");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isShowOverlay, setIsShowOverlay] = useState(false);
     const location = useLocation();
 
 
@@ -31,7 +30,6 @@ export default function Navbar() {
     const handleClick = (path) => {
         setActiveLink(path);
         setIsMenuOpen(false);
-        setIsShowOverlay(path !== "/");
     };
 
     const displayNavLink = () => {
@@ -60,7 +58,6 @@ export default function Navbar() {
     };
     return (
         <>
-            <OverlayEffect isShow={isShowOverlay} />
             { activeLink==="/" ? (
                 <nav className={`${classes.navbar}`}>
                     <div className="container">
@@ -72,11 +69,6 @@ export default function Navbar() {
                                 <li className={classes.logo_link}>
                                     <Link to="/" onClick={() => handleClick("/")} aria-label="Home">
                                         <img src={icon1} width="40" alt="navbar icon" />
-                                    </Link>
-                                </li>
-                                <li className={`${classes.close_link} ${isShowOverlay ? classes.show : ""}`}>
-                                    <Link to="/" onClick={() => handleClick("/")} aria-label="Home">
-                                        <FontAwesomeIcon icon={faAngleLeft} />
                                     </Link>
                                 </li>
                                 {displayNavLink()}

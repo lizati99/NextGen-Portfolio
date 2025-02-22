@@ -26,6 +26,7 @@ export const ThemeProvider = ({ children }) => {
     root.style.setProperty("--color-bg", themeColors.backgroundColor);
     root.style.setProperty("--color-text", themeColors.textColor);
     root.style.setProperty("--color-overlay", themeColors.overlayColor);
+    root.style.setProperty("--color-third", themeColors.thirdColor);
 
     localStorage.setItem("mode", JSON.stringify(isDarkMode));
 

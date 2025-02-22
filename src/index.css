@@ -18,6 +18,11 @@ code {
   --color-secondary:#009688;
   --color-overlay:#222;
 } */
+
+:root{
+  --font-primary: "Audiowide", sans-serif;
+  --font-secondary: "Exo 2", sans-serif;
+}
 ::-webkit-scrollbar{
   width: 10px;
 }
@@ -34,7 +39,8 @@ code {
   text-decoration: none;
   list-style: none;
   -webkit-tap-highlight-color: transparent;
-  font-family: 'Audiowide';
+  font-family: var(--font-primary);
+  font-weight: 600;
   color: var(--color-text);
   outline: none;
 }
@@ -62,6 +68,7 @@ body{
   padding: 80px 0;
   animation: boxOpacity 1s 1;
   transition: .5s;
+  overflow: hidden;
 }
 @keyframes boxOpacity {
   0%,50%{opacity: 0;}

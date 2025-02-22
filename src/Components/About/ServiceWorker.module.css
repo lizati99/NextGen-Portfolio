@@ -9,21 +9,36 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 60px auto;
+    padding: 10px;
 }
 .services_content .service{
-    width: calc(100%/3 - 30px);
-    background-color: #111;
+    width: calc(100% / 3 - 30px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-third);
     padding: 40px;
-    border-radius: 2px;
+    border-radius: 10px;
     margin: 15px auto;
+    gap: 20px;
     cursor: default;
 }
 .service .service_icon{
+    width: 30%;
     padding: 10px;
     text-align: center;
 }
+.service_icon img{
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+}
+
+.service_body{
+    width: 70%;
+}
 .service_body h3{
-    margin: 15px auto;
+    margin-bottom: 15px;
     text-align: center;
 }
 .service_body h3 span{
@@ -31,8 +46,8 @@
 }
 .service_body p{
     text-align: justify;
-    font-size: 14px;
-    font-family:'Poppins';
+    font-size: clamp(12px, 1vw, 16px);
+    font-family: var(--font-secondary);
     color: #9f9f9f;
 }
 

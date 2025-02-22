@@ -48,8 +48,15 @@ export default function DynamicIntro(){
 
     return <>
         <div className={classes.intro_text} id="role-container">
-            <h1>Lizati Mohammed</h1>
-            <p>I'm a <span className={classes.role}>{currentRole}</span> Developer</p>
+            <h1>
+                <span className={classes.role}>Lizati </span>
+                Mohammed
+            </h1>
+            <p>
+                I'm a 
+                <span className={classes.role}> {currentRole} </span>
+                Developer
+            </p>
         </div>
         <div className={classes.row_left}></div>
         <div className={classes.row_right}></div>

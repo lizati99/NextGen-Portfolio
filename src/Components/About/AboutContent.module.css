@@ -29,6 +29,7 @@
     font-size: 30px;
 }
 .right .answer{
+    font-family: var(--font-secondary);
     letter-spacing: 1px;
     color: #777;
 }

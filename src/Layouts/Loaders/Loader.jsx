@@ -1,4 +1,3 @@
-import SolarSystem from '../../Components/ui/SolarSystem/SolarSystem';
 import classes from './Loader.module.css';
 const Loader = () => {
     return (

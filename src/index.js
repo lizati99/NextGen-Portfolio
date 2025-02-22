@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '@fontsource/audiowide';
+import "@fontsource/exo-2"; 
+import "@fontsource/exo-2/200.css";
+import "@fontsource/exo-2/600.css";
+import "@fontsource/exo-2/800.css";
+import './index.css';
 import { ThemeProvider } from './Context/ThemeContext';
-import Testimonial from './Components/ui/Testimonial/Testimonial';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
