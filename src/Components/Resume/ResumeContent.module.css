@@ -1,7 +1,7 @@
 .resume_content{
     width: 100%;
     height: auto;
-    margin: 100px auto;
+    margin: 60px auto;
     display: flex;
     position: relative;
 }
@@ -11,23 +11,23 @@
     width: 50%;
     height: auto;
     position: relative;
-    padding: 50px 40px;
+    padding: 20px 40px;
 }
 .education::after,
 .experience::after{
     content: '';
-    height: 70%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    height: 80%;
     width: 3px;
     background-color: var(--color-secondary);
-    position: absolute;
-    top: 50px;
-    left: 0;
 }
 .header{
-    position: absolute;
-    top: -50px;
-    left: 40px;
+    position: relative;
+    width: 100%;
     font-size: 30px;
+    margin-bottom: 20px;
 }
 
 .square_parent{
@@ -35,7 +35,7 @@
     height: 20px;
     position: absolute;
     top: 50%;
-    left: -40px;
+    left: -48px;
     transform: translateY(-50%) rotate(45deg);
     background-color: var(--color-secondary);
     display: flex;

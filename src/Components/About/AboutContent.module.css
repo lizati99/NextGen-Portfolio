@@ -2,7 +2,7 @@
 .content_about{
     width: 100%;
     height: auto;
-    margin-top: 50px;
+    margin: 60px auto;
     display: flex;
     cursor: default;
     overflow: hidden;
@@ -10,7 +10,6 @@
 .content_about .left{
     width: 40%;
     height: inherit;
-    /* background: url(../../assets/images/About/IMG-3.jpg)  50% 70%; */
     background: url(../../assets/images/About/IMG_9347.JPG) 10%;
     background-size: cover;
     border-radius: 40px;
