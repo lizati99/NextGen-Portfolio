@@ -1,0 +1,76 @@
+.card .year{
+    position: absolute;
+    top: 10px;
+    left: -57px;
+    background-color: var(--color-secondary);
+    border-radius: 2px;
+    padding: 2px;
+    font-size: 14px;
+    font-family: var(--font-secondary);
+    z-index: 1;
+}
+
+.year::after{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: var(--color-bg);
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    background-color: var(--color-overlay);
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+.card::after{
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    border-color: transparent var(--color-overlay) transparent transparent;
+    position: absolute;
+    top: 10px;
+    left: -18px;
+}
+.card h3{
+    font-family: var(--font-secondary);
+    font-weight: 500;
+}
+.card .date{
+    display: block;
+    color: #777;
+    font-size: 12px;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    text-align: end;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.card .text{
+    color: #999;
+    text-align: justify;
+    font-size: clamp(12px, 1vw, 16px);
+    font-family: var(--font-secondary);
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width:767px) {
+    .card{
+        padding: 15px;
+        margin-bottom: 35px;
+    }
+    .card .year{
+        top: -33px;
+        left: -40px;
+    }
+    .card h3{
+        font-size: 15px;
+    }
+}

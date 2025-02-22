@@ -5,27 +5,7 @@
     display: flex;
     position: relative;
 }
-.education_item .year{
-    position: absolute;
-    top: 10px;
-    left: -57px;
-    background-color: var(--color-secondary);
-    border-radius: 2px;
-    padding: 2px;
-    font-size: 14px;
-    font-family: var(--font-secondary);
-    z-index: 1;
-}
 
-.year::after{
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: 0;
-    height: 5px;
-    width: 100%;
-    background-color: var(--color-bg);
-}
 .resume_content .education,
 .resume_content .experience{
     width: 50%;
@@ -43,49 +23,33 @@
     top: 50px;
     left: 0;
 }
-.education_title{
+.header{
     position: absolute;
     top: -50px;
     left: 40px;
     font-size: 30px;
 }
-.education_item {
-    width: 100%;
-    height: auto;
-    background-color: var(--color-overlay);
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    position: relative;
-}
-.education_item::after{
-    content: '';
-    width: 0;
-    height: 0;
-    border: 10px solid;
-    border-color: transparent var(--color-overlay) transparent transparent;
+
+.square_parent{
+    aspect-ratio: 1/1;
+    height: 20px;
     position: absolute;
-    top: 10px;
-    left: -18px;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
 }
-.education_item h3{
-    font-family: var(--font-secondary);
-    font-weight: 500;
+.square_child{
+    aspect-ratio: 1/1;
+    height: 12px;
+    background-color: var(--color-bg);
+    border-radius: 5px;
 }
-.education_item .date{
-    display: block;
-    font-size: 12px;
-    font-family: var(--font-secondary);
-    margin-bottom: 10px;
-    color: #777;
-}
-.education_item .text{
-    color: #999;
-    text-align: justify;
-    font-size: 13px;
-    font-family: 'Poppins';
-    font-weight: bolder;
-}
+
 /* skills section */
 .skills{
     width: 100%;
@@ -138,7 +102,7 @@
         display: block;
         margin: 60px auto;
     }
-    .education_title{
+    .header{
         font-size: 25px;
         top: -25px;
     }
@@ -151,16 +115,5 @@
     .education::after,
     .experience::after{
         left: 14px;
-    }
-    .education_item{
-        padding: 15px;
-        margin-bottom: 35px;
-    }
-    .education_item .year{
-        top: -33px;
-        left: -40px;
-    }
-    .education_item h3{
-        font-size: 15px;
     }
 }
