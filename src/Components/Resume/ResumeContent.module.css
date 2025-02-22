@@ -1,0 +1,166 @@
+.resume_content{
+    width: 100%;
+    height: auto;
+    margin: 100px auto;
+    display: flex;
+    position: relative;
+}
+.education_item .year{
+    position: absolute;
+    top: 10px;
+    left: -57px;
+    background-color: var(--color-secondary);
+    border-radius: 2px;
+    padding: 2px;
+    font-size: 14px;
+    font-family: var(--font-secondary);
+    z-index: 1;
+}
+
+.year::after{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: var(--color-bg);
+}
+.resume_content .education,
+.resume_content .experience{
+    width: 50%;
+    height: auto;
+    position: relative;
+    padding: 50px 40px;
+}
+.education::after,
+.experience::after{
+    content: '';
+    height: 70%;
+    width: 3px;
+    background-color: var(--color-secondary);
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+.education_title{
+    position: absolute;
+    top: -50px;
+    left: 40px;
+    font-size: 30px;
+}
+.education_item {
+    width: 100%;
+    height: auto;
+    background-color: var(--color-overlay);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+.education_item::after{
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    border-color: transparent var(--color-overlay) transparent transparent;
+    position: absolute;
+    top: 10px;
+    left: -18px;
+}
+.education_item h3{
+    font-family: var(--font-secondary);
+    font-weight: 500;
+}
+.education_item .date{
+    display: block;
+    font-size: 12px;
+    font-family: var(--font-secondary);
+    margin-bottom: 10px;
+    color: #777;
+}
+.education_item .text{
+    color: #999;
+    text-align: justify;
+    font-size: 13px;
+    font-family: 'Poppins';
+    font-weight: bolder;
+}
+/* skills section */
+.skills{
+    width: 100%;
+    height: auto;
+    margin: 80px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.skill{
+    width: 45%;
+    margin: 20px auto;
+    position: relative;
+}
+.skill_head{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.skill_head h4{
+    font-size: 14px;
+    font-weight: normal;
+}
+.skill-head .pc{
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--color-secondary);
+}
+.skills .range{
+    height: 15px;
+    background-color: #777;
+    border-radius: 1px;
+    position: relative;
+    border-radius: 5px;
+}
+.skills .range span{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    border-radius: inherit;
+    transition: 4s;
+}
+/* End Resume Content */
+
+@media screen and (max-width:767px) {
+    .resume_content{
+        display: block;
+        margin: 60px auto;
+    }
+    .education_title{
+        font-size: 25px;
+        top: -25px;
+    }
+    .resume_content .education,
+    .resume_content .experience{
+        width: 100%;
+        padding: 40px 0;
+        padding-left: 30px;    
+    }
+    .education::after,
+    .experience::after{
+        left: 14px;
+    }
+    .education_item{
+        padding: 15px;
+        margin-bottom: 35px;
+    }
+    .education_item .year{
+        top: -33px;
+        left: -40px;
+    }
+    .education_item h3{
+        font-size: 15px;
+    }
+}

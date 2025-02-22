@@ -7,12 +7,9 @@ export default function AboutPage(){
     return <>
         <div className="box">
             <Close />
-            <div>
-                <MainHeading smallText="know" mainText="About" highlightedText="Me"/>
-                <AboutContent />
-                {/* Service Section */}
-                <ServiceWorker />
-            </div>
+            <MainHeading smallText="know" mainText="About" highlightedText="Me"/>
+            <AboutContent />
+            <ServiceWorker />
         </div>
     </>
 }

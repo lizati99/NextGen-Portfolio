@@ -39,7 +39,7 @@ const assignIcons = (index) => ({
 const MODE = {
     secondaryColor: "#009688",
     light: {
-        backgroundColor: "#EEE",
+        backgroundColor: "#F9F9F9",
         textColor: "#000",
         overlayColor: "#AAA",
         thirdColor: "#FFF",
@@ -54,7 +54,7 @@ const MODE = {
     },
     dark: {
         backgroundColor: "#000",
-        textColor: "#EEE",
+        textColor: "#F9F9F9",
         overlayColor: "#222",
         thirdColor: "#111",
         logo: "",

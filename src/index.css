@@ -68,7 +68,6 @@ body{
   padding: 80px 0;
   animation: boxOpacity 1s 1;
   transition: .5s;
-  overflow: hidden;
 }
 @keyframes boxOpacity {
   0%,50%{opacity: 0;}
