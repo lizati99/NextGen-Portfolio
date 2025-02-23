@@ -1,0 +1,153 @@
+/* PortfolioContent.module.css */
+
+.port_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.897);
+    z-index: 1001;
+}
+
+.port_overlay .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: auto;
+    padding: 40px;
+    background-color: var(--color-overlay);
+    border-radius: 3px;
+}
+
+.popup h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.popup h2 span {
+    color: var(--color-secondary);
+}
+
+.close_popup {
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    padding: 10px 15px;
+    background-color: #777;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.close_popup:hover {
+    background-color: var(--color-secondary);
+}
+
+.popup_img {
+    height: 60vh;
+    width: 100%;
+    overflow: scroll;
+    background-size: cover;
+}
+
+.portfolio_content {
+    margin: 80px auto;
+    width: 100%;
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pagination li.active {
+    color: var(--color-secondary);
+    border-bottom: var(--color-secondary) 2px solid;
+    opacity: 1;
+}
+
+.pagination li {
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 5px;
+    border-radius: 3px;
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.pagination li:hover {
+    opacity: 1;
+}
+
+.works {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.first_work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 40px);
+    height: calc(64px + 20vh);
+    margin: 20px auto;
+    background-color: var(--color-overlay);
+    overflow: hidden;
+    cursor: default;
+}
+
+.work {
+    margin: 20px auto;
+    width: calc(100% / 3 - 40px);
+    border-radius: 3px;
+    background-color: #111;
+    overflow: hidden;
+    position: relative;
+    padding: 5px;
+    cursor: default;
+    transition: 0.5s;
+}
+
+.work:hover {
+    transform: scale(1.15);
+}
+
+.work_head {
+    width: 100%;
+    height: 20vh;
+    transition: 2s;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.work_head img {
+    width: 100%;
+    border-radius: inherit;
+    cursor: pointer;
+}
+
+.work_body {
+    padding: 20px 0;
+    font-size: 14px;
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+.work_body span {
+    color: var(--color-secondary);
+}
+
+.work_role {
+    display: flex;
+    justify-content: end;
+}
+
+.work_role small {
+    font-size: 12px;
+    opacity: 0.3;
+}
