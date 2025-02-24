@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Footer from "../Components/Common/Footer/Footer";
 import Navbar from "../Components/Common/Navbar/Navbar";
 import OverlayEffect from "../Components/ui/Overlay/OverlayEffect";
+import Settings from "../Components/ui/Settings/Settings";
 
 export default function PublicLayouts() {
   const location = useLocation();
@@ -16,7 +17,8 @@ export default function PublicLayouts() {
       <OverlayEffect isShow={isShowOverlay} />
       <Navbar />
       <div className={`container`}>
-          <Outlet />
+        <Settings />
+        <Outlet />
       </div>
       <Footer />
     </>

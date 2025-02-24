@@ -1,0 +1,43 @@
+.settings {
+  position: fixed;
+  top: 50%;
+  right: 100px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.settingsButton {
+  background-color: var(--color-overlay);
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.settingsButton:hover {
+  background-color: var(--color-secondary);
+}
+
+.settingsButton svg{
+    transform: rotate(0deg);
+    animation: rotated 2s ease-in-out infinite;
+}
+
+@keyframes rotated {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.settingsPanel {
+  position: fixed;
+  top: 2px;
+  right: 45px;
+  background: var(--color-overlay);
+  padding: 16px;
+  border-radius: 8px;
+  width: 200px;
+}
