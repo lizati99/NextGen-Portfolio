@@ -1,3 +1,4 @@
+import Square from './../ui/Square/Square'
 import ResumeCard from './ResumeCard';
 import classes from './ResumeContent.module.css';
 
@@ -78,10 +79,8 @@ export default function ResumeContent() {
         <div className={classes.resume_content}>
             <div className={classes.education}>
                 <div className={classes.header}>
+                    <Square />
                     Education
-                    <div className={classes.square_parent}>
-                        <div className={classes.square_child}></div>
-                    </div>
                 </div>
                 {educationData.map((item, index) => (
                     <ResumeCard key={index} {...item} />
@@ -89,10 +88,8 @@ export default function ResumeContent() {
             </div>
             <div className={classes.experience}>
                 <div className={classes.header}>
+                    <Square />
                     Experience
-                    <div className={classes.square_parent}>
-                        <div className={classes.square_child}></div>
-                    </div>
                 </div>
                 {experienceData.map((item, index) => (
                     <ResumeCard key={index} {...item} />
