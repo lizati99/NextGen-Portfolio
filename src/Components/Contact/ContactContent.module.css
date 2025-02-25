@@ -3,37 +3,30 @@
     height: 90vh;
     max-height: 100vh;
     margin-top: 60px;
-    display: flex;
-    flex-wrap: wrap;
     position: relative;
 }
-.contact_content .start {
-    width: 30%;
-    height: 100%;
+
+.end {
+    /* width: 70%;
+    height: 100%; */
 }
-.start .contact_info {
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-wrap: wrap;
+
+.contact_info {
     width: 40%;
-    height: 60%;
-    z-index: 1002;
+    height: auto;
+    margin-inline: auto;
 }
 .contact_info .info {
-    width: calc(50% - 4%);
-    height: calc(50% - 4%);
-    background-color: #222;
-    margin: 2%;
+    background-color: var(--color-overlay);
     border-radius: 5px;
     overflow: hidden;
     padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .info .info_icon {
-    width: 100%;
-    height: auto;
+    aspect-ratio: 1;
     text-align: center;
 }
 .info_icon i {
@@ -41,24 +34,29 @@
 }
 .info h4 {
     text-align: center;
-    margin-top: 10px;
     margin-bottom: 10px;
     color: var(--color_secondary);
 }
 .info p {
-    font-family: 'Poppins';
+    font-family: var(--font-secondary);
     font-size: 12px;
     text-transform: capitalize;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
 }
-.contact_content .end {
-    width: 70%;
-    height: 100%;
-    background-color: #111;
+
+.start {
+    background-color: var(--color-third);
     position: relative;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
 }
+
 .nv_message {
     display: none;
     position: absolute;
@@ -78,73 +76,126 @@
 .nv_message a:hover {
     opacity: 1;
 }
-form {
+
+/* start header section */
+.header_section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 40px;
+}
+
+.header_section h1 {
+    font-size: 28px;
+}
+
+.header_section h1 span {
+    color: var(--color-secondary);
+}
+
+.header_section .form_description {
+    font-size: 14px;
+    font-family: var(--font-secondary);
+}
+
+/* end header section */
+
+/* start contact form */
+.contact_form {
     display: none;
-    position: absolute;
-    right: 8%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 70%;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 40px;
+    background-color: var(--color-third);
+    border-radius: 8px;
 }
-form h1 span {
-    color: var(--color_secondary);
+
+.contact_form h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 5px;
 }
-form input,
-form textarea,
-.input_group input {
+
+.contact_form h1 span {
+    color: var(--color-secondary);
+}
+
+.contact_form input,
+.contact_form textarea {
     display: block;
     width: 100%;
     padding: 10px 15px;
-    background-color: #222;
-    font-family: 'Poppins';
-    font-size: 12px;
+    background-color: var(--color-overlay);
+    font-family: var(--font-secondary);
+    font-size: clamp(10px, 2vw, 14px);
     outline: none;
     border: 1px solid #333;
     margin: 10px 0;
     opacity: .5;
     transition: .5s;
 }
-form textarea {
-    max-height: 130px;
+
+.contact_form textarea {
+    max-height: 150px;
+    resize: none;
     margin-top: 20px;
 }
-form .input_group {
+
+.contact_form .form_group {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 10px;
 }
-.input_group input {
+
+.form_group input {
     width: calc(50% - 10px);
 }
-form .button_group {
+
+.contact_form .button_group {
     text-align: end;
 }
-.send_message {
+
+.send_button {
     all: unset;
-    background-color: var(--color_secondary);
+    background-color: var(--color-secondary);
     padding: 10px;
     opacity: .5;
     cursor: pointer;
     border-radius: 2px;
     transition: .5s;
 }
-.send_message:hover,
+
+.send_button:hover,
 form input:hover,
-form textarea:hover,
-.input_group input:hover {
+form textarea:hover{
     opacity: 1;
 }
+
+.error_message {
+    color: red;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+/* end contact form */
 
 @media screen and (max-width: 991px) {
     .contact_content {
         display: block;
         height: auto;
     }
-    .contact_content .start {
+    .start {
         width: 100%;
         height: auto;
     }
-    .start .contact_info {
+    .contact_info {
         position: relative;
         transform: none;
         display: flex;
@@ -168,11 +219,11 @@ form textarea:hover,
     .info h4, .info p {
         text-align: start;
     }
-    .contact_content .end {
+    .end {
         width: 100%;
         height: 75vh;
     }
-    .end form {
+    .contact_form {
         position: relative;
         transform: none;
         width: 70%;
@@ -181,10 +232,10 @@ form textarea:hover,
         top: unset;
         padding: 50px 0;
     }
-    form .button_group {
+    .contact_form .button_group {
         text-align: end;
     }
-    form .send_message {
+    .contact_form .send_message {
         float: unset;
     }
 }
