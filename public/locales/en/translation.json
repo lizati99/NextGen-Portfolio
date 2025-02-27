@@ -1,4 +1,13 @@
 {
+    "navbar":{
+        "links":{
+            "home":"Home",
+            "about":"About",
+            "resume":"Resume",
+            "portfolio":"Portfolio",
+            "contact":"Contact"
+        }
+    },
     "homePage":{
         "landing":{
             "lastName":"Lizati",
@@ -127,6 +136,11 @@
             }
         }, 
         "skillContent":{
+            "mainHeading":{
+                "smallText":"My level of knowledge",
+                "mainText":"My",
+                "highlightedText":"Skills"
+            },
             "content":{
                 "skills":[
                     { "name": "HTML", "percentage": 100 },

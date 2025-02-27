@@ -27,11 +27,15 @@ export default function Skills() {
     useEffect(() => {
         changeLanguage("en")
     }, []);
-    
+
     const skills = t('resumePage.skillContent.content.skills', {returnObjects:true} ); 
 
     return <>
-        <MainHeading smallText="My level of knowledge" mainText="My" highlightedText="Skills"/>
+        <MainHeading 
+            smallText={t('resumePage.skillContent.mainHeading.smallText')}
+            mainText={t('resumePage.skillContent.mainHeading.mainText')}
+            highlightedText={t('resumePage.skillContent.mainHeading.highlightedText')}
+        />
         <div className={classes.skills}>
             {skills.map((skill, index) => (
                 <Skill key={index} name={skill.name} percentage={skill.percentage} />

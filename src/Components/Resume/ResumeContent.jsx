@@ -16,9 +16,9 @@ export default function ResumeContent() {
     useEffect(()=>{
         changeLanguage("en");
     }, []);    
-    const educationData = t('resumePage.resumeContent.content.education', { returnObjects: true } )
-    const experienceData = t('resumePage.resumeContent.content.experience', { returnObjects: true } )
-
+    const educationData = t('resumePage.resumeContent.content.education', { returnObjects: true });
+    const experienceData = t('resumePage.resumeContent.content.experience', { returnObjects: true });
+    console.log(educationData);
     return <>
         <MainHeading 
             smallText={t('resumePage.resumeContent.mainHeading.smallText')} 

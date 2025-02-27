@@ -9,10 +9,21 @@ import {
   PieChart as PortfolioIcon,
 } from "lucide-react";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import "./../../../i18n";
 
 export default function NavbarMobile() {
   const [activeLink, setActiveLink] = useState();
   const location = useLocation();
+  const { t, i18n } = useTranslation();
+  
+  const changeLanguage = (lng) => {
+      i18n.changeLanguage(lng); 
+  };
+
+  useEffect(() => {
+      changeLanguage("en")
+  }, []);
 
   useEffect(() => {
     setActiveLink(location.pathname);
@@ -24,11 +35,11 @@ export default function NavbarMobile() {
 
   const displayNavLink = () => {
     const linkList = [
-      { icon: <HomeIcon size={20} />,label: "Home", path: "/"},
-      { icon: <AboutMeIcon size={20} />,label: "About", path: "/About"},
-      { icon: <ResumeIcon size={20} />,label: "Resume", path: "/Resume"},
-      { icon: <PortfolioIcon size={20} />,label: "Portfolio", path: "/Portfolio"},
-      { icon: <ContactIcon size={20} />,label: "Contact", path: "/Contact"}
+      { icon: <HomeIcon size={20} />,label: t('navbar.links.home'), path: "/"},
+      { icon: <AboutMeIcon size={20} />,label: t('navbar.links.about'), path: "/About"},
+      { icon: <ResumeIcon size={20} />,label: t('navbar.links.resume'), path: "/Resume"},
+      { icon: <PortfolioIcon size={20} />,label: t('navbar.links.portfolio'), path: "/Portfolio"},
+      { icon: <ContactIcon size={20} />,label: t('navbar.links.contact'), path: "/Contact"}
     ];
 
     return linkList.map((link, index) => (

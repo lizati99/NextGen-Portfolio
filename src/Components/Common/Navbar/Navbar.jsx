@@ -4,13 +4,22 @@ import homeIcon from "./../../../assets/images/Navbar/home (1).png"
 import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../../../Context/ThemeContext";
 import NavbarMobile from "./NavbarMobile";
+import { useTranslation } from 'react-i18next';
+import "./../../../i18n";
 
 export default function Navbar() {
     const { colorData } = useContext(ThemeContext);
     const [activeLink, setActiveLink] = useState("/");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation();
+    const { t, i18n } = useTranslation();
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng); 
+    };
 
+    useEffect(() => {
+        changeLanguage("en")
+    }, []);
 
     useEffect(() => {
         setActiveLink(location.pathname);
@@ -28,11 +37,11 @@ export default function Navbar() {
 
     const displayNavLink = () => {
         const linkList = [
-            { label: "Home", path: "/", icon: homeIcon },
-            { label: "About", path: "/About", icon: null },
-            { label: "Resume", path: "/Resume", icon: null },
-            { label: "Portfolio", path: "/Portfolio", icon: null },
-            { label: "Contact", path: "/Contact", icon: null },
+            { label: t('navbar.links.home'), path: "/", icon: homeIcon },
+            { label: t('navbar.links.about'), path: "/About", icon: null },
+            { label: t('navbar.links.resume'), path: "/Resume", icon: null },
+            { label: t('navbar.links.portfolio'), path: "/Portfolio", icon: null },
+            { label: t('navbar.links.contact'), path: "/Contact", icon: null },
         ];
 
         return linkList.map((link, key) => (
