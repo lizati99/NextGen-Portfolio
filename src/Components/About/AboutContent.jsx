@@ -18,6 +18,10 @@ export default function AboutContent(){
         i18n.changeLanguage(lng); 
     };
 
+    useEffect(()=>{
+        changeLanguage("en");
+    }, [])
+
     return <>
         <div className={classes.content_about}>
             <div className={classes.left}></div>
@@ -29,11 +33,11 @@ export default function AboutContent(){
                     {t("aboutPage.aboutContent.content.name")}
                 </h1>
                 <p className={classes.answer}>
-                    {t("aboutPage.aboutContent.content.answer", { years: currentAge.years, city: city, email:email, phone:phone})}
+                    {t("aboutPage.aboutContent.content.answer", { years: currentAge.years, city: city, country:country, email:email, phone:phone})}
                 </p>
                 <SocialHorizontalItem />
                 <div className={classes.export}>
-                    <a href="./Mohammed lizati Cv.pdf" className={classes.btn_primary}>Download CV</a>
+                    <a href="./Mohammed lizati Cv.pdf" className={classes.btn_primary}>{t('aboutPage.aboutContent.content.downloadLink')}</a>
                 </div>
             </div>
         </div>

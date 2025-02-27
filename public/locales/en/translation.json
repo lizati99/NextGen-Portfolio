@@ -18,7 +18,8 @@
             "content":{
                 "question":"Who am i ?",
                 "name":"I am Lizati Mohammed",
-                "answer":"a Fullstack developer, I am {years} years old from {city}, MA. I have an email {email} and my phone number is {phone}."
+                "answer":"a Fullstack developer, I am {{years}} years old from {{city}}, {{country}}. I have an email {{email}} and my phone number is {{phone}}.",
+                "downloadLink": "Download Cv"
             }
         },
         "serviceContent":{
