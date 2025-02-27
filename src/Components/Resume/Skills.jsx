@@ -1,5 +1,8 @@
 import MainHeading from '../Common/MainHeading/MainHeading';
 import classes from './Skills.module.css';
+import { useTranslation } from 'react-i18next';
+import "./../../i18n";
+import { useEffect } from 'react';
 
 function Skill({ name, percentage }) {
     return (
@@ -16,18 +19,16 @@ function Skill({ name, percentage }) {
 }
 
 export default function Skills() {
-    const skills = [
-        { name: 'HTML', percentage: 100 },
-        { name: 'CSS', percentage: 90 },
-        { name: 'SASS', percentage: 80 },
-        { name: 'JAVASCRIPT', percentage: 85 },
-        { name: 'TYPESCRIPT', percentage: 75 },
-        { name: 'REACT JS', percentage: 80 },
-        { name: 'PHP', percentage: 85 },
-        { name: 'LARAVEL', percentage: 80 },
-        { name: 'ASP.NET Core', percentage: 85 },
-        { name: 'SQL', percentage: 85 },
-    ];
+    const { t, i18n } = useTranslation();
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng); 
+    };
+
+    useEffect(() => {
+        changeLanguage("en")
+    }, []);
+    
+    const skills = t('resumePage.skillContent.content.skills', {returnObjects:true} ); 
 
     return <>
         <MainHeading smallText="My level of knowledge" mainText="My" highlightedText="Skills"/>

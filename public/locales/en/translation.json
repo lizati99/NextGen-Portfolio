@@ -125,6 +125,22 @@
                     }
                 ]
             }
+        }, 
+        "skillContent":{
+            "content":{
+                "skills":[
+                    { "name": "HTML", "percentage": 100 },
+                    { "name": "CSS", "percentage": 90 },
+                    { "name": "SASS", "percentage": 80 },
+                    { "name": "JAVASCRIPT", "percentage": 85 },
+                    { "name": "TYPESCRIPT", "percentage": 75 },
+                    { "name": "REACT JS", "percentage": 80 },
+                    { "name": "PHP", "percentage": 85 },
+                    { "name": "LARAVEL", "percentage": 80 },
+                    { "name": "ASP.NET Core", "percentage": 85 },
+                    { "name": "SQL", "percentage": 85 }
+                ]
+            }
         }
     }
 }
