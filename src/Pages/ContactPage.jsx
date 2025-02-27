@@ -5,7 +5,7 @@ import Close from "./../Components/ui/ClosePage/Close";
 
 export default function ContactPage(){
     return <>
-        <div class="box">
+        <div className="box">
             <Close />
             <ContactContent />
             <Testimonial />

@@ -2,7 +2,7 @@ import classes  from './ContactForm.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
-import "./../../../i18n";
+import "./../../i18n";
 
 export default function ContactForm(){
     const { t, i18n } = useTranslation();
