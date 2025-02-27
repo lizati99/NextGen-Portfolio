@@ -7,7 +7,6 @@ export default function ContactPage(){
     return <>
         <div class="box">
             <Close />
-            <MainHeading smallText="Feel free to contact me anytimes" mainText="Get" highlightedText="in Touch" />
             <ContactContent />
             <Testimonial />
         </div>

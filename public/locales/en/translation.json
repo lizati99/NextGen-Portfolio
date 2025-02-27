@@ -274,5 +274,26 @@
                 }
             }
         }
+    },
+    "contactPage":{
+        "contactContent":{
+            "mainHeading":{
+                "smallText":"Feel free to contact me anytimes",
+                "mainText":"Get",
+                "highlightedText":"in Touch"
+            },
+            "content":{
+                "title":"Contact",
+                "subject":"Us",
+                "description":"We would love to hear from you! Please fill out the form below."
+            }
+        },
+        "contactForm":{
+            "name":"Enter your Name",
+            "email":"Enter a valid email address",
+            "subject":"Enter your Subject",
+            "message":"Write your message here...",
+            "submit":"Send"
+        }
     }
 }
