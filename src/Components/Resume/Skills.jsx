@@ -1,3 +1,4 @@
+import MainHeading from '../Common/MainHeading/MainHeading';
 import classes from './Skills.module.css';
 
 function Skill({ name, percentage }) {
@@ -28,11 +29,12 @@ export default function Skills() {
         { name: 'SQL', percentage: 85 },
     ];
 
-    return (
+    return <>
+        <MainHeading smallText="My level of knowledge" mainText="My" highlightedText="Skills"/>
         <div className={classes.skills}>
             {skills.map((skill, index) => (
                 <Skill key={index} name={skill.name} percentage={skill.percentage} />
             ))}
         </div>
-    );
+    </>;
 }
