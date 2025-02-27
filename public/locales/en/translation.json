@@ -1,41 +1,46 @@
 {
-    "navbar":{
-        "links":{
-            "home":"Home",
-            "about":"About",
-            "resume":"Resume",
-            "portfolio":"Portfolio",
-            "contact":"Contact"
+    "navbar": {
+        "links": {
+            "home": "Home",
+            "about": "About",
+            "resume": "Resume",
+            "portfolio": "Portfolio",
+            "contact": "Contact"
         }
     },
-    "homePage":{
-        "landing":{
-            "lastName":"Lizati",
-            "firstName":"Mohammed",
-            "subject":"I'm a",
-            "roleList":["Web", "Frontend", "Backend", "Fullstack"],
-            "lastRole":"Developer"
+    "homePage": {
+        "landing": {
+            "lastName": "Lizati",
+            "firstName": "Mohammed",
+            "subject": "I'm a",
+            "roleList": [
+                "Web",
+                "Frontend",
+                "Backend",
+                "Fullstack"
+            ],
+            "lastRole": "Developer"
         }
     },
-    "aboutPage":{
-        "aboutContent":{
-            "mainHeading":{
-                "smallText":"know",
-                "mainText":"About",
-                "highlightedText":"Me"
+    "aboutPage": {
+        "aboutContent": {
+            "mainHeading": {
+                "smallText": "know",
+                "mainText": "About",
+                "highlightedText": "Me"
             },
-            "content":{
-                "question":"Who am i ?",
-                "name":"I am Lizati Mohammed",
-                "answer":"a Fullstack developer, I am {{years}} years old from {{city}}, {{country}}. I have an email {{email}} and my phone number is {{phone}}.",
+            "content": {
+                "question": "Who am i ?",
+                "name": "I am Lizati Mohammed",
+                "answer": "a Fullstack developer, I am {{years}} years old from {{city}}, {{country}}. I have an email {{email}} and my phone number is {{phone}}.",
                 "downloadLink": "Download Cv"
             }
         },
-        "serviceContent":{
-            "mainHeading":{
-                "smallText":"Services i offer to my clients",
-                "mainText":"My",
-                "highlightedText":"Services"
+        "serviceContent": {
+            "mainHeading": {
+                "smallText": "Services i offer to my clients",
+                "mainText": "My",
+                "highlightedText": "Services"
             },
             "services": {
                 "webDesign": {
@@ -65,15 +70,15 @@
             }
         }
     },
-    "resumePage":{
-        "resumeContent":{
-            "mainHeading":{
-                "smallText":"Here's",
-                "mainText":"My",
-                "highlightedText":"Resume"
+    "resumePage": {
+        "resumeContent": {
+            "mainHeading": {
+                "smallText": "Here's",
+                "mainText": "My",
+                "highlightedText": "Resume"
             },
-            "content":{
-                "titleEducation":"Education",
+            "content": {
+                "titleEducation": "Education",
                 "education": [
                     {
                         "year": "2024",
@@ -106,7 +111,7 @@
                         "description": "Baccalaureate in physical science (Charif El Edrissi High School)."
                     }
                 ],
-                "titleExperience":"Experience",
+                "titleExperience": "Experience",
                 "experience": [
                     {
                         "year": "2025",
@@ -134,26 +139,139 @@
                     }
                 ]
             }
-        }, 
-        "skillContent":{
-            "mainHeading":{
-                "smallText":"My level of knowledge",
-                "mainText":"My",
-                "highlightedText":"Skills"
+        },
+        "skillContent": {
+            "mainHeading": {
+                "smallText": "My level of knowledge",
+                "mainText": "My",
+                "highlightedText": "Skills"
             },
-            "content":{
-                "skills":[
-                    { "name": "HTML", "percentage": 100 },
-                    { "name": "CSS", "percentage": 90 },
-                    { "name": "SASS", "percentage": 80 },
-                    { "name": "JAVASCRIPT", "percentage": 85 },
-                    { "name": "TYPESCRIPT", "percentage": 75 },
-                    { "name": "REACT JS", "percentage": 80 },
-                    { "name": "PHP", "percentage": 85 },
-                    { "name": "LARAVEL", "percentage": 80 },
-                    { "name": "ASP.NET Core", "percentage": 85 },
-                    { "name": "SQL", "percentage": 85 }
+            "content": {
+                "skills": [
+                    {
+                        "name": "HTML",
+                        "percentage": 100
+                    },
+                    {
+                        "name": "CSS",
+                        "percentage": 90
+                    },
+                    {
+                        "name": "SASS",
+                        "percentage": 80
+                    },
+                    {
+                        "name": "JAVASCRIPT",
+                        "percentage": 85
+                    },
+                    {
+                        "name": "TYPESCRIPT",
+                        "percentage": 75
+                    },
+                    {
+                        "name": "REACT JS",
+                        "percentage": 80
+                    },
+                    {
+                        "name": "PHP",
+                        "percentage": 85
+                    },
+                    {
+                        "name": "LARAVEL",
+                        "percentage": 80
+                    },
+                    {
+                        "name": "ASP.NET Core",
+                        "percentage": 85
+                    },
+                    {
+                        "name": "SQL",
+                        "percentage": 85
+                    }
                 ]
+            }
+        }
+    },
+    "portfolioPage": {
+        "portfolioContent": {
+            "mainHeading": {
+                "smallText": "Some of my project work",
+                "mainText": "My",
+                "highlightedText": "Portfolio"
+            },
+            "content": {
+                "categories": [
+                    {
+                        "name": "all",
+                        "label": "All"
+                    },
+                    {
+                        "name": "desktop",
+                        "label": "Desktop"
+                    },
+                    {
+                        "name": "web",
+                        "label": "Web"
+                    },
+                    {
+                        "name": "landingPage",
+                        "label": "LandingPage"
+                    },
+                    {
+                        "name": "commerce",
+                        "label": "Commerce"
+                    },
+                    {
+                        "name": "frontend",
+                        "label": "Front-end"
+                    },
+                    {
+                        "name": "backend",
+                        "label": "Back-end"
+                    }
+                ],
+                "projects": {
+                    "quiz": {
+                        "title": "Quiz",
+                        "description": "Topic",
+                        "role": "Front-end"
+                    },
+                    "toolkit": {
+                        "title": "Toolkit",
+                        "description": "Portfolio",
+                        "role": "Front-end"
+                    },
+                    "tictactoe": {
+                        "title": "TicTacToe",
+                        "description": "Game",
+                        "role": "Front-end"
+                    },
+                    "movie": {
+                        "title": "Movie",
+                        "description": "Vault",
+                        "role": "Back-end"
+                    },
+                    "stock": {
+                        "title": "Stock",
+                        "description": "Track",
+                        "role": "Back-end"
+                    },
+                    "elearning": {
+                        "title": "E Learning",
+                        "description": "Learning",
+                        "role": "Back-end"
+                    },
+                    "investmarrakech": {
+                        "title": "InvestMarrakech",
+                        "description": "Sphere",
+                        "role": "Back-end"
+                    },
+                    "supply": {
+                        "title": "Supply",
+                        "description": "Sphere",
+                        "role": "Back-end"
+                    }
+                }
             }
         }
     }

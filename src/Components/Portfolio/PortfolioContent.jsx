@@ -1,48 +1,64 @@
 import classes from './PortfolioContent.module.css';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Work from './Work';
-import projectImg from './../../assets/images/Portfolio/projet_1.jpg'
+import projectImg from './../../assets/images/Portfolio/projet_1.jpg';
+import MainHeading from '../Common/MainHeading/MainHeading'
+import { useTranslation } from 'react-i18next';
+import "./../../i18n";
 
 export default function PortfolioContent() {
     const [selectedCategory, setSelectedCategory] = useState('all');
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng); 
+    };
+
+    useEffect(() => {
+        changeLanguage("en")
+    }, []);
 
     const works = [
-        { category: 'frontend', image: projectImg, title: 'Quiz', description: 'Topic', role: 'Front-end' },
-        { category: 'frontend', image: projectImg, title: 'Toolkit', description: 'Portfolio', role: 'Front-end' },
-        { category: 'frontend', image: projectImg, title: 'TicTacToe', description: 'Game', role: 'Front-end' },
-        { category: 'backend', image: projectImg, title: 'Movie', description: 'Vault', role: 'Back-end' },
-        { category: 'backend', image: projectImg, title: 'Stock', description: 'Track', role: 'Back-end' },
-        { category: 'backend', image: projectImg, title: 'E Learning', description: 'Learning', role: 'Back-end' },
-        { category: 'backend', image: projectImg, title: 'InvestMarrakech', description: 'Sphere', role: 'Back-end' },
-        { category: 'backend', image: projectImg, title: 'Supply', description: 'Sphere', role: 'Back-end' },
-    ];
+        { category: 'frontend', title: 'projects.quiz.title', description: 'projects.quiz.description', role: 'projects.quiz.role', image: projectImg },
+        { category: 'frontend', title: 'projects.toolkit.title', description: 'projects.toolkit.description', role: 'projects.toolkit.role', image: projectImg },
+        { category: 'frontend', title: 'projects.tictactoe.title', description: 'projects.tictactoe.description', role: 'projects.tictactoe.role', image: projectImg },
+        { category: 'backend', title: 'projects.movie.title', description: 'projects.movie.description', role: 'projects.movie.role', image: projectImg },
+        { category: 'backend', title: 'projects.stock.title', description: 'projects.stock.description', role: 'projects.stock.role', image: projectImg },
+        { category: 'backend', title: 'projects.elearning.title', description: 'projects.elearning.description', role: 'projects.elearning.role', image: projectImg },
+        { category: 'backend', title: 'projects.investmarrakech.title', description: 'projects.investmarrakech.description', role: 'projects.investmarrakech.role', image: projectImg },
+        { category: 'backend', title: 'projects.supply.title', description: 'projects.supply.description', role: 'projects.supply.role', image: projectImg },
+      ];
 
-    const filteredWorks = selectedCategory === 'all'
-        ? works
-        : works.filter(work => work.category === selectedCategory);
+    const translatedWorks = works.map(work => ({
+        ...work,
+        title: t("portfolioPage.portfolioContent.content."+work.title),
+        description: t("portfolioPage.portfolioContent.content."+work.description),
+        role: t("portfolioPage.portfolioContent.content."+work.role),
+    }));
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
     };
+    
+    const categories = t('portfolioPage.portfolioContent.content.categories', {returnObjects:true} );
+    
+    const filteredWorks = selectedCategory === categories[0].name
+        ? translatedWorks
+        : translatedWorks.filter(work => work.role === selectedCategory);
 
-    const categories = [
-        { name: 'all', label: 'All' },
-        { name: 'desktop', label: 'Desktop' },
-        { name: 'web', label: 'Web' },
-        { name: 'landingPage', label: 'LandingPage' },
-        { name: 'commerce', label: 'Commerce' },
-        { name: 'frontend', label: 'Front-end' },
-        { name: 'backend', label: 'Back-end' },
-    ];
-
-    return (
+    return <>
+        <MainHeading 
+            smallText={t('portfolioPage.portfolioContent.mainHeading.smallText')} 
+            mainText={t('portfolioPage.portfolioContent.mainHeading.mainText')} 
+            highlightedText={t('portfolioPage.portfolioContent.mainHeading.highlightedText')} 
+        />
         <div className={classes.portfolio_content}>
             <ul className={classes.pagination}>
                 {categories.map((category) => (
                     <li
                         key={category.name}
-                        className={`${selectedCategory === category.name ? classes.active : ''}`}
-                        onClick={() => handleCategoryClick(category.name)}
+                        className={`${selectedCategory === category.label ? classes.active : ''}`}
+                        onClick={() => handleCategoryClick(category.label)}
                     >
                         {category.label}
                     </li>
@@ -51,7 +67,7 @@ export default function PortfolioContent() {
 
             <div className={classes.works}>
                 <div className={classes.first_work}>
-                    <h1>{selectedCategory === 'all' ? 'All' : selectedCategory}</h1>
+                    <h1>{selectedCategory === categories[0].name ? categories[0].label : selectedCategory}</h1>
                 </div>
 
                 {filteredWorks.map((work, index) => (
@@ -59,5 +75,5 @@ export default function PortfolioContent() {
                 ))}
             </div>
         </div>
-    );
+    </>;
 }
