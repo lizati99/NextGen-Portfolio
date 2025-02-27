@@ -1,13 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import classes from "./Navbar.module.css";
-import logo5 from "./../../../assets/images/Navbar/logo_5.png";
-import icon1 from "./../../../assets/icons/icon_1.png";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import homeIcon from "./../../../assets/images/Navbar/home (1).png"
 import { useContext, useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import OverlayEffect from "../../ui/Overlay/OverlayEffect";
 import { ThemeContext } from "../../../Context/ThemeContext";
 import NavbarMobile from "./NavbarMobile";
 
@@ -66,29 +60,16 @@ export default function Navbar() {
                                 <img src={colorData.logo} width="40" alt="header logo" />
                             </div>
                             <ul className={`${classes.links} ${isMenuOpen ? classes.open : ""}`}>
-                                <li className={classes.logo_link}>
-                                    <Link to="/" onClick={() => handleClick("/")} aria-label="Home">
-                                        <img src={icon1} width="40" alt="navbar icon" />
-                                    </Link>
-                                </li>
                                 {displayNavLink()}
                             </ul>
-                            <button className={classes.toggle_menu} onClick={handleMenuToggle}>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </button>
                         </div>
                     </div>
                 </nav>
-            
             ) : (
                 <>
                     <NavbarMobile />
                 </>
             )}
-            
-
         </>
     );
 }

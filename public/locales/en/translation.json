@@ -1,0 +1,58 @@
+{
+    "homePage":{
+        "landing":{
+            "lastName":"Lizati",
+            "firstName":"Mohammed",
+            "subject":"I'm a",
+            "roleList":["Web", "Frontend", "Backend", "Fullstack"],
+            "lastRole":"Developer"
+        }
+    },
+    "aboutPage":{
+        "aboutContent":{
+            "mainHeading":{
+                "smallText":"know",
+                "mainText":"About",
+                "highlightedText":"Me"
+            },
+            "content":{
+                "question":"Who am i ?",
+                "name":"I am Lizati Mohammed",
+                "answer":"a Fullstack developer, I am {years} years old from {city}, MA. I have an email {email} and my phone number is {phone}."
+            }
+        },
+        "serviceContent":{
+            "mainHeading":{
+                "smallText":"Services i offer to my clients",
+                "mainText":"My",
+                "highlightedText":"Services"
+            },
+            "services": {
+                "webDesign": {
+                    "name": "Web Design",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta corrupti in reiciendis laborum quis labore dolores non omnis saepe nihil."
+                },
+                "webDevelopment": {
+                    "name": "Web Development",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta corrupti in reiciendis laborum quis labore dolores non omnis saepe nihil."
+                },
+                "mobileAppDevelopment": {
+                    "name": "Mobile App Development",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta corrupti in reiciendis laborum quis labore dolores non omnis saepe nihil."
+                },
+                "digitalMarketing": {
+                    "name": "Digital Marketing",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta corrupti in reiciendis laborum quis labore dolores non omnis saepe nihil."
+                },
+                "seoSem": {
+                    "name": "SEO & SEM",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta corrupti in reiciendis laborum quis labore dolores non omnis saepe nihil."
+                },
+                "brandingIdentity": {
+                    "name": "Branding & Identity",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta corrupti in reiciendis laborum quis labore dolores non omnis saepe nihil."
+                }
+            }
+        }
+    }
+}

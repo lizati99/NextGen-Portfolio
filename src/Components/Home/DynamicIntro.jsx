@@ -1,13 +1,23 @@
 import { useEffect, useState } from 'react';
 import classes from './DynamicIntro.module.css'
-
+import { useTranslation } from 'react-i18next';
+import "./../../i18n";
 
 export default function DynamicIntro(){
-    const roleList = ['Web', 'Frontend', 'Backend', 'Fullstack'];
+    const { t, i18n } = useTranslation();
+    const roleList = t('homePage.landing.roleList', { returnObjects: true });
     const [currentRole, setCurrentRole] = useState('');
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng); 
+    };
+
+    useEffect(() => {
+        changeLanguage("en")
+    }, []);
 
     const handleTypingEffect = () => {
         let text=roleList[currentRoleIndex];
@@ -49,13 +59,13 @@ export default function DynamicIntro(){
     return <>
         <div className={classes.intro_text} id="role-container">
             <h1>
-                <span className={classes.role}>Lizati </span>
-                Mohammed
+                <span className={classes.role}>{t('homePage.landing.lastName')} </span>
+                {t('homePage.landing.firstName')}
             </h1>
             <p>
-                I'm a 
+                {t('homePage.landing.subject')}
                 <span className={classes.role}> {currentRole} </span>
-                Developer
+                {t('homePage.landing.lastRole')}
             </p>
         </div>
         <div className={classes.row_left}></div>

@@ -1,0 +1,11 @@
+{
+    "homePage":{
+        "landing":{
+            "lastName":"الليزاطي",
+            "firstName":"محمد",
+            "subject":"مبرمج",
+            "roleList":["ويب", "الواجهة الأمامية", "الواجهة الخلفية"],
+            "lastRole":""
+        }
+    }
+}

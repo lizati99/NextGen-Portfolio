@@ -17,7 +17,7 @@ export default function PublicLayouts() {
       <OverlayEffect isShow={isShowOverlay} />
       <Navbar />
       <div className={`container`}>
-        <Settings />
+        {/* <Settings /> */}
         <Outlet />
       </div>
       <Footer />
