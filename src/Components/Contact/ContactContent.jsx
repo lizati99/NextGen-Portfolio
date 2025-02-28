@@ -4,14 +4,9 @@ import Square from "./../ui/Square/Square";
 import ContactForm from "./ContactForm";
 import MainHeading from "../Common/MainHeading/MainHeading";
 import { useTranslation } from 'react-i18next';
-import "./../../i18n";
 
 export default function ContactContent() {
-    const { t, i18n } = useTranslation();
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng); 
-    };
-
+    const { t } = useTranslation();
     return <>
         <MainHeading 
             smallText={t('contactPage.contactContent.mainHeading.smallText')}
@@ -23,7 +18,7 @@ export default function ContactContent() {
                 <div className={classes.header_section}>
                     <h1>
                         <Square />
-                        {t('contactPage.contactContent.content.title')}
+                        {t('contactPage.contactContent.content.title')} 
                         <span> 
                             {t('contactPage.contactContent.content.subject')}
                         </span>

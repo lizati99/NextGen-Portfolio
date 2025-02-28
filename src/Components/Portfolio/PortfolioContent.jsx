@@ -3,20 +3,11 @@ import { useEffect, useState } from 'react'
 import Work from './Work';
 import projectImg from './../../assets/images/Portfolio/projet_1.jpg';
 import MainHeading from '../Common/MainHeading/MainHeading'
-import { useTranslation } from 'react-i18next';
-import "./../../i18n";
+import { useTranslation } from 'react-i18next'
 
 export default function PortfolioContent() {
     const [selectedCategory, setSelectedCategory] = useState('all');
-    const { t, i18n } = useTranslation();
-
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng); 
-    };
-
-    useEffect(() => {
-        changeLanguage("en")
-    }, []);
+    const { t } = useTranslation();
 
     const works = [
         { category: 'frontend', title: 'projects.quiz.title', description: 'projects.quiz.description', role: 'projects.quiz.role', image: projectImg },
@@ -44,7 +35,7 @@ export default function PortfolioContent() {
     
     const filteredWorks = selectedCategory === categories[0].name
         ? translatedWorks
-        : translatedWorks.filter(work => work.role === selectedCategory);
+        : translatedWorks.filter(work => work.category === selectedCategory);
 
     return <>
         <MainHeading 
@@ -58,7 +49,7 @@ export default function PortfolioContent() {
                     <li
                         key={category.name}
                         className={`${selectedCategory === category.label ? classes.active : ''}`}
-                        onClick={() => handleCategoryClick(category.label)}
+                        onClick={() => handleCategoryClick(category.name)}
                     >
                         {category.label}
                     </li>

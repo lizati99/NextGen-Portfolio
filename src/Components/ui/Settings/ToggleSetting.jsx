@@ -4,9 +4,11 @@ import classes from "./ToggleSetting.module.css";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../../../Context/ThemeContext";
 import MODE from "./../../../utils/color";
+import { useLanguage } from "../../../Context/LanguageContext"; 
 
 export default function ToggleSetting() {
   const { isDarkMode, toggleThemeMode, toggleColors } = useContext(ThemeContext);
+  const { changeLanguage, language } = useLanguage();
   const themeColors = isDarkMode ? MODE.dark : MODE.light;
   const [isOpen, setIsOpen] = useState(false);
 
@@ -41,6 +43,16 @@ export default function ToggleSetting() {
           <FontAwesomeIcon icon={faExpand} />
         </li>
         {displayColorList()}
+        
+        <li onClick={() => changeLanguage("ar")} style={{ cursor: "pointer" }}>
+          🇸🇦 العربية {language === "ar" && "✔"}
+        </li>
+        <li onClick={() => changeLanguage("en")} style={{ cursor: "pointer" }}>
+          🇬🇧 English {language === "en" && "✔"}
+        </li>
+        <li onClick={() => changeLanguage("de")} style={{ cursor: "pointer" }}>
+          DE Deutsch {language === "de" && "✔"}
+        </li>
       </ul>
     </div>
   );

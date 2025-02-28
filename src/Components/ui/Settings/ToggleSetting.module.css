@@ -63,3 +63,18 @@
 .hide{
     display: none;
 }
+
+.settings li {
+    aspect-ratio: 1 / 1;
+    width: 70%;
+    margin: 10px auto;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .settings li:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }

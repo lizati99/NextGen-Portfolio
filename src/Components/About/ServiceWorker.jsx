@@ -7,19 +7,9 @@ import digitalIcon from '../../assets/icons/service/icons8-pro-display-xdr-48.pn
 import serviceIcon from '../../assets/icons/service/icons8-service-48.png'
 import brandingIcon from './../../assets/icons/service/icons8-branding-64.png'
 import { useTranslation } from 'react-i18next';
-import "./../../i18n";
-import { useEffect } from 'react'
 
 export default function ServiceWorker() {
-    const { t, i18n } = useTranslation();
-   
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng); 
-    };
-
-    useEffect(()=>{
-        changeLanguage("en");
-    }, [])
+    const { t } = useTranslation();
 
     const services = [
         {

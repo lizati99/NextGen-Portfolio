@@ -10,20 +10,14 @@ import {
 } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
-import "./../../../i18n";
+
 
 export default function NavbarMobile() {
   const [activeLink, setActiveLink] = useState();
   const location = useLocation();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   
-  const changeLanguage = (lng) => {
-      i18n.changeLanguage(lng); 
-  };
 
-  useEffect(() => {
-      changeLanguage("en")
-  }, []);
 
   useEffect(() => {
     setActiveLink(location.pathname);

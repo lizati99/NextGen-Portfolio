@@ -5,10 +5,7 @@ import { useTranslation } from 'react-i18next';
 import "./../../i18n";
 
 export default function ContactForm(){
-    const { t, i18n } = useTranslation();
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng); 
-    };
+    const { t } = useTranslation();
 
     const handleSubmit = (e) => {
         e.preventDefault();

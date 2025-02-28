@@ -4,7 +4,6 @@ import closeSvg from './../../assets/icons/close.png';
 
 export default function Work({ image, title, description, role }) {
   const [show, setShow] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const [animationClass, setAnimationClass] = useState("");
 
   const handleMouseOver = () => setAnimationClass(classes.moveDownOver);

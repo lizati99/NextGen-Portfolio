@@ -9,14 +9,17 @@ import "@fontsource/exo-2/600.css";
 import "@fontsource/exo-2/800.css";
 import './index.css';
 import { ThemeProvider } from './Context/ThemeContext';
+import { LanguageProvider } from './Context/LanguageContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
+    <LanguageProvider>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </LanguageProvider>
   </React.StrictMode>
 );
 

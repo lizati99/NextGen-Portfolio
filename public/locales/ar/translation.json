@@ -1,11 +1,11 @@
 {
     "navbar": {
         "links": {
-            "home": "الرئيسية",
-            "about": "عن",
+            "home": "الصفحة الرئيسية",
+            "about": "من نحن",
             "resume": "السيرة الذاتية",
-            "portfolio": "المعرض",
-            "contact": "اتصل"
+            "portfolio": "محفظة الأعمال",
+            "contact": "اتصل بنا"
         }
     },
     "homePage":{
@@ -26,7 +26,7 @@
             },
             "content": {
                 "question": "من أنا؟",
-                "name": "أنا ليزاتي محمد",
+                "name": "أنا الليزاطي محمد",
                 "answer": "مطور فول ستاك، عمري {{years}} سنة من {{city}}، {{country}}. بريدي الإلكتروني هو {{email}} ورقم هاتفي هو {{phone}}.",
                 "downloadLink": "تحميل السيرة الذاتية"
             }
@@ -34,7 +34,9 @@
         "serviceContent": {
             "mainHeading": {
                 "smallText": "الخدمات التي أقدمها لعملائي",
-                "mainText": "خدماتي"
+                "mainText": "خدما",
+                "highlightedText":"تي"
+                
             },
             "services": {
                 "webDesign": {
@@ -137,7 +139,8 @@
         "skillContent": {
             "mainHeading": {
                 "smallText": "مستوى معرفتي",
-                "mainText": "مهاراتي"
+                "mainText": "مهارا",
+                "highlightedText":"تي"
             },
             "content": {
                 "skills": [
@@ -188,8 +191,9 @@
     "portfolioPage": {
         "portfolioContent": {
             "mainHeading": {
-                "smallText": "بعض من أعمالي",
-                "mainText": "معرضي"
+                "smallText": "معرضي",
+                "mainText": "بعض من",
+                "highlightedText":"أعمالي"
             },
             "content": {
                 "categories": [
@@ -206,25 +210,79 @@
                         "label": "الويب"
                     },
                     {
-                        "name": "mobile",
-                        "label": "الموبايل"
+                        "name": "frontend",
+                        "label": "واجهة الامامية"
+                    },
+                    {
+                        "name":"backend",
+                        "label":"واجهة الخلفية"
                     }
-                ]
+                ],
+                "projects": {
+                    "quiz": {
+                        "title": "الاختبار",
+                        "description": "موضوع",
+                        "role": "الواجهة الأمامية"
+                    },
+                    "toolkit": {
+                        "title": "مجموعة الأدوات",
+                        "description": "ملف الأعمال",
+                        "role": "الواجهة الأمامية"
+                    },
+                    "tictactoe": {
+                        "title": "إكس-أو",
+                        "description": "لعبة",
+                        "role": "الواجهة الأمامية"
+                    },
+                    "movie": {
+                        "title": "فيلم",
+                        "description": "الأرشيف",
+                        "role": "الخلفية"
+                    },
+                    "stock": {
+                        "title": "الأسهم",
+                        "description": "المتابعة",
+                        "role": "الخلفية"
+                    },
+                    "elearning": {
+                        "title": "التعليم الإلكتروني",
+                        "description": "التعلم",
+                        "role": "الخلفية"
+                    },
+                    "investmarrakech": {
+                        "title": "استثمر في مراكش",
+                        "description": "المجال",
+                        "role": "الخلفية"
+                    },
+                    "supply": {
+                        "title": "الإمداد",
+                        "description": "المجال",
+                        "role": "الخلفية"
+                    }
+                }
             }
         }
     },
     "contactPage": {
         "contactContent": {
             "mainHeading": {
-                "smallText": "تواصل معي",
-                "mainText": "اتصل"
+                "smallText": "لا تتردد في التواصل معي في أي وقت",
+                "mainText": "ابقَ",
+                "highlightedText": "على تواصل"
             },
             "content": {
-                "name": "الاسم",
-                "email": "البريد الإلكتروني",
-                "message": "الرسالة",
-                "sendMessage": "إرسال الرسالة"
+                "title": "بنا",
+                "subject": "اتصل",
+                "description": "يسعدنا الاستماع إليك! يرجى ملء النموذج أدناه."
             }
+        },
+        "contactForm": {
+            "name": "أدخل اسمك",
+            "email": "أدخل عنوان بريد إلكتروني صالح",
+            "subject": "أدخل موضوع رسالتك",
+            "message": "اكتب رسالتك هنا...",
+            "submit": "إرسال"
         }
     }
+
 }

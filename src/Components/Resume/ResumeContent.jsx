@@ -2,23 +2,14 @@ import Square from './../ui/Square/Square'
 import ResumeCard from './ResumeCard';
 import classes from './ResumeContent.module.css';
 import { useTranslation } from 'react-i18next';
-import "./../../i18n";
-import { useEffect } from 'react'
 import MainHeading from '../Common/MainHeading/MainHeading';
 
 export default function ResumeContent() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
        
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng); 
-    };
-
-    useEffect(()=>{
-        changeLanguage("en");
-    }, []);    
     const educationData = t('resumePage.resumeContent.content.education', { returnObjects: true });
     const experienceData = t('resumePage.resumeContent.content.experience', { returnObjects: true });
-    console.log(educationData);
+    
     return <>
         <MainHeading 
             smallText={t('resumePage.resumeContent.mainHeading.smallText')} 

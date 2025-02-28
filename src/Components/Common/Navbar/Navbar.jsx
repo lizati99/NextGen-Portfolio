@@ -5,21 +5,13 @@ import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../../../Context/ThemeContext";
 import NavbarMobile from "./NavbarMobile";
 import { useTranslation } from 'react-i18next';
-import "./../../../i18n";
 
 export default function Navbar() {
     const { colorData } = useContext(ThemeContext);
     const [activeLink, setActiveLink] = useState("/");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation();
-    const { t, i18n } = useTranslation();
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng); 
-    };
-
-    useEffect(() => {
-        changeLanguage("en")
-    }, []);
+    const { t } = useTranslation();
 
     useEffect(() => {
         setActiveLink(location.pathname);

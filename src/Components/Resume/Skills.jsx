@@ -1,8 +1,6 @@
 import MainHeading from '../Common/MainHeading/MainHeading';
 import classes from './Skills.module.css';
 import { useTranslation } from 'react-i18next';
-import "./../../i18n";
-import { useEffect } from 'react';
 
 function Skill({ name, percentage }) {
     return (
@@ -19,14 +17,7 @@ function Skill({ name, percentage }) {
 }
 
 export default function Skills() {
-    const { t, i18n } = useTranslation();
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng); 
-    };
-
-    useEffect(() => {
-        changeLanguage("en")
-    }, []);
+    const { t } = useTranslation();
 
     const skills = t('resumePage.skillContent.content.skills', {returnObjects:true} ); 
 

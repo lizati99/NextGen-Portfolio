@@ -1,28 +1,24 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import calculateExactAge from "../../utils/calculeExactAge";
+import MainHeading from "../Common/MainHeading/MainHeading";
 import SocialHorizontalItem from "../ui/Social/SocialHorizontalItem";
 import classes from "./AboutContent.module.css"
-import { useEffect } from "react";
-import "./../../i18n";
 
 export default function AboutContent(){
+    const { t } = useTranslation();
     const birthDate = "1999-08-04";
     const currentAge=calculateExactAge(birthDate);
     const city="Oujda";
     const country="Morocco";
     const email="mohammedlizati99@gmail.com";
     const phone="0695283656";
-    const { t, i18n } = useTranslation();
-
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng); 
-    };
-
-    useEffect(()=>{
-        changeLanguage("en");
-    }, [])
 
     return <>
+        <MainHeading 
+            smallText={t("aboutPage.aboutContent.mainHeading.smallText")} 
+            mainText={t("aboutPage.aboutContent.mainHeading.mainText")}
+            highlightedText={t("aboutPage.aboutContent.mainHeading.highlightedText")}
+        />
         <div className={classes.content_about}>
             <div className={classes.left}></div>
             <div className={classes.right}>
