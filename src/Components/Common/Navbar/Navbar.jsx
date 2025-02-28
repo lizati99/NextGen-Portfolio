@@ -12,7 +12,9 @@ export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation();
     const { t } = useTranslation();
-
+    
+    const isMobile = window.innerWidth <= 768;
+    console.log(isMobile);
     useEffect(() => {
         setActiveLink(location.pathname);
     }, [location]);
@@ -53,7 +55,7 @@ export default function Navbar() {
     };
     return (
         <>
-            { activeLink==="/" ? (
+            { activeLink==="/" && !isMobile ? (
                 <nav className={`${classes.navbar}`}>
                     <div className="container">
                         <div className={classes.header_area}>

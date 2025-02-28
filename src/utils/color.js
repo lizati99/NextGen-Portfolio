@@ -42,7 +42,7 @@ const MODE = {
         backgroundColor: "#F9F9F9",
         textColor: "#000",
         overlayColor: "#AAA",
-        thirdColor: "#FFF",
+        thirdColor: "#EEE",
         logo: "",
         COLORS: [
         { color: "#ba021d", logo: images.logo.logo_1 },

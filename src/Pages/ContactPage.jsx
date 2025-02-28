@@ -1,14 +1,14 @@
-import MainHeading from "../Components/Common/MainHeading/MainHeading";
 import ContactContent from "../Components/Contact/ContactContent";
-import Testimonial from "../Components/ui/Testimonial/Testimonial";
 import Close from "./../Components/ui/ClosePage/Close";
+import Reviews from "./../Components/ui/Testimonial/Reviews"
 
 export default function ContactPage(){
     return <>
         <div className="box">
             <Close />
             <ContactContent />
-            <Testimonial />
+            {/* <Testimonial /> */}
+            <Reviews />
         </div>
     </>
 }
