@@ -41,11 +41,11 @@ export default function NavbarMobile() {
     ));
   };
   return (
-    <>
-      <div className={classes.navbar}>
+    <div className={classes.stroke}>
+      <nav className={classes.navbar}>
         {displayNavLink()}
-      </div>
-    </>
+      </nav>
+    </div>
   );
 }
 

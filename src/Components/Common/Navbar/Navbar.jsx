@@ -9,25 +9,26 @@ import { useTranslation } from 'react-i18next';
 export default function Navbar() {
     const { colorData } = useContext(ThemeContext);
     const [activeLink, setActiveLink] = useState("/");
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation();
     const { t } = useTranslation();
+    const [showMobileNav, setShowMobileNav] = useState(false);
     
     const isMobile = window.innerWidth <= 768;
-    console.log(isMobile);
+
     useEffect(() => {
         setActiveLink(location.pathname);
     }, [location]);
 
-    const handleMenuToggle = () => {
-        setIsMenuOpen(prevOpen => !prevOpen);
-    };
-
-
-    const handleClick = (path) => {
-        setActiveLink(path);
-        setIsMenuOpen(false);
-    };
+    useEffect(() => {
+        if (activeLink !== "/" || isMobile) {
+            const timer = setTimeout(() => {
+                setShowMobileNav(true);
+            }, 1000);
+            return () => clearTimeout(timer); 
+        } else {
+            setShowMobileNav(false);
+        }
+    }, [activeLink, isMobile]);
 
     const displayNavLink = () => {
         const linkList = [
@@ -42,7 +43,7 @@ export default function Navbar() {
             <li key={key} className={classes.linkItem}>
                 <Link
                     to={link.path}
-                    onClick={() => handleClick(link.path)}
+                    onClick={() => setActiveLink(link.path)}
                     className={
                         activeLink === link.path ? classes.active : ""
                     }
@@ -62,16 +63,14 @@ export default function Navbar() {
                             <div className={classes.logo}>
                                 <img src={colorData.logo} width="40" alt="header logo" />
                             </div>
-                            <ul className={`${classes.links} ${isMenuOpen ? classes.open : ""}`}>
+                            <ul className={`${classes.links}`}>
                                 {displayNavLink()}
                             </ul>
                         </div>
                     </div>
                 </nav>
             ) : (
-                <>
-                    <NavbarMobile />
-                </>
+                showMobileNav && <NavbarMobile />
             )}
         </>
     );

@@ -65,7 +65,7 @@ body{
   /* height: 100%; */
   min-height: 100vh;
   /* background-color: var(--color-bg); */
-  padding: 80px 0;
+  padding: 7rem 0;
   animation: boxOpacity 1s 1;
   transition: .5s;
 }

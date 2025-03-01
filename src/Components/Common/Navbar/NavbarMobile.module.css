@@ -1,26 +1,30 @@
-.navbar {
-  position: sticky;
+.stroke{
+  position: fixed;
   top: 30px;
   left: 50%;
-  width: 35%;
+  width: 40%;
   transform: translateX(-50%);
-  background-color: var(--color-overlay);
-  color: white;
-  padding: 8px 0;
+  background: linear-gradient(10deg, var(--color-text), transparent);
+  padding: 1px;
+  animation: move 1s 1 linear;
+  border-radius: 20px;
+  z-index: 1000;
+}
+
+.navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 20px;
-  animation: NavbarMobile_move__u1Rxk 1s 2linear;
-  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-overlay);
+  padding: 8px 0;
+  border-radius: inherit;
 }
 
 @keyframes move {
   0% {
-    transform: translate(-50%, 0);
-  }
-  50% {
-    transform: translate(-50%, -10px);
+    transform: translate(-50%, 10px);
   }
   100% {
     transform: translate(-50%, 0);
@@ -51,4 +55,10 @@
   font-size: 12px;
   margin-top: 4px;
   transition: all 1s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .stroke {
+    width: 80%;
+  }
 }
