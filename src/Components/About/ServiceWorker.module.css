@@ -61,8 +61,22 @@
     .services_box{
         padding: 25px 0;
     }
+
+    .services_content{
+        margin: 40px auto;
+    }
+
     .services_content .service{
         width: 100%;
         padding: 20px;
+    }
+
+    .service_icon{
+        display: none;
+    }
+
+    .service_body{
+        width: 100%;
+        padding: 10px;
     }
 }

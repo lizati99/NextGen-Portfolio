@@ -20,7 +20,7 @@ export default function PublicLayouts() {
         {/* <Settings /> */}
         <Outlet />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -1,5 +1,5 @@
 import classes from './PortfolioContent.module.css';
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Work from './Work';
 import projectImg from './../../assets/images/Portfolio/projet_1.jpg';
 import MainHeading from '../Common/MainHeading/MainHeading'
@@ -48,7 +48,7 @@ export default function PortfolioContent() {
                 {categories.map((category) => (
                     <li
                         key={category.name}
-                        className={`${selectedCategory === category.label ? classes.active : ''}`}
+                        className={`${selectedCategory === category.name ? classes.active : ''}`}
                         onClick={() => handleCategoryClick(category.name)}
                     >
                         {category.label}

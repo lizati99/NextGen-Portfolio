@@ -116,4 +116,8 @@ body{
   .container{
     max-width: 95%;
   }
+
+  .box{
+    padding-bottom: 2rem;
+  }
 }

@@ -103,7 +103,8 @@
 @media screen and (max-width:767px) {
     .resume_content{
         display: block;
-        margin: 60px auto;
+        margin-top: 60px;
+        margin-bottom: 40px;
     }
     .header{
         font-size: 25px;
@@ -112,11 +113,11 @@
     .resume_content .education,
     .resume_content .experience{
         width: 100%;
-        padding: 40px 0;
+        padding: 25px 0;
         padding-left: 30px;    
     }
     .education::after,
     .experience::after{
-        left: 14px;
+        left: 5px;
     }
 }

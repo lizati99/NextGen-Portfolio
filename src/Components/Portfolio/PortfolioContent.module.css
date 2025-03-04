@@ -10,12 +10,6 @@
     justify-content: center;
 }
 
-.pagination li.active {
-    color: var(--color-secondary);
-    border-bottom: var(--color-secondary) 2px solid;
-    opacity: 1;
-}
-
 .pagination li {
     cursor: pointer;
     margin-left: 15px;
@@ -23,9 +17,16 @@
     border-radius: 3px;
     opacity: 0.5;
     font-size: 14px;
+    transition: all 1s ease-in-out;
 }
 
 .pagination li:hover {
+    opacity: 1;
+}
+
+.pagination li.active {
+    color: var(--color-secondary);
+    border-bottom: var(--color-secondary) 2px solid;
     opacity: 1;
 }
 
