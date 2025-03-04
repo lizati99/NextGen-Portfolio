@@ -22,6 +22,11 @@
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+.toggle_settings:hover{
+    background-color: var(--color-third);
 }
 .toggle_settings svg path{
     transition: color .5s;

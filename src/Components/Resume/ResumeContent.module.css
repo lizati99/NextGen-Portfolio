@@ -3,6 +3,7 @@
     height: auto;
     margin: 60px auto;
     display: flex;
+    gap: 40px;
     position: relative;
 }
 
@@ -11,18 +12,34 @@
     width: 50%;
     height: auto;
     position: relative;
-    padding: 20px 40px;
+    /* padding: 20px 40px; */
 }
+
+.resume_content .education{
+    padding-left: 40px;
+}
+.resume_content .experience{
+    padding-right: 40px;
+}
+
 .education::after,
 .experience::after{
     content: '';
     position: absolute;
     top: 80px;
-    left: 0;
     height: 80%;
     width: 3px;
     background-color: var(--color-secondary);
 }
+
+.education::after{
+    left: 0;
+}
+
+.experience::after{
+    right: 0;
+}
+
 .header{
     position: relative;
     width: 100%;
@@ -30,6 +47,10 @@
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+}
+
+.experience .year{
+    right: 0 !important;
 }
 
 /* skills section */

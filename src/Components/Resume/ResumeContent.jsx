@@ -23,7 +23,7 @@ export default function ResumeContent() {
                     {t('resumePage.resumeContent.content.titleEducation')}
                 </div>
                 {educationData.map((item, index) => (
-                    <ResumeCard key={index} {...item} />
+                    <ResumeCard key={index} {...item} isLeftSide={true} />
                 ))}
             </div>
             <div className={classes.experience}>
@@ -32,7 +32,7 @@ export default function ResumeContent() {
                     {t('resumePage.resumeContent.content.titleExperience')}
                 </div>
                 {experienceData.map((item, index) => (
-                    <ResumeCard key={index} {...item} />
+                    <ResumeCard key={index} {...item} isLeftSide={false} />
                 ))}
             </div>
         </div>

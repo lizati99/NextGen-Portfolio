@@ -1,7 +1,6 @@
 .card .year{
     position: absolute;
     top: 10px;
-    left: -57px;
     background-color: var(--color-secondary);
     border-radius: 2px;
     padding: 2px;
@@ -20,16 +19,27 @@
     background-color: var(--color-bg);
 }
 
+.yearLeftSide{
+    left:-58px
+}
+
+.yearRightSide{
+    left: calc(100% + 20px)
+}
+
 .card {
     width: 100%;
     height: auto;
     background-color: var(--color-overlay);
     padding: 20px 30px;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     position: relative;
 }
-.card::after{
+
+
+
+.left::after {
     content: '';
     width: 0;
     height: 0;
@@ -39,6 +49,18 @@
     top: 10px;
     left: -18px;
 }
+
+.right::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    border-color: transparent transparent transparent var(--color-overlay);
+    position: absolute;
+    top: 10px;
+    left: calc(100%);
+}
+
 .card h3{
     font-family: var(--font-secondary);
     font-weight: 500;
@@ -72,5 +94,10 @@
     }
     .card h3{
         font-size: 15px;
+    }
+
+    .right::before {
+        border-color: transparent var(--color-overlay) transparent transparent;
+        left: -18px;
     }
 }

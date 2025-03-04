@@ -1,6 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 import classes from "./Navbar.module.css";
-import homeIcon from "./../../../assets/images/Navbar/home (1).png"
+import { 
+    Home as HomeIcon
+  } from "lucide-react";
+// import homeIcon from "./../../../assets/images/Navbar/home (1).png"
 import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../../../Context/ThemeContext";
 import NavbarMobile from "./NavbarMobile";
@@ -32,7 +35,7 @@ export default function Navbar() {
 
     const displayNavLink = () => {
         const linkList = [
-            { label: t('navbar.links.home'), path: "/", icon: homeIcon },
+            { label: t('navbar.links.home'), path: "/", icon: <HomeIcon size={24} /> },
             { label: t('navbar.links.about'), path: "/About", icon: null },
             { label: t('navbar.links.resume'), path: "/Resume", icon: null },
             { label: t('navbar.links.portfolio'), path: "/Portfolio", icon: null },
@@ -49,7 +52,7 @@ export default function Navbar() {
                     }
                     aria-label={link.label}
                 >
-                    {link.icon ? <img src={link.icon} alt={link.label} /> : link.label}
+                    {link.icon ? link.icon : link.label}
                 </Link>
             </li>
         ));
