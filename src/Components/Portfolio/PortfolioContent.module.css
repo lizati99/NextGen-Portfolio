@@ -17,6 +17,8 @@
     border-radius: 3px;
     opacity: 0.5;
     font-size: 14px;
+    font-family: var(--font-secondary);
+    font-weight: 400;
     transition: all 1s ease-in-out;
 }
 
@@ -45,4 +47,14 @@
     background-color: var(--color-overlay);
     overflow: hidden;
     cursor: default;
+}
+
+@media (max-width: 767px) {
+    .pagination{
+        gap: 5px;
+    }
+
+    .pagination li{
+        margin: 0;
+    }
 }

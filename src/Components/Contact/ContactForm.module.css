@@ -27,7 +27,7 @@
     display: block;
     width: 100%;
     max-width: 100%;
-    padding: 20px 40px;
+    padding: 10px 20px;
     background-color: var(--color-third);
     border-radius: 8px;
 }
@@ -49,7 +49,7 @@
     padding: 10px 15px;
     background-color: var(--color-overlay);
     font-family: var(--font-secondary);
-    font-size: clamp(10px, 2vw, 14px);
+    font-size: clamp(12px, 2vw, 16px);
     outline: none;
     border: 1px solid #333;
     margin: 10px 0;
@@ -63,7 +63,7 @@
     margin-top: 20px;
 }
 
-.contact_form .form_group {
+.form_group {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -105,4 +105,13 @@ form textarea:hover{
 
 .active{
     display: block !important;
+}
+
+@media (max-width: 767px) {
+    .form_group{
+        gap: 0;
+    }
+    .form_group input {
+        width: 100%;
+    }
 }

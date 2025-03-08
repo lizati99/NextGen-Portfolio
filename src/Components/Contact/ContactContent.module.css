@@ -1,7 +1,7 @@
 .contact_content {
     width: 100%;
     max-height: 100vh;
-    margin-top: 60px;
+    margin: 60px auto;
     position: relative;
 }
 
@@ -66,11 +66,11 @@
     flex-direction: column;
     gap: 20px;
     justify-content: center;
-    padding: 20px 40px;
+    padding: 10px 20px;
 }
 
 .header_section h1 {
-    font-size: 28px;
+    font-size: clamp(20px, 2vw, 28px);
     display: flex;
     align-items: center;
 }
@@ -80,8 +80,9 @@
 }
 
 .header_section .form_description {
-    font-size: clamp(10px, 2vw, 14px);
+    font-size: clamp(12px, 2vw, 16px);
     font-family: var(--font-secondary);
+    font-weight: 600;
     color: #777;
 }
 
@@ -147,5 +148,13 @@
     }
     .info_icon i {
         font-size: 30px;
+    }
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        padding: 10px 0;
+    }
+    .header_section{
+        gap: 15px;
     }
 }

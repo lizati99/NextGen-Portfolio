@@ -6,6 +6,7 @@ export default function PortfolioPage(){
         <div className="box">
             <Close />
             <PortfolioContent />
+            {/* <Slider /> */}
         </div>
     </>
 }
