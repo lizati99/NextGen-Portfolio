@@ -10,6 +10,8 @@ import "@fontsource/exo-2/800.css";
 import './index.css';
 import { ThemeProvider } from './Context/ThemeContext';
 import { LanguageProvider } from './Context/LanguageContext';
+import Slider from './Components/Common/Slider/Slider';
+import HighwaySlider from './Components/Common/HighwaySlider/HighwaySlider';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,7 +19,9 @@ root.render(
   <React.StrictMode>
     <LanguageProvider>
       <ThemeProvider>
-        <App />
+        {/* <App /> */}
+        {/* <Slider /> */}
+        <HighwaySlider />
       </ThemeProvider>
     </LanguageProvider>
   </React.StrictMode>
