@@ -19,9 +19,9 @@ root.render(
   <React.StrictMode>
     <LanguageProvider>
       <ThemeProvider>
-        {/* <App /> */}
+        <App />
         {/* <Slider /> */}
-        <HighwaySlider />
+        {/* <HighwaySlider /> */}
       </ThemeProvider>
     </LanguageProvider>
   </React.StrictMode>

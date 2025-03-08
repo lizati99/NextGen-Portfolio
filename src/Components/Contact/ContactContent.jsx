@@ -4,6 +4,7 @@ import Square from "./../ui/Square/Square";
 import ContactForm from "./ContactForm";
 import MainHeading from "../Common/MainHeading/MainHeading";
 import { useTranslation } from 'react-i18next';
+import HighwaySlider from "../Common/HighwaySlider/HighwaySlider";
 
 export default function ContactContent() {
     const { t } = useTranslation();
@@ -13,6 +14,7 @@ export default function ContactContent() {
             mainText={t('contactPage.contactContent.mainHeading.mainText')}
             highlightedText={t('contactPage.contactContent.mainHeading.highlightedText')}
         />
+        <HighwaySlider
         <div className={classes.contact_content}>
             <div className={classes.container}>
                 <div className={classes.header_section}>
