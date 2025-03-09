@@ -15,12 +15,12 @@
     top: 0;
     right: 0;
     width: 50%;
-    height: 100%;
+    height: 95%;
     opacity: .4;
     z-index: -1;
     pointer-events: none;
     background: linear-gradient(to top, var(--color-bg) 40%, transparent), 
-            repeating-linear-gradient(to left, var(--color-secondary), transparent 10px, var(--color-secondary) 20px);;
+            repeating-linear-gradient(to left, var(--color-secondary), transparent 10px, var(--color-secondary) 20px);
 }
 
 .landing_img img{
@@ -31,3 +31,11 @@
 
 
 /* End landing Page */
+
+@media (max-width: 767px) {
+    .landing_img{
+        background: repeating-linear-gradient(to left, var(--color-secondary), transparent 10px, var(--color-secondary) 20px),
+                    linear-gradient(to left, var(--color-bg) 10%, transparent 90%);
+        mask: linear-gradient(to bottom, transparent 0,var(--color-overlay) 5%, transparent 90%);
+    }
+}

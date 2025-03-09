@@ -23,7 +23,7 @@
 .highway_lane {
     display: flex;
     height: 100%;
-    width: calc(180px * 24);
+    width: calc(180px * 20);
     animation: translateinfinite 25s linear infinite;
 }
 
@@ -48,6 +48,19 @@
 
 @keyframes translateinfinite {
     100% {
-        transform: translateX(calc(-180px * 12));
+        transform: translateX(calc(-180px * 10));
+    }
+}
+
+@media (max-width: 768px) {
+    .highway_slider{
+        height: 100px;
+    }
+    .highway_lane{
+        width: calc(70px * 20);
+        animation: translateinfinite 50s linear infinite;
+    }
+    .highway_car{
+        width: 70px;
     }
 }
