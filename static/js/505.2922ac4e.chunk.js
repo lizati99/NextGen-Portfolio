@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunknext_gen_portfolio=self.webpackChunknext_gen_portfolio||[]).push([[505],{2505:(e,a,s)=>{s.r(a),s.d(a,{default:()=>d});const o="Loader_loader_container__l-MGE",_="Loader_loader__bN5CJ",l="Loader_loading_text__s09Gu";var n=s(579);const d=()=>(0,n.jsxs)("div",{className:o,children:[(0,n.jsx)("div",{className:_}),(0,n.jsx)("p",{className:l,children:"Loading..."})]})}}]);
+//# sourceMappingURL=505.2922ac4e.chunk.js.map

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunknext_gen_portfolio=self.webpackChunknext_gen_portfolio||[]).push([[393],{393:(e,n,r)=>{r.r(n),r.d(n,{default:()=>o});var t=r(579);function o(){return(0,t.jsx)(t.Fragment,{children:(0,t.jsx)("div",{className:"box",children:(0,t.jsx)("h1",{children:"Not Found"})})})}}}]);
+//# sourceMappingURL=393.2d9045ff.chunk.js.map

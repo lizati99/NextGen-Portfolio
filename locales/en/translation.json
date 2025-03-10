@@ -1,0 +1,299 @@
+{
+    "navbar": {
+        "links": {
+            "home": "Home",
+            "about": "About",
+            "resume": "Resume",
+            "portfolio": "Portfolio",
+            "contact": "Contact"
+        }
+    },
+    "homePage": {
+        "landing": {
+            "lastName": "Lizati",
+            "firstName": "Mohammed",
+            "subject": "I'm a",
+            "roleList": [
+                "Web",
+                "Frontend",
+                "Backend",
+                "Fullstack"
+            ],
+            "lastRole": "Developer"
+        }
+    },
+    "aboutPage": {
+        "aboutContent": {
+            "mainHeading": {
+                "smallText": "know",
+                "mainText": "About",
+                "highlightedText": "Me"
+            },
+            "content": {
+                "question": "Who am i ?",
+                "name": "I am Lizati Mohammed",
+                "answer": "a Fullstack developer, I am {{years}} years old from {{city}}, {{country}}. I have an email {{email}} and my phone number is {{phone}}.",
+                "downloadLink": "Download Cv"
+            }
+        },
+        "serviceContent": {
+            "mainHeading": {
+                "smallText": "Services i offer to my clients",
+                "mainText": "My",
+                "highlightedText": "Services"
+            },
+            "services": {
+                "webDesign": {
+                    "name": "Web Design",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta corrupti in reiciendis laborum quis labore dolores non omnis saepe nihil."
+                },
+                "webDevelopment": {
+                    "name": "Web Development",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta corrupti in reiciendis laborum quis labore dolores non omnis saepe nihil."
+                },
+                "mobileAppDevelopment": {
+                    "name": "Mobile App Development",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta corrupti in reiciendis laborum quis labore dolores non omnis saepe nihil."
+                },
+                "digitalMarketing": {
+                    "name": "Digital Marketing",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta corrupti in reiciendis laborum quis labore dolores non omnis saepe nihil."
+                },
+                "seoSem": {
+                    "name": "SEO & SEM",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta corrupti in reiciendis laborum quis labore dolores non omnis saepe nihil."
+                },
+                "brandingIdentity": {
+                    "name": "Branding & Identity",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta corrupti in reiciendis laborum quis labore dolores non omnis saepe nihil."
+                }
+            }
+        }
+    },
+    "resumePage": {
+        "resumeContent": {
+            "mainHeading": {
+                "smallText": "Here's",
+                "mainText": "My",
+                "highlightedText": "Resume"
+            },
+            "content": {
+                "titleEducation": "Education",
+                "education": [
+                    {
+                        "year": "2024",
+                        "title": "German Language Diploma B1",
+                        "date": "TELC / 2024",
+                        "description": "Is a language certificate for advanced basic knowledge of German."
+                    },
+                    {
+                        "year": "2022",
+                        "title": "Specialized Technician Diploma",
+                        "date": "CFMNTIOE Oujda / 2020 - 2022",
+                        "description": "Technician specialized in development informatique at establishment l'offshoring Oujda."
+                    },
+                    {
+                        "year": "2022",
+                        "title": "MICROSOFT OFFICE SPECIALIST",
+                        "date": "MICROSOFT / 2022",
+                        "description": "Office Word 2016, Office Excel 2016"
+                    },
+                    {
+                        "year": "2022",
+                        "title": "COMPUTER TECHNOLOGY ESSENTIAL CERTIFICATE",
+                        "date": "CISCO / 2021",
+                        "description": "Cisco Networking Academy"
+                    },
+                    {
+                        "year": "2018",
+                        "title": "Bachelor degree in Physical Science",
+                        "date": "Charif El Edrissi High School / 2017 - 2018",
+                        "description": "Baccalaureate in physical science (Charif El Edrissi High School)."
+                    }
+                ],
+                "titleExperience": "Experience",
+                "experience": [
+                    {
+                        "year": "2025",
+                        "title": "Training : Fullstack Developer",
+                        "date": "SoftCactus / 2024 - 2025, Oujda",
+                        "description": "I worked on the E-Commerce project, customizing the user interface using React JS and fixing some backend issues with Laravel. I also analyzed the Sales and Purchase project from scratch, created a UML diagram, and developed the backend using Laravel."
+                    },
+                    {
+                        "year": "2023",
+                        "title": "Training : Fullstack Developer",
+                        "date": "Bel Learning Pro / 2022 - 2023, Oujda",
+                        "description": "I contributed to three projects. As a Full Stack Developer, I built an e-learning platform using HTML, Bootstrap 5, JavaScript, PHP, and MySQL, focusing on user experience, data security, and efficient storage. Another role as a Back End Developer, I developed a system for managing orders and project files using ASP.NET Core, design patterns, OOP, JWT, and SQL Server. Also developed a warehouse business management application using ADO.NET."
+                    },
+                    {
+                        "year": "2023",
+                        "title": "Freelancer : Back-end Developer",
+                        "date": "Digital Butterfly Freelancer / 2023, Oujda",
+                        "description": "I developed a system for Marrakech Invest platform using PHP. My responsibilities included back-end development and database creation."
+                    },
+                    {
+                        "year": "2022",
+                        "title": "Training : Back-end Developer",
+                        "date": "SYMPANUX / 2022",
+                        "description": "Creation of an e-commerce and e-learning platform with HTML, Bootstrap 5, JavaScript, PHP, and MySQL."
+                    }
+                ]
+            }
+        },
+        "skillContent": {
+            "mainHeading": {
+                "smallText": "My level of knowledge",
+                "mainText": "My",
+                "highlightedText": "Skills"
+            },
+            "content": {
+                "skills": [
+                    {
+                        "name": "HTML",
+                        "percentage": 100
+                    },
+                    {
+                        "name": "CSS",
+                        "percentage": 90
+                    },
+                    {
+                        "name": "SASS",
+                        "percentage": 80
+                    },
+                    {
+                        "name": "JAVASCRIPT",
+                        "percentage": 85
+                    },
+                    {
+                        "name": "TYPESCRIPT",
+                        "percentage": 75
+                    },
+                    {
+                        "name": "REACT JS",
+                        "percentage": 80
+                    },
+                    {
+                        "name": "PHP",
+                        "percentage": 85
+                    },
+                    {
+                        "name": "LARAVEL",
+                        "percentage": 80
+                    },
+                    {
+                        "name": "ASP.NET Core",
+                        "percentage": 85
+                    },
+                    {
+                        "name": "SQL",
+                        "percentage": 85
+                    }
+                ]
+            }
+        }
+    },
+    "portfolioPage": {
+        "portfolioContent": {
+            "mainHeading": {
+                "smallText": "Some of my project work",
+                "mainText": "My",
+                "highlightedText": "Portfolio"
+            },
+            "content": {
+                "categories": [
+                    {
+                        "name": "all",
+                        "label": "All"
+                    },
+                    {
+                        "name": "desktop",
+                        "label": "Desktop"
+                    },
+                    {
+                        "name": "web",
+                        "label": "Web"
+                    },
+                    {
+                        "name": "landingPage",
+                        "label": "LandingPage"
+                    },
+                    {
+                        "name": "commerce",
+                        "label": "Commerce"
+                    },
+                    {
+                        "name": "frontend",
+                        "label": "Front-end"
+                    },
+                    {
+                        "name": "backend",
+                        "label": "Back-end"
+                    }
+                ],
+                "projects": {
+                    "quiz": {
+                        "title": "Quiz",
+                        "description": "Topic",
+                        "role": "Front-end"
+                    },
+                    "toolkit": {
+                        "title": "Toolkit",
+                        "description": "Portfolio",
+                        "role": "Front-end"
+                    },
+                    "tictactoe": {
+                        "title": "TicTacToe",
+                        "description": "Game",
+                        "role": "Front-end"
+                    },
+                    "movie": {
+                        "title": "Movie",
+                        "description": "Vault",
+                        "role": "Back-end"
+                    },
+                    "stock": {
+                        "title": "Stock",
+                        "description": "Track",
+                        "role": "Back-end"
+                    },
+                    "elearning": {
+                        "title": "E Learning",
+                        "description": "Learning",
+                        "role": "Back-end"
+                    },
+                    "investmarrakech": {
+                        "title": "InvestMarrakech",
+                        "description": "Sphere",
+                        "role": "Back-end"
+                    },
+                    "supply": {
+                        "title": "Supply",
+                        "description": "Sphere",
+                        "role": "Back-end"
+                    }
+                }
+            }
+        }
+    },
+    "contactPage":{
+        "contactContent":{
+            "mainHeading":{
+                "smallText":"Feel free to contact me anytimes",
+                "mainText":"Get",
+                "highlightedText":"in Touch"
+            },
+            "content":{
+                "title":"Contact",
+                "subject":"Us",
+                "description":"We would love to hear from you! Please fill out the form below."
+            }
+        },
+        "contactForm":{
+            "name":"Enter your Name",
+            "email":"Enter a valid email address",
+            "subject":"Enter your Subject",
+            "message":"Write your message here...",
+            "submit":"Send"
+        }
+    }
+}
