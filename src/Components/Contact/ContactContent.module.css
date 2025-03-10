@@ -6,7 +6,7 @@
 }
 
 .container {
-    background-color: var(--color-third);
+    background-color: var(--color-overlay);
     position: relative;
     display: grid;
     flex-wrap: wrap;

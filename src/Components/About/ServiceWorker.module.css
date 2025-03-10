@@ -16,11 +16,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--color-third);
-    padding: 40px;
+    background-color: var(--color-overlay);
+    padding: 30px;
     border-radius: 10px;
     margin: 15px auto;
-    gap: 20px;
+    gap: 10px;
     cursor: default;
 }
 .service .service_icon{
@@ -48,7 +48,7 @@
     text-align: justify;
     font-size: clamp(12px, 1vw, 16px);
     font-family: var(--font-secondary);
-    color: #9f9f9f;
+    color: var(--color-third);
 }
 
 @media screen and (max-width:1200px) {

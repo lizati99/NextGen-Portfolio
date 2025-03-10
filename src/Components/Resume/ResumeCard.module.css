@@ -2,6 +2,7 @@
     position: absolute;
     top: 10px;
     background-color: var(--color-secondary);
+    color:var(--color-overlay);
     border-radius: 2px;
     padding: 2px;
     font-size: 14px;

@@ -43,7 +43,7 @@ export default function Navbar() {
         ];
 
         return linkList.map((link, key) => (
-            <li key={key} className={classes.linkItem}>
+            <li key={key} className={`${classes.linkItem} ${link.path === '/Contact' ? classes.contactItem :"" }`}>
                 <Link
                     to={link.path}
                     onClick={() => setActiveLink(link.path)}
