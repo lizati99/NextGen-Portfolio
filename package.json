@@ -2,7 +2,7 @@
   "name": "next-gen-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/lizati99/NextGen-Portfolio",
+  "homepage": "https://lizati99.github.io/NextGen-Portfolio",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
