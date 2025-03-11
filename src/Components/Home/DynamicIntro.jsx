@@ -10,6 +10,7 @@ export default function DynamicIntro(){
     const [charIndex, setCharIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
 
+    const direction=localStorage.getItem('direction');
     const handleTypingEffect = () => {
         let text=roleList[currentRoleIndex];
         if(!isDeleting){
@@ -35,9 +36,9 @@ export default function DynamicIntro(){
 
     const changeTime = () => {
         if(!isDeleting)
-            return 100 * Math.ceil(Math.random() * 8);
-        else
             return 100 * Math.ceil(Math.random() * 4);
+        else
+            return 100 * Math.ceil(Math.random());
     }
 
     useEffect(()=>{
@@ -55,7 +56,7 @@ export default function DynamicIntro(){
             </h1>
             <p>
                 {t('homePage.landing.subject')}
-                <span className={classes.role}> {currentRole} </span>
+                <span className={`${classes.role} ${direction==="rtl" ? classes.ar_blinking_cursor : classes.en_blinking_cursor}`}> {currentRole} </span>
                 {t('homePage.landing.lastRole')}
             </p>
         </div>

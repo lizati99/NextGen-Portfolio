@@ -16,8 +16,37 @@
 .intro_text .role{
     font-weight: bolder;
     color: var(--color-secondary);
+    position: relative;
+}  
+
+.ar_blinking_cursor::after,
+.en_blinking_cursor::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    width: 3px;
+    background-color: var(--color-secondary);
+    animation: blink 0.8s infinite steps(2, start);
 }
 
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.ar_blinking_cursor::after{
+    left: -3px;
+}
+
+.en_blinking_cursor::after{
+    right: 3px;
+}
 /* Row Effect */
 .row_left{
     position: absolute;

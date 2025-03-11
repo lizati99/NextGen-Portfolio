@@ -46,6 +46,7 @@ code {
 }
 
 body{
+  direction: var(--dir);
   background: linear-gradient(to bottom, var(--color-bg) 97%, var(--color-secondary));
   width: 100%;
   /* height: 100vh; */
