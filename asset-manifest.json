@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/NextGen-Portfolio/static/css/main.1c794615.css",
-    "main.js": "/NextGen-Portfolio/static/js/main.ec858d20.js",
+    "main.js": "/NextGen-Portfolio/static/js/main.b6687d2e.js",
     "static/css/505.4874f19d.chunk.css": "/NextGen-Portfolio/static/css/505.4874f19d.chunk.css",
     "static/js/505.2922ac4e.chunk.js": "/NextGen-Portfolio/static/js/505.2922ac4e.chunk.js",
     "static/css/572.23933624.chunk.css": "/NextGen-Portfolio/static/css/572.23933624.chunk.css",
@@ -93,7 +93,7 @@
     "index.html": "/NextGen-Portfolio/index.html",
     "static/media/SelectArrow.svg": "/NextGen-Portfolio/static/media/SelectArrow.b6a50386400728f69d47d4c706c58a66.svg",
     "main.1c794615.css.map": "/NextGen-Portfolio/static/css/main.1c794615.css.map",
-    "main.ec858d20.js.map": "/NextGen-Portfolio/static/js/main.ec858d20.js.map",
+    "main.b6687d2e.js.map": "/NextGen-Portfolio/static/js/main.b6687d2e.js.map",
     "505.4874f19d.chunk.css.map": "/NextGen-Portfolio/static/css/505.4874f19d.chunk.css.map",
     "505.2922ac4e.chunk.js.map": "/NextGen-Portfolio/static/js/505.2922ac4e.chunk.js.map",
     "572.23933624.chunk.css.map": "/NextGen-Portfolio/static/css/572.23933624.chunk.css.map",
@@ -117,6 +117,6 @@
   },
   "entrypoints": [
     "static/css/main.1c794615.css",
-    "static/js/main.ec858d20.js"
+    "static/js/main.b6687d2e.js"
   ]
 }
