@@ -33,20 +33,9 @@ const NewProfile=({t})=>{
     const [isExpanded, setIsExpanded] = useState(false);
     const birthDate = "1999-08-04";
     const currentAge=calculateExactAge(birthDate);
-    const details = [
-        { label: "Age", value: currentAge.years.toString() },
-        { label: "Language", value: <Languages /> },
-        { label: "Phone", value: "+123-456-7890" },
-        { label: "Email", value: "ShaikhAnas@gmail.com" },
-        { label: "Address", value: "Mumbai, India - 400104" },
-        { label: "Freelance", value: "Available" },
-      ];
+    const details = t("aboutPage.aboutContent.content.details", {year:currentAge.years.toString(), returnObjects:true});
 
-    const text = `A software developer with a specialized diploma in IT development,  
-        experienced in backend development using PHP, ASP.NET Core,  
-        along with MySQL and SQL Server. Currently expanding my skills  
-        in full-stack development with React.js and Laravel.  
-        Independent and quick to adapt to new technologies.`;
+    const text = t("aboutPage.aboutContent.content.answer");
     const displayText = (isExpanded) ? text : text.substring(0, 100) + '...';
 
     return <>
@@ -63,7 +52,7 @@ const NewProfile=({t})=>{
         <p className={classes.answer}>
             {displayText}
             <span onClick={() => setIsExpanded(!isExpanded)} className={classes.expanded}>
-                {isExpanded ? "read less" : "read more"}
+                {isExpanded ? t("aboutPage.aboutContent.content.readLess") : t("aboutPage.aboutContent.content.readMore")}
             </span>
         </p>
         <SocialHorizontalItem />
@@ -98,7 +87,7 @@ const OldProfile=(t)=>{
             {t("aboutPage.aboutContent.content.name")}
         </h1>
         <p className={classes.answer}>
-            {t("aboutPage.aboutContent.content.answer", { years: currentAge.years, city: city, country:country, email:email, phone:phone})}
+            {t("aboutPage.aboutContent.content.answerOld", { years: currentAge.years, city: city, country:country, email:email, phone:phone})}
         </p>
         <SocialHorizontalItem />
         <div className={classes.export}>

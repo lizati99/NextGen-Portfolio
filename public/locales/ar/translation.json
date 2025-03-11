@@ -1,288 +1,297 @@
 {
-    "navbar": {
-        "links": {
-            "home": "الصفحة الرئيسية",
-            "about": "من نحن",
-            "resume": "السيرة الذاتية",
-            "portfolio": "محفظة الأعمال",
-            "contact": "اتصل بنا"
-        }
-    },
-    "homePage":{
-        "landing":{
-            "lastName":"الليزاطي",
-            "firstName":"محمد",
-            "subject":"مبرمج",
-            "roleList":["ويب", "الواجهة الأمامية", "الواجهة الخلفية"],
-            "lastRole":""
-        }
-    },
-    "aboutPage": {
-        "aboutContent": {
-            "mainHeading": {
-                "smallText": "اعرف",
-                "mainText": "عن",
-                "highlightedText": "نفسي"
-            },
-            "content": {
-                "question": "من أنا؟",
-                "name": "أنا الليزاطي محمد",
-                "answer": "مطور فول ستاك، عمري {{years}} سنة من {{city}}، {{country}}. بريدي الإلكتروني هو {{email}} ورقم هاتفي هو {{phone}}.",
-                "downloadLink": "تحميل السيرة الذاتية"
-            }
-        },
-        "serviceContent": {
-            "mainHeading": {
-                "smallText": "الخدمات التي أقدمها لعملائي",
-                "mainText": "خدما",
-                "highlightedText":"تي"
-                
-            },
-            "services": {
-                "webDesign": {
-                    "name": "تصميم الويب",
-                    "description": "لوريم إيبسوم دولور سيت أميت، كونسيكتتور أديبيسيسينغ إيليت. ديكتا كوروبتي إن ريسييانديس لابوروم كويز لابوري دولورس نون أومينيس سايبي نيهي."
-                },
-                "webDevelopment": {
-                    "name": "تطوير الويب",
-                    "description": "لوريم إيبسوم دولور سيت أميت، كونسيكتتور أديبيسيسينغ إيليت. ديكتا كوروبتي إن ريسييانديس لابوروم كويز لابوري دولورس نون أومينيس سايبي نيهي."
-                },
-                "mobileAppDevelopment": {
-                    "name": "تطوير تطبيقات الموبايل",
-                    "description": "لوريم إيبسوم دولور سيت أميت، كونسيكتتور أديبيسيسينغ إيليت. ديكتا كوروبتي إن ريسييانديس لابوروم كويز لابوري دولورس نون أومينيس سايبي نيهي."
-                },
-                "digitalMarketing": {
-                    "name": "التسويق الرقمي",
-                    "description": "لوريم إيبسوم دولور سيت أميت، كونسيكتتور أديبيسيسينغ إيليت. ديكتا كوروبتي إن ريسييانديس لابوروم كويز لابوري دولورس نون أومينيس سايبي نيهي."
-                },
-                "seoSem": {
-                    "name": "تحسين محركات البحث & SEM",
-                    "description": "لوريم إيبسوم دولور سيت أميت، كونسيكتتور أديبيسيسينغ إيليت. ديكتا كوروبتي إن ريسييانديس لابوروم كويز لابوري دولورس نون أومينيس سايبي نيهي."
-                },
-                "brandingIdentity": {
-                    "name": "العلامة التجارية والهوية",
-                    "description": "لوريم إيبسوم دولور سيت أميت، كونسيكتتور أديبيسيسينغ إيليت. ديكتا كوروبتي إن ريسييانديس لابوروم كويز لابوري دولورس نون أومينيس سايبي نيهي."
-                }
-            }
-        }
-    },
-    "resumePage": {
-        "resumeContent": {
-            "mainHeading": {
-                "smallText": "إليك",
-                "mainText": "سيرتي",
-                "highlightedText": "الذاتية"
-            },
-            "content": {
-                "titleEducation": "التعليم",
-                "education": [
-                    {
-                        "year": "2024",
-                        "title": "دبلوم اللغة الألمانية B1",
-                        "date": "TELC / 2024",
-                        "description": "شهادة لغة للمعرفة الأساسية المتقدمة في اللغة الألمانية."
-                    },
-                    {
-                        "year": "2022",
-                        "title": "دبلوم تقني متخصص",
-                        "date": "CFMNTIOE وجدة / 2020 - 2022",
-                        "description": "تقني متخصص في تطوير البرمجيات في مؤسسة الأوفشورينغ وجدة."
-                    },
-                    {
-                        "year": "2022",
-                        "title": "اختصاصي في مايكروسوفت أوفيس",
-                        "date": "مايكروسوفت / 2022",
-                        "description": "وورد 2016، إكسل 2016"
-                    },
-                    {
-                        "year": "2022",
-                        "title": "شهادة في تقنيات الكمبيوتر الأساسية",
-                        "date": "CISCO / 2021",
-                        "description": "أكاديمية شبكات سيسكو"
-                    },
-                    {
-                        "year": "2018",
-                        "title": "بكالوريا في العلوم الفيزيائية",
-                        "date": "ثانوية الشريف الإدريسي / 2017 - 2018",
-                        "description": "بكالوريا في العلوم الفيزيائية."
-                    }
-                ],
-                "titleExperience": "الخبرات",
-                "experience": [
-                    {
-                        "year": "2025",
-                        "title": "تدريب: مطور فول ستاك",
-                        "date": "سوفت كاكتوس / 2024 - 2025، وجدة",
-                        "description": "عملت على مشروع التجارة الإلكترونية، حيث قمت بتخصيص واجهة المستخدم باستخدام React JS وحل بعض المشاكل في الخلفية باستخدام Laravel. كما قمت بتحليل مشروع المبيعات والمشتريات من البداية، أنشأت مخطط UML، وطورت الخلفية باستخدام Laravel."
-                    },
-                    {
-                        "year": "2023",
-                        "title": "تدريب: مطور فول ستاك",
-                        "date": "بيل ليرنينغ برو / 2022 - 2023، وجدة",
-                        "description": "ساهمت في ثلاثة مشاريع. كمطور فول ستاك، قمت ببناء منصة تعليمية باستخدام HTML وBootstrap 5 وJavaScript وPHP وMySQL، مع التركيز على تجربة المستخدم، وأمان البيانات، والتخزين الفعال. كما عملت كمطور باك إند، حيث طورت نظامًا لإدارة الطلبات وملفات المشاريع باستخدام ASP.NET Core، وأنماط التصميم، والبرمجة الكائنية، وJWT، وSQL Server."
-                    },
-                    {
-                        "year": "2023",
-                        "title": "مستقل: مطور باك إند",
-                        "date": "ديجيتال باترفلاي فريلانس / 2023، وجدة",
-                        "description": "طورت نظامًا لمنصة Marrakech Invest باستخدام PHP. كانت مسؤولياتي تتضمن تطوير الخلفية وإنشاء قاعدة البيانات."
-                    },
-                    {
-                        "year": "2022",
-                        "title": "تدريب: مطور باك إند",
-                        "date": "سيمبانيكس / 2022",
-                        "description": "إنشاء منصة تجارة إلكترونية ومنصة تعليمية باستخدام HTML وBootstrap 5 وJavaScript وPHP وMySQL."
-                    }
-                ]
-            }
-        },
-        "skillContent": {
-            "mainHeading": {
-                "smallText": "مستوى معرفتي",
-                "mainText": "مهارا",
-                "highlightedText":"تي"
-            },
-            "content": {
-                "skills": [
-                    {
-                        "name": "HTML",
-                        "percentage": 100
-                    },
-                    {
-                        "name": "CSS",
-                        "percentage": 90
-                    },
-                    {
-                        "name": "SASS",
-                        "percentage": 80
-                    },
-                    {
-                        "name": "JAVASCRIPT",
-                        "percentage": 85
-                    },
-                    {
-                        "name": "TYPESCRIPT",
-                        "percentage": 75
-                    },
-                    {
-                        "name": "REACT JS",
-                        "percentage": 80
-                    },
-                    {
-                        "name": "PHP",
-                        "percentage": 85
-                    },
-                    {
-                        "name": "LARAVEL",
-                        "percentage": 80
-                    },
-                    {
-                        "name": "ASP.NET Core",
-                        "percentage": 85
-                    },
-                    {
-                        "name": "SQL",
-                        "percentage": 85
-                    }
-                ]
-            }
-        }
-    },
-    "portfolioPage": {
-        "portfolioContent": {
-            "mainHeading": {
-                "smallText": "معرضي",
-                "mainText": "بعض من",
-                "highlightedText":"أعمالي"
-            },
-            "content": {
-                "categories": [
-                    {
-                        "name": "all",
-                        "label": "الكل"
-                    },
-                    {
-                        "name": "desktop",
-                        "label": "سطح المكتب"
-                    },
-                    {
-                        "name": "web",
-                        "label": "الويب"
-                    },
-                    {
-                        "name": "frontend",
-                        "label": "واجهة الامامية"
-                    },
-                    {
-                        "name":"backend",
-                        "label":"واجهة الخلفية"
-                    }
-                ],
-                "projects": {
-                    "quiz": {
-                        "title": "الاختبار",
-                        "description": "موضوع",
-                        "role": "الواجهة الأمامية"
-                    },
-                    "toolkit": {
-                        "title": "مجموعة الأدوات",
-                        "description": "ملف الأعمال",
-                        "role": "الواجهة الأمامية"
-                    },
-                    "tictactoe": {
-                        "title": "إكس-أو",
-                        "description": "لعبة",
-                        "role": "الواجهة الأمامية"
-                    },
-                    "movie": {
-                        "title": "فيلم",
-                        "description": "الأرشيف",
-                        "role": "الخلفية"
-                    },
-                    "stock": {
-                        "title": "الأسهم",
-                        "description": "المتابعة",
-                        "role": "الخلفية"
-                    },
-                    "elearning": {
-                        "title": "التعليم الإلكتروني",
-                        "description": "التعلم",
-                        "role": "الخلفية"
-                    },
-                    "investmarrakech": {
-                        "title": "استثمر في مراكش",
-                        "description": "المجال",
-                        "role": "الخلفية"
-                    },
-                    "supply": {
-                        "title": "الإمداد",
-                        "description": "المجال",
-                        "role": "الخلفية"
-                    }
-                }
-            }
-        }
-    },
-    "contactPage": {
-        "contactContent": {
-            "mainHeading": {
-                "smallText": "لا تتردد في التواصل معي في أي وقت",
-                "mainText": "ابقَ",
-                "highlightedText": "على تواصل"
-            },
-            "content": {
-                "title": "بنا",
-                "subject": "اتصل",
-                "description": "يسعدنا الاستماع إليك! يرجى ملء النموذج أدناه."
-            }
-        },
-        "contactForm": {
-            "name": "أدخل اسمك",
-            "email": "أدخل عنوان بريد إلكتروني صالح",
-            "subject": "أدخل موضوع رسالتك",
-            "message": "اكتب رسالتك هنا...",
-            "submit": "إرسال"
-        }
+  "navbar": {
+    "links": {
+      "home": "الصفحة الرئيسية",
+      "about": "من نحن",
+      "resume": "السيرة الذاتية",
+      "portfolio": "محفظة الأعمال",
+      "contact": "اتصل بنا"
     }
-
+  },
+  "homePage": {
+    "landing": {
+      "lastName": "الليزاطي",
+      "firstName": "محمد",
+      "subject": "مبرمج",
+      "roleList": ["ويب", "الواجهة الأمامية", "الواجهة الخلفية"],
+      "lastRole": ""
+    }
+  },
+  "aboutPage": {
+    "aboutContent": {
+      "mainHeading": {
+        "smallText": "اعرف",
+        "mainText": "عن",
+        "highlightedText": "نفسي"
+      },
+      "content": {
+        "question": "من أنا؟",
+        "name": "أنا الليزاطي محمد",
+        "answerOld": "مطور فول ستاك، عمري {{years}} سنة من {{city}}، {{country}}. بريدي الإلكتروني هو {{email}} ورقم هاتفي هو {{phone}}.",
+        "answer": "مطور برمجيات حاصل على دبلوم متخصص في تطوير تقنية المعلومات، أمتلك خبرة في تطوير الخلفية باستخدام PHP وASP.NET Core،إلى جانب MySQL وSQL Server. حاليًا، أعمل على توسيع مهاراتي في تطوير الويب الكامل باستخدام React.js وLaravel. مستقل وسريع التكيف مع التقنيات الجديدة.",
+        "readMore": "اقرأ المزيد",
+        "readLess": "عرض أقل",
+        "details": [
+          { "label": "العمر", "value": "{{year}}" },
+          { "label": "اللغة", "value": "الهندية / الإنجليزية" },
+          { "label": "الهاتف", "value": "+123-456-7890" },
+          { "label": "البريد الإلكتروني", "value": "ShaikhAnas@gmail.com" },
+          { "label": "العنوان", "value": "مومباي، الهند - 400104" },
+          { "label": "العمل الحر", "value": "متاح" }
+        ],
+        "downloadLink": "تحميل السيرة الذاتية"
+      }
+    },
+    "serviceContent": {
+      "mainHeading": {
+        "smallText": "الخدمات التي أقدمها لعملائي",
+        "mainText": "خدما",
+        "highlightedText": "تي"
+      },
+      "services": {
+        "webDesign": {
+          "name": "تصميم الويب",
+          "description": "لوريم إيبسوم دولور سيت أميت، كونسيكتتور أديبيسيسينغ إيليت. ديكتا كوروبتي إن ريسييانديس لابوروم كويز لابوري دولورس نون أومينيس سايبي نيهي."
+        },
+        "webDevelopment": {
+          "name": "تطوير الويب",
+          "description": "لوريم إيبسوم دولور سيت أميت، كونسيكتتور أديبيسيسينغ إيليت. ديكتا كوروبتي إن ريسييانديس لابوروم كويز لابوري دولورس نون أومينيس سايبي نيهي."
+        },
+        "mobileAppDevelopment": {
+          "name": "تطوير تطبيقات الموبايل",
+          "description": "لوريم إيبسوم دولور سيت أميت، كونسيكتتور أديبيسيسينغ إيليت. ديكتا كوروبتي إن ريسييانديس لابوروم كويز لابوري دولورس نون أومينيس سايبي نيهي."
+        },
+        "digitalMarketing": {
+          "name": "التسويق الرقمي",
+          "description": "لوريم إيبسوم دولور سيت أميت، كونسيكتتور أديبيسيسينغ إيليت. ديكتا كوروبتي إن ريسييانديس لابوروم كويز لابوري دولورس نون أومينيس سايبي نيهي."
+        },
+        "seoSem": {
+          "name": "تحسين محركات البحث & SEM",
+          "description": "لوريم إيبسوم دولور سيت أميت، كونسيكتتور أديبيسيسينغ إيليت. ديكتا كوروبتي إن ريسييانديس لابوروم كويز لابوري دولورس نون أومينيس سايبي نيهي."
+        },
+        "brandingIdentity": {
+          "name": "العلامة التجارية والهوية",
+          "description": "لوريم إيبسوم دولور سيت أميت، كونسيكتتور أديبيسيسينغ إيليت. ديكتا كوروبتي إن ريسييانديس لابوروم كويز لابوري دولورس نون أومينيس سايبي نيهي."
+        }
+      }
+    }
+  },
+  "resumePage": {
+    "resumeContent": {
+      "mainHeading": {
+        "smallText": "إليك",
+        "mainText": "سيرتي",
+        "highlightedText": "الذاتية"
+      },
+      "content": {
+        "titleEducation": "التعليم",
+        "education": [
+          {
+            "year": "2024",
+            "title": "دبلوم اللغة الألمانية B1",
+            "date": "TELC / 2024",
+            "description": "شهادة لغة للمعرفة الأساسية المتقدمة في اللغة الألمانية."
+          },
+          {
+            "year": "2022",
+            "title": "دبلوم تقني متخصص",
+            "date": "CFMNTIOE وجدة / 2020 - 2022",
+            "description": "تقني متخصص في تطوير البرمجيات في مؤسسة الأوفشورينغ وجدة."
+          },
+          {
+            "year": "2022",
+            "title": "اختصاصي في مايكروسوفت أوفيس",
+            "date": "مايكروسوفت / 2022",
+            "description": "وورد 2016، إكسل 2016"
+          },
+          {
+            "year": "2022",
+            "title": "شهادة في تقنيات الكمبيوتر الأساسية",
+            "date": "CISCO / 2021",
+            "description": "أكاديمية شبكات سيسكو"
+          },
+          {
+            "year": "2018",
+            "title": "بكالوريا في العلوم الفيزيائية",
+            "date": "ثانوية الشريف الإدريسي / 2017 - 2018",
+            "description": "بكالوريا في العلوم الفيزيائية."
+          }
+        ],
+        "titleExperience": "الخبرات",
+        "experience": [
+          {
+            "year": "2025",
+            "title": "تدريب: مطور فول ستاك",
+            "date": "سوفت كاكتوس / 2024 - 2025، وجدة",
+            "description": "عملت على مشروع التجارة الإلكترونية، حيث قمت بتخصيص واجهة المستخدم باستخدام React JS وحل بعض المشاكل في الخلفية باستخدام Laravel. كما قمت بتحليل مشروع المبيعات والمشتريات من البداية، أنشأت مخطط UML، وطورت الخلفية باستخدام Laravel."
+          },
+          {
+            "year": "2023",
+            "title": "تدريب: مطور فول ستاك",
+            "date": "بيل ليرنينغ برو / 2022 - 2023، وجدة",
+            "description": "ساهمت في ثلاثة مشاريع. كمطور فول ستاك، قمت ببناء منصة تعليمية باستخدام HTML وBootstrap 5 وJavaScript وPHP وMySQL، مع التركيز على تجربة المستخدم، وأمان البيانات، والتخزين الفعال. كما عملت كمطور باك إند، حيث طورت نظامًا لإدارة الطلبات وملفات المشاريع باستخدام ASP.NET Core، وأنماط التصميم، والبرمجة الكائنية، وJWT، وSQL Server."
+          },
+          {
+            "year": "2023",
+            "title": "مستقل: مطور باك إند",
+            "date": "ديجيتال باترفلاي فريلانس / 2023، وجدة",
+            "description": "طورت نظامًا لمنصة Marrakech Invest باستخدام PHP. كانت مسؤولياتي تتضمن تطوير الخلفية وإنشاء قاعدة البيانات."
+          },
+          {
+            "year": "2022",
+            "title": "تدريب: مطور باك إند",
+            "date": "سيمبانيكس / 2022",
+            "description": "إنشاء منصة تجارة إلكترونية ومنصة تعليمية باستخدام HTML وBootstrap 5 وJavaScript وPHP وMySQL."
+          }
+        ]
+      }
+    },
+    "skillContent": {
+      "mainHeading": {
+        "smallText": "مستوى معرفتي",
+        "mainText": "مهارا",
+        "highlightedText": "تي"
+      },
+      "content": {
+        "skills": [
+          {
+            "name": "HTML",
+            "percentage": 100
+          },
+          {
+            "name": "CSS",
+            "percentage": 90
+          },
+          {
+            "name": "SASS",
+            "percentage": 80
+          },
+          {
+            "name": "JAVASCRIPT",
+            "percentage": 85
+          },
+          {
+            "name": "TYPESCRIPT",
+            "percentage": 75
+          },
+          {
+            "name": "REACT JS",
+            "percentage": 80
+          },
+          {
+            "name": "PHP",
+            "percentage": 85
+          },
+          {
+            "name": "LARAVEL",
+            "percentage": 80
+          },
+          {
+            "name": "ASP.NET Core",
+            "percentage": 85
+          },
+          {
+            "name": "SQL",
+            "percentage": 85
+          }
+        ]
+      }
+    }
+  },
+  "portfolioPage": {
+    "portfolioContent": {
+      "mainHeading": {
+        "smallText": "معرضي",
+        "mainText": "بعض من",
+        "highlightedText": "أعمالي"
+      },
+      "content": {
+        "categories": [
+          {
+            "name": "all",
+            "label": "الكل"
+          },
+          {
+            "name": "desktop",
+            "label": "سطح المكتب"
+          },
+          {
+            "name": "web",
+            "label": "الويب"
+          },
+          {
+            "name": "frontend",
+            "label": "واجهة الامامية"
+          },
+          {
+            "name": "backend",
+            "label": "واجهة الخلفية"
+          }
+        ],
+        "projects": {
+          "quiz": {
+            "title": "الاختبار",
+            "description": "موضوع",
+            "role": "الواجهة الأمامية"
+          },
+          "toolkit": {
+            "title": "مجموعة الأدوات",
+            "description": "ملف الأعمال",
+            "role": "الواجهة الأمامية"
+          },
+          "tictactoe": {
+            "title": "إكس-أو",
+            "description": "لعبة",
+            "role": "الواجهة الأمامية"
+          },
+          "movie": {
+            "title": "فيلم",
+            "description": "الأرشيف",
+            "role": "الخلفية"
+          },
+          "stock": {
+            "title": "الأسهم",
+            "description": "المتابعة",
+            "role": "الخلفية"
+          },
+          "elearning": {
+            "title": "التعليم الإلكتروني",
+            "description": "التعلم",
+            "role": "الخلفية"
+          },
+          "investmarrakech": {
+            "title": "استثمر في مراكش",
+            "description": "المجال",
+            "role": "الخلفية"
+          },
+          "supply": {
+            "title": "الإمداد",
+            "description": "المجال",
+            "role": "الخلفية"
+          }
+        }
+      }
+    }
+  },
+  "contactPage": {
+    "contactContent": {
+      "mainHeading": {
+        "smallText": "لا تتردد في التواصل معي في أي وقت",
+        "mainText": "ابقَ",
+        "highlightedText": "على تواصل"
+      },
+      "content": {
+        "title": "بنا",
+        "subject": "اتصل",
+        "description": "يسعدنا الاستماع إليك! يرجى ملء النموذج أدناه."
+      }
+    },
+    "contactForm": {
+      "name": "أدخل اسمك",
+      "email": "أدخل عنوان بريد إلكتروني صالح",
+      "subject": "أدخل موضوع رسالتك",
+      "message": "اكتب رسالتك هنا...",
+      "submit": "إرسال"
+    }
+  }
 }
