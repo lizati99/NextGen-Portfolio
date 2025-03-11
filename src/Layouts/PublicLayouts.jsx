@@ -1,6 +1,5 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Footer from "../Components/Common/Footer/Footer";
 import Navbar from "../Components/Common/Navbar/Navbar";
 import OverlayEffect from "../Components/ui/Overlay/OverlayEffect";
 

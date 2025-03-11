@@ -1,5 +1,5 @@
 /* Start About Content */
-.content_about{
+.content_about {
     width: 100%;
     height: auto;
     margin: 60px auto;
@@ -7,118 +7,194 @@
     cursor: default;
     overflow: hidden;
 }
-.content_about .left{
+
+.content_about .left {
     width: 40%;
     height: inherit;
     background: url(../../assets/images/About/IMG_9347.JPG) 10%;
     background-size: cover;
     border-radius: 40px;
 }
-.content_about .right{
+
+.content_about .right {
     width: 60%;
     height: 100%;
-    padding: 40px 80px;
+    padding: 30px 40px;
     line-height: 2;
 }
-.right .question{
+
+/* Start old profile */
+.right .question {
     color: var(--color-secondary);
     font-size: 18px;
 }
-.right h1{
+
+.right h1 {
     font-size: 30px;
 }
-.right .answer{
+
+.right .answer {
     font-family: var(--font-secondary);
     letter-spacing: 1px;
     color: #777;
 }
-.right .contactList{
-    margin: 40px 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    font-size: 20px;
-    position: relative;
-}
 
-.contactList li i{
-    background-color: var(--color-overlay);
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-    transition: .5s;
-}
-.contactList li i:hover,
-.contactList li i:focus{
-    opacity: .5;
-}
-.contactList li i::after{
-    content: '';
-    height: 0;
-    width: 0;
-    border: 10px solid;
-    border-color: transparent transparent var(--color-overlay) transparent;
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.export{
+.export {
     text-align: center;
 }
-.export a{
+
+.export a {
     display: inline-block;
     padding: 10px;
     border-radius: 5px;
     font-size: 18px;
 }
-.btn_primary{
+
+.btn_primary {
     background-color: var(--color-secondary);
     transition: .5s;
 }
+
 .btn_primary:hover,
-.btn_primary:focus{
+.btn_primary:focus {
     opacity: .5;
 }
+
+/* End old profile */
+
+/* Start new profile */
+.card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+
+.details {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.detailItem {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.detailItem strong{
+    color: var(--color-secondary);
+    letter-spacing: 1px;
+    font-size: clamp(12px, 1vw, 18px);
+}
+
+.detailItem {
+    color: var(--color-third);
+    font-family: var(--font-secondary);
+    font-size: clamp(12px, 1vw, 18px);
+    font-weight: 600;
+}
+
+.info .export{
+    margin-top: 10px;
+}
+/* Start Languages style */
+.setting_item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.setting_item>div {
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    opacity: .6;
+    transition: all 1s ease;
+}
+
+.setting_item>div:hover,
+.setting_item>svg:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.expanded{
+    color: var(--color-secondary);
+    font-family: var(--font-secondary);
+    font-size: clamp(12px, 1vw, 18px);
+    font-weight: 400;
+    margin-left: 5px;
+    cursor: pointer;
+    opacity: .8;
+    transition: all .5s linear;
+}
+.expanded:hover{
+    opacity: 1  ;
+}
+
+/* End languages style */
+
+/* End new profile */
 /* End About Content */
 
 @media screen and (max-width:1200px) {
-    .content_about .right{
+    .content_about .right {
         padding: 20px;
     }
 }
+
 @media screen and (max-width:767px) {
-    .content_about{
+    .content_about {
         display: block;
     }
-    .content_about .left{
+
+    .content_about .left {
         height: 40vh;
         width: 100%;
-        background-position:50% 30%;
+        background-position: 50% 30%;
     }
-    .content_about .right{
+
+    .content_about .right {
         padding: 10px;
         width: 100%;
     }
-    .right .answer{
+
+    .right .answer {
         text-align: justify;
         font-size: 13px;
     }
-    .right h1{
+
+    .right h1 {
         font-size: 16px;
         text-align: center;
     }
-    .right .question{
+
+    .right .question {
         text-align: center;
     }
-    .right .question{
+
+    .right .question {
         font-size: 12px;
     }
-    .services_box{
+
+    .services_box {
         padding: 25px 0;
     }
-    .services_content .service{
+
+    .services_content .service {
         width: 100%;
         padding: 20px;
     }

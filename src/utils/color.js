@@ -29,12 +29,12 @@ export const SOLARSYSTEMCOLORS = {
 };
 
 
-const assignIcons = (index) => ({
-    about: images.icon.about[`about_${index + 1}`],
-    resume: images.icon.resume[`resume_${index + 1}`],
-    portfolio: images.icon.portfolio[`portfolio_${index + 1}`],
-    contact: images.icon.contact[`contact_${index + 1}`],
-  });
+// const assignIcons = (index) => ({
+//     about: images.icon.about[`about_${index + 1}`],
+//     resume: images.icon.resume[`resume_${index + 1}`],
+//     portfolio: images.icon.portfolio[`portfolio_${index + 1}`],
+//     contact: images.icon.contact[`contact_${index + 1}`],
+//   });
   
 const MODE = {
     secondaryColor: "#009688",

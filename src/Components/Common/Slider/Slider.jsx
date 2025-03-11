@@ -14,11 +14,10 @@ const projects = [
     { id: 5, title: "Task Manager", description: "A productivity task manager with cloud synchronization.", image: { src: projectImg, alt: "Task manager app" }}
 ];
 
-// إنشاء نسخة متكررة للعناصر بحيث تحتوي القائمة على عنصر أول وأخير وهمي
 const duplicatedProjects = [
-    projects[projects.length - 1],  // العنصر الأخير مكرر في البداية
+    projects[projects.length - 1], 
     ...projects,
-    projects[0]  // العنصر الأول مكرر في النهاية
+    projects[0]
 ];
 
 const Slider = () => {

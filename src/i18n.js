@@ -15,8 +15,9 @@ i18n
       caches: ["localStorage"],
     },
     backend: {
-      loadPath: "/locales/{{lng}}/translation.json",
+      loadPath: process.env.PUBLIC_URL + "/locales/{{lng}}/translation.json",
     },
   });
 
+  console.log( process.env.PUBLIC_URL);
 export default i18n;
