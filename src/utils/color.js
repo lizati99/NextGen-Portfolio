@@ -1,4 +1,6 @@
 import images from "./imagesImports";
+import darkBackground from "./../assets/images/Body/allec-gomes-fuooELn4jyA-unsplash.jpg"
+import lightBackground from "./../assets/images/Body/oleg-laptev-7jQh3EiS8Bs-unsplash.jpg"
 
 export const SOLARSYSTEMCOLORS = {
     core: "#512BD4",
@@ -39,9 +41,10 @@ export const SOLARSYSTEMCOLORS = {
 const MODE = {
     secondaryColor: "#009688",
     light: {
-        backgroundColor: "#f5f4ef",
+        backgroundImage: `url(${lightBackground})`,
+        backgroundColor: "#FFF",
         textColor: "#686763",
-        overlayColor: "#e5e2d9",
+        overlayColor: "#EEE",
         thirdColor: "#b8b5b0",
         logo: "",
         COLORS: [
@@ -53,6 +56,7 @@ const MODE = {
         ],
     },
     dark: {
+        backgroundImage: `url(${darkBackground})`,
         backgroundColor: "#000",
         textColor: "#F9F9F9",
         overlayColor: "#222",

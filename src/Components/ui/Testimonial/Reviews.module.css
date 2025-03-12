@@ -1,12 +1,36 @@
 .reviews_box {
     padding: 60px 0;
+    position: relative;
 }
+/* 
+.reviews_content::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-overlay);
+    z-index: -1;
+}
+
+.reviews_content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    z-index: -1;
+} */
 
 .reviews_content {
     width: 100%;
     height: auto;
     margin: 50px auto;
     padding: 10px;
+    position: relative;
 }
 
 

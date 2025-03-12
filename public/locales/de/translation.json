@@ -33,10 +33,10 @@
         "readLess": "weniger anzeigen",
         "details": [
           { "label": "Alter", "value": "{{year}}" },
-          { "label": "Sprache", "value": "Hindi / Englisch" },
-          { "label": "Telefon", "value": "+123-456-7890" },
-          { "label": "E-Mail", "value": "ShaikhAnas@gmail.com" },
-          { "label": "Adresse", "value": "Mumbai, Indien - 400104" },
+          { "label": "Sprache", "value": null },
+          { "label": "Telefon", "value": "{{phone}}" },
+          { "label": "E-Mail", "value": "{{email}}" },
+          { "label": "Adresse", "value": "Hay Benazzi Nr. 28, Straße 26, Oujda" },
           { "label": "Freiberuflich", "value": "Verfügbar" }
         ],
         "downloadLink": "Lebenslauf herunterladen"

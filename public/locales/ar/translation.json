@@ -33,10 +33,10 @@
         "readLess": "عرض أقل",
         "details": [
           { "label": "العمر", "value": "{{year}}" },
-          { "label": "اللغة", "value": "الهندية / الإنجليزية" },
-          { "label": "الهاتف", "value": "+123-456-7890" },
-          { "label": "البريد الإلكتروني", "value": "ShaikhAnas@gmail.com" },
-          { "label": "العنوان", "value": "مومباي، الهند - 400104" },
+          { "label": "اللغة", "value": null },
+          { "label": "الهاتف", "value": "{{phone}}" },
+          { "label": "البريد الإلكتروني", "value": "{{email}}" },
+          { "label": "العنوان", "value": "حي بنعزي، رقم 28، شارع 26، وجدة" },
           { "label": "العمل الحر", "value": "متاح" }
         ],
         "downloadLink": "تحميل السيرة الذاتية"

@@ -3,12 +3,8 @@ import calculateExactAge from "../../utils/calculeExactAge";
 import MainHeading from "../Common/MainHeading/MainHeading";
 import SocialHorizontalItem from "../ui/Social/SocialHorizontalItem";
 import classes from "./AboutContent.module.css"
-
-import { useLanguage } from "../../Context/LanguageContext";
-import moroccoFlag from "./../../assets/icons/home/morocco.webp"
-import britishFlag from "./../../assets/icons/home/unitedkingdom.webp"
-import deutschlandFlag from "./../../assets/icons/home/germany.webp"
 import { useState } from "react";
+import LanguageToggle from "./../ui/Languages/LanguageToggle";
 
 export default function AboutContent(){
     const { t } = useTranslation();
@@ -33,7 +29,7 @@ const NewProfile=({t})=>{
     const [isExpanded, setIsExpanded] = useState(false);
     const birthDate = "1999-08-04";
     const currentAge=calculateExactAge(birthDate);
-    const details = t("aboutPage.aboutContent.content.details", {year:currentAge.years.toString(), returnObjects:true});
+    const details = t("aboutPage.aboutContent.content.details", {email:"mohammedlizati99@gmail.com",phone:"+212695283656",year:currentAge.years.toString(), returnObjects:true});
 
     const text = t("aboutPage.aboutContent.content.answer");
     const displayText = (isExpanded) ? text : text.substring(0, 100) + '...';
@@ -59,7 +55,12 @@ const NewProfile=({t})=>{
         <div className={classes.details}>
             {details.map((item, index) => (
                 <p key={index} className={classes.detailItem}>
-                    <strong>{item.label}:</strong> {item.value}
+                    <strong>{item.label}:</strong> 
+                    { 
+                    (item.value !== null) 
+                        ? item.value 
+                        : <LanguageToggle /> 
+                    }
                 </p>
             ))}
         </div>
@@ -92,35 +93,6 @@ const OldProfile=(t)=>{
         <SocialHorizontalItem />
         <div className={classes.export}>
             <a href="./Mohammed lizati Cv.pdf" className={classes.btn_primary}>{t('aboutPage.aboutContent.content.downloadLink')}</a>
-        </div>
-    </>
-}
-
-const Languages=()=>{
-    const { changeLanguage, language } = useLanguage();
-    return <>
-        <div className={classes.setting_item}>
-          <div 
-            className={ language==="ar" ? classes.active : "" }
-            onClick={() => changeLanguage("ar")} 
-            style={{ cursor: "pointer" }}
-          >
-            <img src={moroccoFlag} width="20" alt="morocco flag" />
-          </div>
-          <div
-            className={ language==="en" ? classes.active : "" }
-            onClick={() => changeLanguage("en")}
-            style={{ cursor: "pointer" }}
-          >
-            <img src={britishFlag} width="20" alt="british flag" />
-          </div>
-          <div 
-            className={ language==="de" ? classes.active : "" }
-            onClick={() => changeLanguage("de")} 
-            style={{ cursor: "pointer" }}
-          >
-            <img src={deutschlandFlag} width="20" alt="deutschland flag" />
-          </div>
         </div>
     </>
 }

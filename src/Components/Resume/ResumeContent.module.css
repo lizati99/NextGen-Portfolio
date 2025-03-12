@@ -5,6 +5,7 @@
     display: flex;
     gap: 40px;
     position: relative;
+    direction: ltr;
 }
 
 .resume_content .education,
@@ -13,6 +14,7 @@
     height: auto;
     position: relative;
     /* padding: 20px 40px; */
+    direction: var(--dir);
 }
 
 .resume_content .education{

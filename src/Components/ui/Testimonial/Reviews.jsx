@@ -41,7 +41,7 @@ const Reviews = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState("mieux notés");
     const [sortedReviews, setSortedReviews] = useState([]);
-    const [visibleReviews, setVisibleReviews] = useState(6);
+    const [visibleReviews, setVisibleReviews] = useState(3);
     const isReviews = reviews && reviews.length > 0;
 
     useEffect(() => {
@@ -64,7 +64,7 @@ const Reviews = () => {
 
     const loadMoreOrLess  = () => {
         if (visibleReviews >= reviews.length) {
-            setVisibleReviews(6);
+            setVisibleReviews(3);
         } else {
             setVisibleReviews((prev) => prev + 3);
         }

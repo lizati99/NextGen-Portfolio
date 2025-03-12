@@ -22,6 +22,7 @@ code {
 :root{
   --font-primary: "Audiowide", sans-serif;
   --font-secondary: "Exo 2", sans-serif;
+  --background-image:url(./assets/images/Body/allec-gomes-fuooELn4jyA-unsplash.jpg);
 }
 ::-webkit-scrollbar{
   width: 10px;
@@ -47,7 +48,12 @@ code {
 
 body{
   direction: var(--dir);
-  background: linear-gradient(to bottom, var(--color-bg) 97%, var(--color-secondary));
+  /* background: linear-gradient(to bottom, var(--color-bg) 97%, var(--color-secondary)); */
+  background-color: var(--color-bg);
+  /* background-image: url(./assets/images/Body/oleg-laptev-7jQh3EiS8Bs-unsplash.jpg); */
+  /* background: var(--background-image);
+  background-position: 50% 100%;
+  background-size: 100% 100%; */
   width: 100%;
   /* height: 100vh; */
   overflow-x: hidden;
@@ -71,6 +77,7 @@ body{
   min-height: 100vh;
   /* background-color: var(--color-bg); */
   padding: 7rem 0;
+  padding-bottom: 4rem;
   animation: boxOpacity 1s 1;
   transition: .5s;
 }
