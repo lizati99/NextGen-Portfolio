@@ -1,11 +1,11 @@
-import { faExpand, faGear } from "@fortawesome/free-solid-svg-icons";
+import { faExpand, faGear, faPause, faPauseCircle, faPlay, faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classes from "./ToggleSetting.module.css";
 import LanguageToggle from "../Languages/LanguageToggle";
 import ColorToggle from "../ColorToggle/ColorToggle";
 import { useState } from "react";
 
-export default function ToggleSetting() {
+export default function ToggleSetting({setIsStopped}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -31,6 +31,11 @@ export default function ToggleSetting() {
         
         <h3 className={classes.setting_title}>Languages :</h3>
         <LanguageToggle />
+        <h3 className={classes.setting_title}>Dynamic Introduction :</h3>
+        <div className={classes.setting_item}>
+          <FontAwesomeIcon icon={faPauseCircle} className={`${classes.control} ${classes.active}`} size="lg" onClick={() => setIsStopped(true)}/>
+          <FontAwesomeIcon icon={faPlayCircle} className={`${classes.control} ${classes.active}`} size="lg" onClick={() => setIsStopped(false)}/>
+        </div>
       </div>
     </div>
   );
