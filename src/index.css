@@ -87,6 +87,20 @@ body{
   100%{opacity: 1;}
 }
 
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+}
+
 .close-box{
   position: fixed;
   top: 30px;
