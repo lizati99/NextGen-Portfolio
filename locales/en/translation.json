@@ -32,7 +32,18 @@
             "content": {
                 "question": "Who am i ?",
                 "name": "I am Lizati Mohammed",
-                "answer": "a Fullstack developer, I am {{years}} years old from {{city}}, {{country}}. I have an email {{email}} and my phone number is {{phone}}.",
+                "answerOld": "a Fullstack developer, I am {{years}} years old from {{city}}, {{country}}. I have an email {{email}} and my phone number is {{phone}}.",
+                "answer": "A software developer with a specialized diploma in IT development, experienced in backend development using PHP, ASP.NET Core, along with MySQL and SQL Server. Currently expanding my skills in full-stack development with React.js and Laravel. Independent and quick to adapt to new technologies.",
+                "readMore":"read more",
+                "readLess":"read less",
+                "details": [
+                    { "label": "Age", "value": "{{year}}" },
+                    { "label": "Language", "value": null },
+                    { "label": "Phone", "value": "{{phone}}" },
+                    { "label": "Email", "value": "{{email}}" },
+                    { "label": "Address", "value": "Hay Benazzi Nr 28 Rue 26 Oujda" },
+                    { "label": "Freelance", "value": "Available" }
+                ],
                 "downloadLink": "Download Cv"
             }
         },
