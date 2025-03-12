@@ -71,97 +71,95 @@ const Reviews = () => {
     };
 
     return <>
-        <div className={classes.reviews_box}>
-            <MainHeading smallText="What" mainText="Clients" highlightedText="Say" />
-            <div className={classes.reviews_content}>
-                <div className={classes.reviews_header}>
-                    <h2 className={classes.title}>
-                        All Reviews <span className={classes.number}>({reviews ? reviews.length : 0})</span>
-                    </h2>
-                    <div className={classes.reviews_section}>
-                        {isReviews && (
-                            <div className={classes.dropdown}>
-                                <button
-                                    className={classes.dropdown_button}
-                                    onClick={toggleDropdown}
+        <MainHeading smallText="What" mainText="Clients" highlightedText="Say" />
+        <div className={classes.reviews_content}>
+            <div className={classes.reviews_header}>
+                <h2 className={classes.title}>
+                    All Reviews <span className={classes.number}>({reviews ? reviews.length : 0})</span>
+                </h2>
+                <div className={classes.reviews_section}>
+                    {isReviews && (
+                        <div className={classes.dropdown}>
+                            <button
+                                className={classes.dropdown_button}
+                                onClick={toggleDropdown}
+                            >
+                                <p className={classes.option}>{selectedOption}</p>
+                                <div className={classes.arrow}>
+                                    <img
+                                        src={SelectArrow}
+                                        className={classes.select_arrow_icon}
+                                        alt="Select Arrow"
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </button>
+                            {isDropdownOpen && (
+                                <div
+                                    className={`${classes.dropdown_content} ${isDropdownOpen ? classes.open : ""
+                                        }`}
                                 >
-                                    <p className={classes.option}>{selectedOption}</p>
-                                    <div className={classes.arrow}>
-                                        <img
-                                            src={SelectArrow}
-                                            className={classes.select_arrow_icon}
-                                            alt="Select Arrow"
-                                            loading="lazy"
-                                        />
-                                    </div>
-                                </button>
-                                {isDropdownOpen && (
-                                    <div
-                                        className={`${classes.dropdown_content} ${isDropdownOpen ? classes.open : ""
-                                            }`}
-                                    >
-                                        <p onClick={() => selectOption("plus récents")} className={classes.option}>
-                                            plus récents
-                                        </p>
-                                        <p onClick={() => selectOption("plus anciens")} className={classes.option}>
-                                            plus anciens
-                                        </p>
-                                        <p onClick={() => selectOption("mieux notés")} className={classes.option}>
-                                            mieux notés
-                                        </p>
-                                        <p onClick={() => selectOption("moins notés")} className={classes.option}>
-                                            moins notés
-                                        </p>
-                                    </div>
-                                )}
-                            </div>
-                        )}
-                        <button
-                            className={classes.write_review_button}
-                            onClick={() => setIsPopupOpen((prevState) => !prevState)}
-                        >
-                            Écrire un avis
-                        </button>
-                    </div>
-
+                                    <p onClick={() => selectOption("plus récents")} className={classes.option}>
+                                        plus récents
+                                    </p>
+                                    <p onClick={() => selectOption("plus anciens")} className={classes.option}>
+                                        plus anciens
+                                    </p>
+                                    <p onClick={() => selectOption("mieux notés")} className={classes.option}>
+                                        mieux notés
+                                    </p>
+                                    <p onClick={() => selectOption("moins notés")} className={classes.option}>
+                                        moins notés
+                                    </p>
+                                </div>
+                            )}
+                        </div>
+                    )}
+                    <button
+                        className={classes.write_review_button}
+                        onClick={() => setIsPopupOpen((prevState) => !prevState)}
+                    >
+                        Écrire un avis
+                    </button>
                 </div>
-                { (isPopupOpen) ? (
-                    <PopupAvis setIsPopupOpen={setIsPopupOpen} />
-                ):(
-                    <></>
-                )}
-                <div className={classes.grid_container}>
-                    {sortedReviews.slice(0, visibleReviews).map((review, index) => (
-                        <div key={index} className={classes.card}>
-                            <div className={classes.card_content}>
-                                <div className={classes.card_icon}>
-                                    <img src={cardIcon} alt="review icon" />
-                                </div>
-                                <div className={classes.stars}>
-                                    <Rating name="read-only" value={review.rating} readOnly />
-                                </div>
 
-                                <p className={classes.review_text}>
-                                    {review.text}
-                                </p>
+            </div>
+            { (isPopupOpen) ? (
+                <PopupAvis setIsPopupOpen={setIsPopupOpen} />
+            ):(
+                <></>
+            )}
+            <div className={classes.grid_container}>
+                {sortedReviews.slice(0, visibleReviews).map((review, index) => (
+                    <div key={index} className={classes.card}>
+                        <div className={classes.card_content}>
+                            <div className={classes.card_icon}>
+                                <img src={cardIcon} alt="review icon" />
+                            </div>
+                            <div className={classes.stars}>
+                                <Rating name="read-only" value={review.rating} readOnly />
+                            </div>
 
-                                <div className={classes.user_info}>
-                                    <img src={review.avatar} alt={review.name} className={classes.avatar} />
-                                    <div className={classes.user_details}>
-                                        <p className={classes.user_name}>{review.name}</p>
-                                        <p className={classes.user_job}>{review.job}</p>
-                                        <p className={classes.time}>{review.createdAt}</p>
-                                    </div>
+                            <p className={classes.review_text}>
+                                {review.text}
+                            </p>
+
+                            <div className={classes.user_info}>
+                                <img src={review.avatar} alt={review.name} className={classes.avatar} />
+                                <div className={classes.user_details}>
+                                    <p className={classes.user_name}>{review.name}</p>
+                                    <p className={classes.user_job}>{review.job}</p>
+                                    <p className={classes.time}>{review.createdAt}</p>
                                 </div>
                             </div>
                         </div>
-                    ))}
-                </div>
-                <div className={classes.load}>
-                    <button className={classes.load_more} onClick={loadMoreOrLess}>
-                        {visibleReviews >= reviews.length ? "Show Less" : "Load More"}
-                    </button>
-                </div>
+                    </div>
+                ))}
+            </div>
+            <div className={classes.load}>
+                <button className={classes.load_more} onClick={loadMoreOrLess}>
+                    {visibleReviews >= reviews.length ? "Show Less" : "Load More"}
+                </button>
             </div>
         </div>
     </>

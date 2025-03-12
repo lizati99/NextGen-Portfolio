@@ -12,7 +12,6 @@ export default function ToggleSetting({ setIsStopped }) {
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
-  // دالة لتفعيل وإيقاف وضع الشاشة الكاملة
   const toggleFullScreen = () => {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen().catch((err) => {

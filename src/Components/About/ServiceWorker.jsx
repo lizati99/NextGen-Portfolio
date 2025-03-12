@@ -65,15 +65,13 @@ export default function ServiceWorker() {
         ))
     }
     return <>
-        <div className={classes.services_box}>
-            <MainHeading 
-                smallText={t('aboutPage.serviceContent.mainHeading.smallText')} 
-                mainText={t('aboutPage.serviceContent.mainHeading.mainText')} 
-                highlightedText={t('aboutPage.serviceContent.mainHeading.highlightedText')} 
-            />
-            <div className={classes.services_content}>
-                {displayServices()}
-            </div>
+        <MainHeading 
+            smallText={t('aboutPage.serviceContent.mainHeading.smallText')} 
+            mainText={t('aboutPage.serviceContent.mainHeading.mainText')} 
+            highlightedText={t('aboutPage.serviceContent.mainHeading.highlightedText')} 
+        />
+        <div className={classes.services_content}>
+            {displayServices()}
         </div>
     </>
 }
