@@ -6,7 +6,7 @@ import '@fontsource/audiowide';
 
 const Loader = lazy( () => import('./Layouts/Loaders/Loader.jsx'));
 const PublicLayouts = lazy(() => import("./Layouts/PublicLayouts"));
-const PageNotFound = lazy(() => import("./Pages/PageNotFound"));
+const NotFoundPage = lazy(() => import("./Pages/NotFoundPage.jsx"));
 const HomePage = lazy(() => import("./Pages/HomePage"));
 const AboutPage = lazy(() => import("./Pages/AboutPage"));
 const ResumePage = lazy(() => import("./Pages/ResumePage"));
@@ -42,7 +42,7 @@ function App() {
                 <Route path="resume" element={<ResumePage />} />
                 <Route path="portfolio" element={<PortfolioPage />} />
                 <Route path="contact" element={<ContactPage />} />
-                <Route path="*" element={<PageNotFound />} />
+                <Route path="*" element={<NotFoundPage />} />
               </Route>
             </Routes>
           </Router>
