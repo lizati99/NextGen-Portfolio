@@ -1,0 +1,21 @@
+
+.wind_text {
+    position: absolute;
+    font-size: 24px;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    color: var(--color-overlay);
+    transform: translateX(100vw);
+    animation: windMove linear infinite;
+    transition: all .5s linear;
+}
+
+@keyframes windMove {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+
+        transform: translateX(-100vw);
+    }
+}

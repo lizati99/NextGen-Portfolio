@@ -27,8 +27,9 @@
     display: block;
     width: 100%;
     max-width: 100%;
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: 20px 40px;
+    border-radius: 2px;
+    background-color: var(--color-overlay);
 }
 
 .contact_form h1 {

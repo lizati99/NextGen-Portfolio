@@ -41,13 +41,14 @@ export default function NavbarMobile() {
     ));
   };
   return (
-    <div className={classes.stroke}>
+    <div className={`${classes.stroke} ${activeLink!=="/" ? classes.show : ""}`}>
       <nav className={classes.navbar}>
         {displayNavLink()}
       </nav>
     </div>
   );
 }
+
 
 function NavItem({ path, icon, label, isActive, onClick }) {
   return (

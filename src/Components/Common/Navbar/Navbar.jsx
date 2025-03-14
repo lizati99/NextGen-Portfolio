@@ -14,24 +14,10 @@ export default function Navbar() {
     const [activeLink, setActiveLink] = useState("/");
     const location = useLocation();
     const { t } = useTranslation();
-    const [showMobileNav, setShowMobileNav] = useState(false);
-    
-    const isMobile = window.innerWidth <= 768;
 
     useEffect(() => {
         setActiveLink(location.pathname);
     }, [location]);
-
-    useEffect(() => {
-        if (activeLink !== "/" || isMobile) {
-            const timer = setTimeout(() => {
-                setShowMobileNav(true);
-            }, 1000);
-            return () => clearTimeout(timer); 
-        } else {
-            setShowMobileNav(false);
-        }
-    }, [activeLink, isMobile]);
 
     const displayNavLink = () => {
         const linkList = [
@@ -59,22 +45,18 @@ export default function Navbar() {
     };
     return (
         <>
-            { activeLink==="/" && !isMobile ? (
-                <nav className={`${classes.navbar}`}>
-                    <div className="container">
-                        <div className={classes.header_area}>
-                            <div className={classes.logo}>
-                                <img src={colorData.logo} width="40" alt="header logo" />
-                            </div>
-                            <ul className={`${classes.links}`}>
-                                {displayNavLink()}
-                            </ul>
+            <nav className={`${classes.navbar} ${activeLink!=="/" ? classes.hide : ""}`}>
+                <div className="container">
+                    <div className={classes.header_area}>
+                        <div className={classes.logo}>
+                            <img src={colorData.logo} width="40" alt="header logo" />
                         </div>
+                        <ul className={`${classes.links}`}>
+                            {displayNavLink()}
+                        </ul>
                     </div>
-                </nav>
-            ) : (
-                showMobileNav && <NavbarMobile />
-            )}
+                </div>
+            </nav>
         </>
     );
 }

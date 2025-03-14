@@ -1,5 +1,6 @@
 /* Start NavBar */
 .navbar {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -52,3 +53,13 @@
     color: var(--color-secondary);
 }
 /* End Header Area */
+
+.hide{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        display: none;
+    }
+}

@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next'
 
 export default function PortfolioContent() {
     const [selectedCategory, setSelectedCategory] = useState('all');
+    const [visibleWorks, setVisibleWorks] = useState(3);
     const { t } = useTranslation();
 
     const works = [
@@ -37,6 +38,13 @@ export default function PortfolioContent() {
         ? translatedWorks
         : translatedWorks.filter(work => work.category === selectedCategory);
 
+    const loadMoreOrLess  = () => {
+        if (visibleWorks >= filteredWorks.length) {
+            setVisibleWorks(3);
+        } else {
+            setVisibleWorks((prev) => prev + 3);
+        }
+    };
     return <>
         <MainHeading 
             smallText={t('portfolioPage.portfolioContent.mainHeading.smallText')} 
@@ -61,9 +69,14 @@ export default function PortfolioContent() {
                     <h1>{selectedCategory === categories[0].name ? categories[0].label : selectedCategory}</h1>
                 </div>
 
-                {filteredWorks.map((work, index) => (
+                {filteredWorks.slice(0, visibleWorks).map((work, index) => (
                     <Work key={index} {...work}/>
                 ))}
+            </div>
+             <div className={classes.load}>
+                <button className={classes.load_more} onClick={loadMoreOrLess}>
+                    {visibleWorks >= filteredWorks.length ? "Show Less" : "Load More"}
+                </button>
             </div>
         </div>
     </>;

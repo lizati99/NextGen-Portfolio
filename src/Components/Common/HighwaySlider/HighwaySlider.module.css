@@ -1,5 +1,5 @@
-.no_marg {
-    margin: 0;
+.slide_option {
+    margin-bottom: 60px;
 }
 
 .container {
@@ -38,6 +38,7 @@
     align-items: center;
     width: 180px;
     border-radius: 5px;
+    font-size: 40px;
     transition: 1s;
 }
 

@@ -59,11 +59,23 @@ body{
   overflow-x: hidden;
 }
 
+.background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: var(--color-bg); */
+  background: radial-gradient(var(--color-bg) 8px, var(--color-overlay) 30px);
+  background-size: 20px 20px;
+  overflow: hidden;
+  z-index: -1;
+}
+
 .container{
   max-width: 90%;
   margin: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 40px;
   overflow: hidden;
 }
 
@@ -142,5 +154,11 @@ body{
 
   .box{
     padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container{
+    padding: 0 20px;
   }
 }

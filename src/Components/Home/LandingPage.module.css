@@ -15,9 +15,9 @@
     top: 0;
     right: 0;
     width: 50%;
-    height: 95%;
-    opacity: .4;
-    z-index: -1;
+    height: 100%;
+    opacity: .6;
+    /* z-index: -1; */
     pointer-events: none;
     background: linear-gradient(to top, var(--color-bg) 40%, transparent), 
             repeating-linear-gradient(to left, var(--color-secondary), transparent 10px, var(--color-secondary) 20px);

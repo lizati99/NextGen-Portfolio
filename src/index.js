@@ -10,7 +10,6 @@ import "@fontsource/exo-2/800.css";
 import './index.css';
 import { ThemeProvider } from './Context/ThemeContext';
 import { LanguageProvider } from './Context/LanguageContext';
-import NotFoundPage from './Pages/NotFoundPage';
 // import Slider from './Components/Common/Slider/Slider';
 // import HighwaySlider from './Components/Common/HighwaySlider/HighwaySlider';
 
@@ -20,8 +19,7 @@ root.render(
   <React.StrictMode>
     <LanguageProvider>
       <ThemeProvider>
-        {/* <App /> */}
-        <NotFoundPage />
+        <App />
         {/* <Slider /> */}
         {/* <HighwaySlider /> */}
       </ThemeProvider>
