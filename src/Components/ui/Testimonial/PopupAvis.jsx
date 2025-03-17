@@ -1,87 +1,64 @@
-import { useState, useEffect } from "react";
+import { useEffect, useReducer } from "react";
 import classes from "./PopupAvis.module.css";
 import { Rating, Box } from "@mui/material";
 import closeSvg from "./../../../assets/icons/close.png";
-import axios from "axios";
+import { formReducer, INITIAL_VALUES, FORM_ACTIONS } from "../../../utils/validation/formReducer";
+import { storeReview } from "../../../utils/http/reviewService";
 
-export default function PopupAvis({ isOpen, setIsPopupOpen }) {
-  const [name, setName] = useState("");
-  const [role, setRole] = useState("Client");
-  const [rating, setRating] = useState(0);
-  const [comment, setComment] = useState("");
-  const [location, setLocation] = useState("");
-  const [image, setImage] = useState(null);
-  const [errorMessage, setErrorMessage] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
+export default function PopupAvis({ setIsPopupOpen }) {
+  const [state, dispatch] = useReducer(formReducer, INITIAL_VALUES);
 
   useEffect(() => {
-    if (isOpen) {
-      setName("");
-      setRole("Client");
-      setRating(0);
-      setComment("");
-      setLocation("");
-      setImage(null);
-      setErrorMessage("");
-      setSuccessMessage("");
-    }
-  }, [isOpen]);
+      dispatch({ type: FORM_ACTIONS.RESET });
+  }, []);
 
   const handleRatingChange = (_, newValue) => {
-    setRating(newValue);
+    dispatch({ type: FORM_ACTIONS.SET_RATING, payload: { id: "rating", value: newValue } });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    if (!rating || rating < 1 || rating > 5) {
-      setErrorMessage("La note doit être entre 1 et 5.");
+
+    if (!state.rating || state.rating < 1 || state.rating > 5) {
+      dispatch({ type: FORM_ACTIONS.SET_ERROR, message: "La note doit être entre 1 et 5." });
       return;
     }
-    if (!comment.trim()) {
-      setErrorMessage("Le commentaire ne peut pas être vide.");
+    if (!state.comment.trim()) {
+      dispatch({ type: FORM_ACTIONS.SET_ERROR, message: "Le commentaire ne peut pas être vide." });
       return;
     }
-    if (!location.trim()) {
-      setErrorMessage("Veuillez entrer votre localisation.");
+    if (!state.location.trim()) {
+      dispatch({ type: FORM_ACTIONS.SET_ERROR, message: "Veuillez entrer votre localisation." });
       return;
     }
-  
+
     try {
       const formData = new FormData();
-      formData.append("name", name);
-      formData.append("role", role);
-      formData.append("comment", comment);
-      formData.append("rating", rating);
-      formData.append("location", location);
-      if (image) {
-        formData.append("image_url", image);
+      formData.append("name", state.name);
+      formData.append("role", state.role);
+      formData.append("comment", state.comment);
+      formData.append("rating", state.rating);
+      formData.append("location", state.location);
+      if (state.image) {
+        formData.append("image_url", state.image);
       }
-  
-      const response = await axios.post("http://127.0.0.1:8000/api/reviews", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
-  
-      console.log("Success:", response.data);
-      setSuccessMessage("Votre avis a été soumis avec succès !");
-      setErrorMessage("");
-      setName("");
-      setRole("Client");
-      setRating(0);
-      setComment("");
-      setLocation("");
-      setImage(null);
+
+      for (let [key, value] of formData.entries()) {
+        console.log(`${key}:`, value);
+      }
+      await storeReview(formData);
+
+      dispatch({ type: FORM_ACTIONS.SET_SUCCESS, message: "Votre avis a été soumis avec succès !" });
+      dispatch({ type: FORM_ACTIONS.RESET });
     } catch (error) {
-      console.error("API Error:", error);
-      setErrorMessage("Erreur lors de l'envoi de votre avis.");
+      dispatch({ type: FORM_ACTIONS.SET_ERROR, message: "Erreur lors de l'envoi de votre avis." });
     }
   };
 
   const handleClose = () => {
     setIsPopupOpen(false);
   };
+
 
   return (
     <div>
@@ -91,27 +68,22 @@ export default function PopupAvis({ isOpen, setIsPopupOpen }) {
           <img src={closeSvg} alt="close icon" loading="lazy" />
         </button>
         <h3 className={classes.popup_title}>
-          Laisser un avis pour Les chandelles
+          Laisser un avis
         </h3>
         <p className={classes.popup_question}>
-          Comment évaluez-vous notre produit ?
+          Comment évaluez-vous notre service ?
         </p>
-        <Box
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          sx={{ padding: 1, marginBottom: 2 }}
-        >
+        <Box display="flex" justifyContent="center" alignItems="center" sx={{ padding: 1, marginBottom: 2 }}>
           <Rating
             name="half-rating"
-            value={rating}
+            value={state.rating}
             precision={0.25}
             onChange={handleRatingChange}
             size="large"
             className={classes.stars}
           />
           <Box fontSize="18px">
-            <p>({rating})</p>
+            <p>({state.rating})</p>
           </Box>
         </Box>
         <form className={classes.review_form} onSubmit={handleSubmit}>
@@ -119,41 +91,41 @@ export default function PopupAvis({ isOpen, setIsPopupOpen }) {
             type="text"
             placeholder="Votre nom..."
             className={classes.input}
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={state.name}
+            onChange={(e) => dispatch({ type: FORM_ACTIONS.SET_INPUT, payload: { id: "name", value: e.target.value } })}
           />
           <input
             type="text"
             placeholder="Votre rôle..."
             className={classes.input}
-            value={role}
-            onChange={(e) => setRole(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Votre localisation..."
-            className={classes.input}
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
+            value={state.role}
+            onChange={(e) => dispatch({ type: FORM_ACTIONS.SET_INPUT, payload: { id: "role", value: e.target.value } })}
           />
           <textarea
             placeholder="Écrire un avis..."
             className={classes.textarea}
-            value={comment}
-            onChange={(e) => setComment(e.target.value)}
+            value={state.comment}
+            onChange={(e) => dispatch({ type: FORM_ACTIONS.SET_INPUT, payload: { id: "comment", value: e.target.value } })}
           ></textarea>
           <input
             type="file"
             accept="image/*"
             className={classes.file_input}
-            onChange={(e) => setImage(e.target.files[0])}
+            onChange={(e) => dispatch({ type: FORM_ACTIONS.SET_IMAGE, payload: { id: "image", value: e.target.files[0] } })}
+          />
+          <input
+            type="text"
+            placeholder="Votre siteweb ou linkedin or portfolio..."
+            className={classes.input}
+            value={state.location}
+            onChange={(e) => dispatch({ type: FORM_ACTIONS.SET_INPUT, payload: { id: "location", value: e.target.value } })}
           />
           <button type="submit" className={classes.submit_button}>
             Soumettre l'avis
           </button>
         </form>
-        {errorMessage && <p className={classes.error}>{errorMessage}</p>}
-        {successMessage && <p className={classes.success}>{successMessage}</p>}
+        {state.errorMessage && <p className={classes.error}>{state.errorMessage}</p>}
+        {state.successMessage && <p className={classes.success}>{state.successMessage}</p>}
       </div>
     </div>
   );

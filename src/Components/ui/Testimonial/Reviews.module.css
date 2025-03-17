@@ -140,7 +140,7 @@
 
 .card {
     background: linear-gradient(to top, var(--color-third), var(--color-bg));
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 2px;
     transition: transform 0.3s;
 }
@@ -198,8 +198,8 @@
 .avatar {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    border: 2px solid var(--color-secondary);
+    border-radius: 5px;
+    object-fit: fill;
 }
 
 .user_details {

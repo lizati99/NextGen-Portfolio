@@ -48,8 +48,9 @@
 }
 
 .popup_question {
+    font-family: var(--font-secondary);
+    font-weight: 500;
     font-size: clamp(14px, 1vw, 18px);
-    font-weight: 400;
     text-align: center;
 }
 
@@ -61,7 +62,6 @@
 
 .textarea{
     height: 150px;
-    background-color: var(--color-primary);
 }
 
 .textarea,
@@ -71,6 +71,10 @@
     border: none;
     border-bottom: 1px solid var(--color-text);
     border-radius: 5px;
+    font-family: var(--font-secondary);
+    font-size: (12px, 1vw, 16px);
+    font-weight: 500;
+    background-color: var(--color-overlay);
 }
 
 .submit_button {

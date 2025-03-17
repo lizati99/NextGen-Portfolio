@@ -4,26 +4,27 @@ import { Rating } from "@mui/material";
 import MainHeading from "../../Common/MainHeading/MainHeading";
 import SelectArrow from "../../../assets/icons/Testimonial/SelectArrow.svg";
 import cardIcon from "../../../assets/icons/Testimonial/Vector.svg";
-import avatarMohammedImg from "../../../assets/images/Testimonial/1027322.jpg"
 import PopupAvis from "./PopupAvis";
+import avatar from "./../../../assets/images/Testimonial/avatar.jpg"
+import { fetchReviews } from "../../../utils/http/reviewService";
 
-const reviews = [
-    { name: "Amina El Fadil", job: "UX Designer", text: "Amazing work! Highly recommended.", rating: 5, avatar: avatarMohammedImg, createdAt: "2025-05-10"},
-    { name: "Youssef Benali", job: "Backend Developer", text: "Great technical skills and communication.", rating: 4, avatar: avatarMohammedImg, createdAt:"2025-02-10"},
-    { name: "Sara Mouhajir", job: "Project Manager", text: "Reliable and efficient. Would work with them again.", rating: 5, avatar: avatarMohammedImg, createdAt:"2025-03-10"},
-    { name: "Omar Chaouki", job: "Data Scientist", text: "Strong problem-solving skills.", rating: 4, avatar: avatarMohammedImg, createdAt:"2025-08-10"},
-    { name: "Nadia Khalil", job: "Frontend Developer", text: "Excellent UI/UX understanding.", rating: 5, avatar: avatarMohammedImg, createdAt:"2025-03-10"},
-    { name: "Karim Lamine", job: "Mobile Developer", text: "Fast and efficient. Delivered before the deadline.", rating: 4, avatar: avatarMohammedImg, createdAt:"2025-09-10"},
-    { name: "Hicham Oubaha", job: "Software Engineer", text: "They write clean and scalable code.", rating: 5, avatar: avatarMohammedImg, createdAt:"2025-10-10"},
-    { name: "Laila Idrissi", job: "QA Tester", text: "Attention to detail is impressive.", rating: 5, avatar: avatarMohammedImg, createdAt:"2025-11-10"},
-    { name: "Anwar Tahiri", job: "DevOps Engineer", text: "Their deployment strategies are well-optimized.", rating: 4, avatar: avatarMohammedImg, createdAt:"2025-12-10"},
-    { name: "Fatima Zahra", job: "Graphic Designer", text: "Creative and responsive team.", rating: 5, avatar: avatarMohammedImg , createdAt:"2025-04-10"},
-    { name: "Khalid Amrani", job: "Cybersecurity Expert", text: "They implement strong security measures.", rating: 5, avatar: avatarMohammedImg , createdAt:"2025-01-10"},
-    { name: "Sofia Bennani", job: "Business Analyst", text: "Very analytical and insightful.", rating: 4, avatar: avatarMohammedImg , createdAt:"2025-03-10"},
-    { name: "Rachid Mouline", job: "Tech Lead", text: "Highly skilled and professional.", rating: 5, avatar: avatarMohammedImg , createdAt:"2025-08-10"},
-    { name: "Meriem Saadi", job: "Marketing Specialist", text: "Great collaboration and creative mindset.", rating: 4, avatar: avatarMohammedImg, createdAt:"2025-07-10"},
-    { name: "Hamza El Majdoubi", job: "Product Manager", text: "Understands client needs very well.", rating: 5, avatar: avatarMohammedImg, createdAt:"2025-03-11"},
-    { name: "Mohammed Lizati", job: "Backend Developer", text: "Understands client needs very well.", rating: 5, avatar: avatarMohammedImg, createdAt:"2025-04-22"}
+const reviews =[
+    { name: "Amina El Fadil", job: "UX Designer", text: "Amazing work! Highly recommended.", rating: 5, image_url: avatar, createdAt: "2025-05-10"},
+    { name: "Youssef Benali", job: "Backend Developer", text: "Great technical skills and communication.", rating: 4, image_url: avatar, createdAt:"2025-02-10"},
+    { name: "Sara Mouhajir", job: "Project Manager", text: "Reliable and efficient. Would work with them again.", rating: 5, image_url: avatar, createdAt:"2025-03-10"},
+    { name: "Omar Chaouki", job: "Data Scientist", text: "Strong problem-solving skills.", rating: 4, image_url: avatar, createdAt:"2025-08-10"},
+    { name: "Nadia Khalil", job: "Frontend Developer", text: "Excellent UI/UX understanding.", rating: 5, image_url: avatar, createdAt:"2025-03-10"},
+    { name: "Karim Lamine", job: "Mobile Developer", text: "Fast and efficient. Delivered before the deadline.", rating: 4, image_url: avatar, createdAt:"2025-09-10"},
+    { name: "Hicham Oubaha", job: "Software Engineer", text: "They write clean and scalable code.", rating: 5, image_url: avatar, createdAt:"2025-10-10"},
+    { name: "Laila Idrissi", job: "QA Tester", text: "Attention to detail is impressive.", rating: 5, image_url: avatar, createdAt:"2025-11-10"},
+    { name: "Anwar Tahiri", job: "DevOps Engineer", text: "Their deployment strategies are well-optimized.", rating: 4, image_url: avatar, createdAt:"2025-12-10"},
+    { name: "Fatima Zahra", job: "Graphic Designer", text: "Creative and responsive team.", rating: 5, image_url: avatar , createdAt:"2025-04-10"},
+    { name: "Khalid Amrani", job: "Cybersecurity Expert", text: "They implement strong security measures.", rating: 5, image_url: avatar , createdAt:"2025-01-10"},
+    { name: "Sofia Bennani", job: "Business Analyst", text: "Very analytical and insightful.", rating: 4, image_url: avatar , createdAt:"2025-03-10"},
+    { name: "Rachid Mouline", job: "Tech Lead", text: "Highly skilled and professional.", rating: 5, image_url: avatar , createdAt:"2025-08-10"},
+    { name: "Meriem Saadi", job: "Marketing Specialist", text: "Great collaboration and creative mindset.", rating: 4, image_url: avatar, createdAt:"2025-07-10"},
+    { name: "Hamza El Majdoubi", job: "Product Manager", text: "Understands client needs very well.", rating: 5, image_url: avatar, createdAt:"2025-03-11"},
+    { name: "Mohammed Lizati", job: "Backend Developer", text: "Understands client needs very well.", rating: 5, image_url: avatar, createdAt:"2025-04-22"}
 ];
 
 const sortingMethods = {
@@ -40,8 +41,20 @@ const Reviews = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState("mieux notés");
+    // const [reviews, setReviews] = useState([]);
     const [sortedReviews, setSortedReviews] = useState([]);
     const [visibleReviews, setVisibleReviews] = useState(3);
+    // useEffect(() => {
+    //     const getReviews = async () => {
+    //         try {
+    //             const data = await fetchReviews();
+    //             setReviews(data);
+    //         } catch (error) {
+    //             console.error("Erreur API :", error);
+    //         }
+    //     };
+    //     getReviews();
+    // }, []);
     const isReviews = reviews && reviews.length > 0;
 
     useEffect(() => {
@@ -143,9 +156,9 @@ const Reviews = () => {
                             <p className={classes.review_text}>
                                 {review.text}
                             </p>
-
                             <div className={classes.user_info}>
-                                <img src={review.avatar} alt={review.name} className={classes.avatar} />
+                                <img src={review.image_url} alt={review.name} className={classes.avatar} />
+                                {/* <img src={"http://127.0.0.1:8000/storage/"+ review.image_url} alt={review.name} className={classes.avatar} /> */}
                                 <div className={classes.user_details}>
                                     <p className={classes.user_name}>{review.name}</p>
                                     <p className={classes.user_job}>{review.job}</p>
