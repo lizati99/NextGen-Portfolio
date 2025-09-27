@@ -5,6 +5,7 @@ import SocialHorizontalItem from "../ui/Social/SocialHorizontalItem";
 import classes from "./AboutContent.module.css"
 import { useState } from "react";
 import LanguageToggle from "./../ui/Languages/LanguageToggle";
+import exportPDF from "./../../assets/files/BML.pdf"
 
 export default function AboutContent(){
     const { t } = useTranslation();
@@ -65,7 +66,7 @@ const NewProfile=({t})=>{
             ))}
         </div>
         <div className={classes.export}>
-            <a href="./Mohammed lizati Cv.pdf" className={classes.btn_primary}>{t('aboutPage.aboutContent.content.downloadLink')}</a>
+            <a href={exportPDF} download="BML.pdf" className={classes.btn_primary}>{t('aboutPage.aboutContent.content.downloadLink')}</a>
         </div>
     </div>
     </>
@@ -92,7 +93,7 @@ const OldProfile=(t)=>{
         </p>
         <SocialHorizontalItem />
         <div className={classes.export}>
-            <a href="./Mohammed lizati Cv.pdf" className={classes.btn_primary}>{t('aboutPage.aboutContent.content.downloadLink')}</a>
+            <a href={exportPDF} className={classes.btn_primary}>{t('aboutPage.aboutContent.content.downloadLink')}</a>
         </div>
     </>
 }

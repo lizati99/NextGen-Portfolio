@@ -1,10 +1,15 @@
 export const INITIAL_VALUES = {
+  // review form information
   name: "",
-  role: "Client",
+  role: "",
   rating: 0,
   comment: "",
   location: "",
   image: null,
+  // contact form information
+  email: "",
+  subject: "",
+  message: "",
   errorMessage: "",
   successMessage: "",
 };

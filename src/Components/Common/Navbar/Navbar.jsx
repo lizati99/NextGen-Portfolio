@@ -6,8 +6,8 @@ import {
 // import homeIcon from "./../../../assets/images/Navbar/home (1).png"
 import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../../../Context/ThemeContext";
-import NavbarMobile from "./NavbarMobile";
 import { useTranslation } from 'react-i18next';
+import exportPDF from "./../../../assets/files/BML.pdf"
 
 export default function Navbar() {
     const { colorData } = useContext(ThemeContext);
@@ -29,7 +29,7 @@ export default function Navbar() {
         ];
 
         return linkList.map((link, key) => (
-            <li key={key} className={`${classes.linkItem} ${link.path === '/Contact' ? classes.contactItem :"" }`}>
+            <li key={key} className={`${classes.linkItem}`}>
                 <Link
                     to={link.path}
                     onClick={() => setActiveLink(link.path)}
@@ -53,6 +53,7 @@ export default function Navbar() {
                         </div>
                         <ul className={`${classes.links}`}>
                             {displayNavLink()}
+                            <a href={exportPDF} download="BML.pdf" className={`${classes.linkItem} ${classes.contactItem}`}>{t('aboutPage.aboutContent.content.downloadLink')}</a>
                         </ul>
                     </div>
                 </div>

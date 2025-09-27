@@ -3,14 +3,14 @@
     top: 0;
     height: 100vh;
     width: 2px;
-    background-color: color-mix(in srgb, var(--color-overlay) 20%, transparent 80%);
+    background-color: color-mix(in srgb, var(--color-overlay) 10%, transparent 90%);
 }
 
 .rain {
     position: absolute;
     left: 0;
     width: 100%;
-    background: linear-gradient(to top, var(--color-secondary) 40%, transparent 60%);
+    background: linear-gradient(to top, var(--color-secondary) 20%, transparent 80%);
     /* background-color: var(--color-secondary); */
     animation: rainFall 3s infinite linear;
     opacity: 0;

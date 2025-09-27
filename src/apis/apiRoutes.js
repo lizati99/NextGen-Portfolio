@@ -2,4 +2,5 @@ export const API_BASE_URL = "http://127.0.0.1:8000/api";
 
 export const ApiRoutes = {
     reviews: () => `${API_BASE_URL}/reviews`,
+    contactMail: () => `${API_BASE_URL}/contact`,
 }

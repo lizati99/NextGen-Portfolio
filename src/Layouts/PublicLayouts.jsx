@@ -2,7 +2,6 @@ import { Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Navbar from "../Components/Common/Navbar/Navbar";
 import OverlayEffect from "../Components/ui/Overlay/OverlayEffect";
-import Settings from "../Components/ui/Settings/Settings"
 import NavbarMobile from "../Components/Common/Navbar/NavbarMobile";
 
 export default function PublicLayouts() {

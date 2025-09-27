@@ -4,7 +4,7 @@ const rainFall = () => {
     const rain_number = 10;
     const distance = 100 / (rain_number - 1);
     return Array.from({ length: rain_number - 2 }).map((_, i) => {
-        const animationDuration = Math.round(3 + Math.random() * 5);
+        const animationDuration = Math.round(3 + Math.random() * 3);
         const animationDelay = Math.round(1 + Math.random() * 2);
         const height = `${Math.random() * 50 + 50}px`;
         

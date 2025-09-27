@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_BASE_URL, ApiRoutes } from "../../apis/apiRoutes";
+import { ApiRoutes } from "../../apis/apiRoutes";
 
 const apiClient = axios.create({
     baseURL: ApiRoutes.baseURL,
@@ -8,8 +8,6 @@ const apiClient = axios.create({
         "Content-Type": "multipart/form-data"
     }
 });
-
-console.log(API_BASE_URL);
 
 export const fetchReviews = async () => {
     try {
